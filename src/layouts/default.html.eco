@@ -12,6 +12,7 @@
 
 		<!-- PLUGINS' STYLES -->
 		<%- @getBlock('styles').toHTML() %>
+		<%- @getBlock('styles').add(['/styles/github.css']).toHTML() %>
 
 		<!-- MY STYLES -->
 		<%- @getBlock('styles').add(['/styles/normalize.css']).toHTML() %>
@@ -30,7 +31,6 @@
 			};
 		</script>
 		<%- @getBlock('scripts').add(['/scripts/adapt.min.js']).toHTML() %>
-		<%- @getBlock('scripts').add(['/scripts/jquery-1.10.1.min.js']).toHTML() %>
 
 		<!-- IE CONDITIONALS -->
 		<!--[if lt IE 9]>
@@ -57,8 +57,10 @@
 		<%- @partial('footer.html') %>
 
 		<!-- PLUGINS' SCRIPTS -->
+		<%- @getBlock('scripts').add(['/scripts/jquery-1.10.1.min.js']).toHTML() %>
 		<%- @getBlock('scripts').toHTML() %>
 
 		<!-- MY SCRIPTS -->
+		<%- @getBlock('scripts').add(['/scripts/main.js']).toHTML() %>
 	</body>
 </html>
