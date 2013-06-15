@@ -30,6 +30,7 @@
 			};
 		</script>
 		<%- @getBlock('scripts').add(['/scripts/adapt.min.js']).toHTML() %>
+		<%- @getBlock('scripts').add(['/scripts/jquery-1.10.1.min.js']).toHTML() %>
 
 		<!-- IE CONDITIONALS -->
 		<!--[if lt IE 9]>
@@ -44,9 +45,9 @@
 
 			<!-- MAIN CONTENT -->
 			<div class="grid-container">
-				<div class="sides grid-15 mobile-grid-0 tablet-grid-10">congrats! you found out this cheat I'm using :)</div>
+				<div class="sides grid-15 mobile-grid-0 tablet-grid-10">ignore this... thanks!</div>
 				<main role="main" class="grid-70 mobile-grid-100 tablet-grid-80"><%- @content %></main>
-				<div class="sides grid-15 mobile-grid-0 tablet-grid-10">congrats! you found out this cheat I'm using :)</div>
+				<div class="sides grid-15 mobile-grid-0 tablet-grid-10">ignore this... thanks!</div>
 
 		<!-- FOOTER STUFF -->
 				<div id="push-footer"></div>
@@ -57,5 +58,7 @@
 
 		<!-- PLUGINS' SCRIPTS -->
 		<%- @getBlock('scripts').toHTML() %>
+
+		<!-- MY SCRIPTS -->
 	</body>
 </html>

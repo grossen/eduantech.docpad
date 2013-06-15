@@ -4,7 +4,6 @@
 # Define the DocPad Configuration
 docpadConfig = {
 	enabledPlugins:
-		livereload: false
 		sass: false
 
 	plugins:
@@ -17,6 +16,8 @@ docpadConfig = {
 			changefreq: 'hourly'
 			priority: 0.5
 			sitemap: true
+		highlightjs:
+			replaceTab: null
 
 	environments:
 		debug:

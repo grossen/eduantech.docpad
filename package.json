@@ -11,9 +11,9 @@
     "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-partials": "~2.6.3",
-    "docpad-plugin-menu": "~1.0.2",
     "docpad-plugin-sass": "~2.4.5",
     "docpad-plugin-livereload": "~2.4.0",
+    "docpad-plugin-highlightjs": "~2.1.6"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

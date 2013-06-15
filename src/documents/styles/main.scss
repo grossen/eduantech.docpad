@@ -9,23 +9,17 @@ $dark_blue: #039;
 
 $light_red: #fc5858;
 $normal_red: #dd514c;
-$dark_red: #c00;
-
-$light_yellow: #f7f3c5;
-$normal_yellow: #f5ec82;
-$dark_yellow: #57320e;
 
 $black: #323232;
 $dark_gray: #777;
+$mid_dark_gray: #111;
 $gray: #eee;
 $light_gray: #fafafa;
 $white: #ffffff;
 
-$orange: #f37b1d;
-
 $a_link: $normal_blue;
-$a_visited: $light_red;
 
+// Font
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 $font: "Open Sans", Helvetica, Arial, sans-serif;
 
@@ -62,10 +56,9 @@ a:link, a:visited {
 	text-decoration: none;
 	border-bottom: 1px $gray solid;
 }
-a:visited { border-bottom: 1px $a_link solid; }
-a:hover { border-bottom: 1px $a_link solid; }
+a:visited, a:hover { border-bottom: 1px $a_link solid; }
 a:focus { outline: thin-dotted; }
-a:active { border-bottom: 1px $normal_red solid; }
+a:active { border-bottom: 1px $light_red solid; }
 
 
 /* ----------------------------------------------------------------------------
@@ -132,27 +125,15 @@ CONTAINER AND STUFF
 ============================================================================ */
 
 * {
+	// Make width/height include margin/padding in calculation
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-body {
-	background: $white;
-	position: relative;
-	width: 100%;
-}
-
-html, body {
-	height: 100%;
-}
-
+// The "main" styles for the content
 div#wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-
 	background: $white;
 	color: $dark_gray;
 	font-family: $font;
@@ -161,7 +142,7 @@ div#wrapper {
 }
 
 .grid-container {
-
+	// Nope... Nothing here... Don't know why this is here...
 }
 
 
@@ -169,13 +150,13 @@ div#wrapper {
 CONTENT RULES
 ============================================================================ */
 
+// What allows the <main> to be in the center without the text being centered
 .sides {
 	color: $white;
 	font-size: 1px;
 }
 
 main {
-	margin-bottom: 20px;
 	header {
 		text-align: center;
 	}
@@ -188,32 +169,34 @@ main {
 			list-style-type: none;
 		}
 	}
-}
-
-
-/* ============================================================================
-ARCHIVES
-============================================================================ */
-
-section.post-entries {
-	h1 {
-		font-size: 22px;
+	// What `` generates when in Markdown, the <code> tag
+	code.inline-code {
+		font-weight: bold;
+		background: #f8f8f8;
+		padding: 0.1em 0.18em;
+		margin: 0;
+		font: monospace;
+		white-space: nowrap;
+		border: 1px solid #ddd;
+		border-radius: 2px;
 	}
 }
 
-section.cat-tag-list {
-	h1 {
-		font-size: 22px;
-	}
-}
+
+/* ----------------------------------------------------------------------------
+Articles */
 
 article {
+	// The post header and meta info
 	header {
+		// The post title
 		h1 {
-			margin-top: 10px;
+			margin: 0.3em 0 0.3em;
+			font-weight: 600;
+			//text-align: justify;
 		}
 		.post-meta {
-			color: $dark_gray;
+			color: $mid_dark_gray;
 			font-size: 13px;
 		}
 	}
@@ -225,17 +208,14 @@ FOOTER
 ============================================================================ */
 
 footer {
+	background: $white;
 	color: $dark_gray;
-	background: $light_gray;
 	text-align: center;
-	font-size: 0.7em;
+	font-size: 11px;
 
 	display: block;
 	border-top: 1px $gray solid;
 	width: 100%;
-	position: relative;
-	margin: 0 auto;
-	bottom: 0;
 	div#footer-left {
 		float: left;
 	}
@@ -244,14 +224,24 @@ footer {
 	}
 }
 
-div#wrapper {
-	margin: 0 auto -4.0em;
+
+/* ----------------------------------------------------------------------------
+Stick to bottom footer */
+
+html, body {
+	height: 100%;
 }
+
+div#wrapper {
+	min-height: 100%;
+	margin: 0 auto -62px;
+}
+
 footer, div#push-footer {
-	height: 4.0em; // #push-footer must be the same height as the footer
+	height: 62px; // #push-footer must be the same height as the footer
 	clear: both;
 }
 
 /* Thanks to Ryan Fait for it's sticky footer trick
- * http://ryanfait.com/
+ * http://ryanfait.com/resources/footer-stick-to-bottom-of-page/
  */
