@@ -1,0 +1,12 @@
+---
+title: Archives
+layout: archives
+menuShow: true
+menuOrder: 1
+ignored: false
+---
+<ul>
+<% for post in @getCollection("posts").findAll({layout:'post'}).toJSON(): %>
+	<li><a href="<%= post.url %>"><%= post.title %></a></li>
+<% end %>
+</ul>

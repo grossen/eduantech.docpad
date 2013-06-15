@@ -1,0 +1,257 @@
+/* EduanTech theme by Eduan Lavaque, Licensed under the MIT license */
+/* ============================================================================
+SCSS VARIABLES
+ */
+
+$light_blue: #69f;
+$normal_blue: #0e90d2;
+$dark_blue: #039;
+
+$light_red: #fc5858;
+$normal_red: #dd514c;
+$dark_red: #c00;
+
+$light_yellow: #f7f3c5;
+$normal_yellow: #f5ec82;
+$dark_yellow: #57320e;
+
+$black: #323232;
+$dark_gray: #777;
+$gray: #eee;
+$light_gray: #fafafa;
+$white: #ffffff;
+
+$orange: #f37b1d;
+
+$a_link: $normal_blue;
+$a_visited: $light_red;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+$font: "Open Sans", Helvetica, Arial, sans-serif;
+
+
+/* ============================================================================
+BASIC TAGS' STYLES
+============================================================================ */
+
+/* ----------------------------------------------------------------------------
+Heading tags */
+
+h1, h2, h3, h4, h5, h6 {
+	color: $black;
+	text-rendering: optimizelegibility;
+}
+
+h1, h2 { font-weight: 300; }
+h1 { color: $black; }
+h2 { color: $dark_gray; }
+h3, h4, h5, h6 { font-weight: bold; }
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.125em; }
+
+
+/* ----------------------------------------------------------------------------
+Anchor tags */
+
+a:link, a:visited {
+	color: $a_link;
+	background: inherit;
+	text-decoration: none;
+	border-bottom: 1px $gray solid;
+}
+a:visited { border-bottom: 1px $a_link solid; }
+a:hover { border-bottom: 1px $a_link solid; }
+a:focus { outline: thin-dotted; }
+a:active { border-bottom: 1px $normal_red solid; }
+
+
+/* ----------------------------------------------------------------------------
+Horizontal ruler */
+
+hr {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border: 0;
+	height: 1px;
+	background: $black;
+	background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+	background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+	background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+	background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+	background-image: linear-gradient(left, #ccc, #333, #ccc);
+}
+
+
+/* ============================================================================
+WEBSITE HEADER
+============================================================================ */
+
+div#top {
+	// Main styles
+	background: $light_gray;
+	text-align: center;
+	border-bottom: 1px $gray solid;
+
+	header {
+		h1 {
+			margin: 0;
+			font-size: 3em;
+			font-weight: 300;
+		}
+	}
+
+	// Header/logo styles
+	a:link, a:visited { color: $normal_blue; }
+
+	// Navigation styles
+	nav {
+		a {
+			display: inline-block;
+			padding: 0.2em;
+			margin: 0.2em 0.5em;
+			font-size: 1.1em;
+			font-weight: 600;
+			border-bottom: 3px $light_gray solid;
+		}
+		a#menu-current {
+			color: $light_red;
+			border-bottom: 3px $light_red solid;
+		}
+		a:link, a:visited { color: $light_red; text-decoration: none; }
+		a:hover { border-bottom: 3px $light_red solid; }
+		a:active { border-bottom: 3px $normal_blue solid; }
+	}
+}
+
+
+/* ============================================================================
+CONTAINER AND STUFF
+============================================================================ */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: $white;
+	position: relative;
+	width: 100%;
+}
+
+html, body {
+	height: 100%;
+}
+
+div#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+
+	background: $white;
+	color: $dark_gray;
+	font-family: $font;
+	font-size: 1.0em;
+	font-weight: 500;
+}
+
+.grid-container {
+
+}
+
+
+/* ============================================================================
+CONTENT RULES
+============================================================================ */
+
+.sides {
+	color: $white;
+	font-size: 1px;
+}
+
+main {
+	margin-bottom: 20px;
+	header {
+		text-align: center;
+	}
+	article header {
+		text-align: left;
+	}
+	ul {
+		padding-left: 20px;
+		li {
+			list-style-type: none;
+		}
+	}
+}
+
+
+/* ============================================================================
+ARCHIVES
+============================================================================ */
+
+section.post-entries {
+	h1 {
+		font-size: 22px;
+	}
+}
+
+section.cat-tag-list {
+	h1 {
+		font-size: 22px;
+	}
+}
+
+article {
+	header {
+		h1 {
+			margin-top: 10px;
+		}
+		.post-meta {
+			color: $dark_gray;
+			font-size: 13px;
+		}
+	}
+}
+
+
+/* ============================================================================
+FOOTER
+============================================================================ */
+
+footer {
+	color: $dark_gray;
+	background: $light_gray;
+	text-align: center;
+	font-size: 0.7em;
+
+	display: block;
+	border-top: 1px $gray solid;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	bottom: 0;
+	div#footer-left {
+		float: left;
+	}
+	div#footer-right {
+		float: right;
+	}
+}
+
+div#wrapper {
+	margin: 0 auto -4.0em;
+}
+footer, div#push-footer {
+	height: 4.0em; // #push-footer must be the same height as the footer
+	clear: both;
+}
+
+/* Thanks to Ryan Fait for it's sticky footer trick
+ * http://ryanfait.com/
+ */

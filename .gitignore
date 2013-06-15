@@ -1,0 +1,39 @@
+# System files
+##############
+
+# Icon files
+*.(I|i)con?
+(I|i)con?
+*.icns
+
+# For Mac OS X files
+.fseventsd
+.DS_Store?
+.Trashes
+.TemporaryItems
+._*
+.Spotlight-V100
+
+# For Windows files
+ehthumbs.db
+Thumbs.db
+
+
+# Environment specific files
+############################
+
+# Cloud9 IDE
+.c9revisions
+
+# PhpStorm and other
+.idea
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
+
+# DocPad stuff
+/out
+/node_modules
+.build-catalog.json

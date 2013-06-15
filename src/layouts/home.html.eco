@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<header>
+	<h1><%= @document.title %></h1>
+</header>
+
+<div><%- @content %></div>

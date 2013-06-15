@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<!-- TITLE -->
+		<title><%= @getPreparedTitle() %></title>
+
+		<!-- PLUGINS' META -->
+		<%- @getBlock('meta').toHTML() %>
+
+		<!-- MY META -->
+		<meta name="description" content="<%= @getPreparedDescription() %>">
+		<meta name="keywords" content="<%= @getPreparedKeywords() %>">
+
+		<!-- PLUGINS' STYLES -->
+		<%- @getBlock('styles').toHTML() %>
+
+		<!-- MY STYLES -->
+		<%- @getBlock('styles').add(['/styles/normalize.css']).toHTML() %>
+		<%- @getBlock('styles').add(['/styles/main.css']).toHTML() %>
+
+		<%- @getBlock('styles').add(['/styles/unsemantic-grid-base.css']).toHTML() %>
+		<script>
+			var ADAPT_CONFIG = {
+				path: '/styles/',
+				dynamic: true,
+				range: [
+					'0 to 640 = unsemantic-grid-mobile.css',
+					'641 to 1024 = unsemantic-grid-tablet.css',
+					'1025 = unsemantic-grid-desktop.css'
+				]
+			};
+		</script>
+		<%- @getBlock('scripts').add(['/scripts/adapt.min.js']).toHTML() %>
+
+		<!-- IE CONDITIONALS -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<!-- CONTENT -->
+	<body>
+		<div id="wrapper">
+			<!-- HEADER -->
+			<%- @partial('header.html.eco', {menuItems: @getCollection("html")}) %>
+
+			<!-- MAIN CONTENT -->
+			<div class="grid-container">
+				<div class="sides grid-15 mobile-grid-0 tablet-grid-10">congrats! you found out this cheat I'm using :)</div>
+				<main role="main" class="grid-70 mobile-grid-100 tablet-grid-80"><%- @content %></main>
+				<div class="sides grid-15 mobile-grid-0 tablet-grid-10">congrats! you found out this cheat I'm using :)</div>
+
+		<!-- FOOTER STUFF -->
+				<div id="push-footer"></div>
+			</div>
+		</div>
+
+		<%- @partial('footer.html') %>
+
+		<!-- PLUGINS' SCRIPTS -->
+		<%- @getBlock('scripts').toHTML() %>
+	</body>
+</html>
