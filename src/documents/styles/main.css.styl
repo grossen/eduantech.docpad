@@ -4,6 +4,7 @@
 @import 'nib'
 // Import normalize.css
 @import 'normalize.css'
+
 /* ============================================================================
 SCSS VARIABLES
  */
@@ -127,12 +128,10 @@ div#top
 			border-bottom  3px light_red solid
 
 		a:link, a:visited
-			color  light_red
+			color  normal_blue
 			text-decoration  none
-		a:hover
+		a:hover, a:active
 			border-bottom  3px light_red solid
-		a:active
-			border-bottom  3px normal_blue solid
 
 
 /* ============================================================================
@@ -167,12 +166,16 @@ CONTENT RULES
 	color  var_white
 	font-size  1px
 
+// The styles of the main content
 main
+	// Separate the footer from the content, when they come in contact that is
 	margin-bottom  1em
 
+	// Align page headers to the center
 	header
 		text-align  center
 
+	// Align post/article headers to the left, I like it better
 	article header
 		text-align  left
 
@@ -185,11 +188,13 @@ main
 		padding  0.1em 0.18em
 		margin  0
 		border  1px solid #ddd
-		var_white-space  nowrap
+		white-space  nowrap
 
+	// Make <code> tags that are a link have an underline when hovered over
 	a:hover code.inline-code
 		text-decoration  underline
 
+	// Styles for code blocks' container
 	pre
 		border  1px solid #ddd
 		font-size  0.8em
@@ -207,9 +212,10 @@ article
 			font-weight  600
 			//text-transform  capitalize
 
+		// The post meta stuff
 		.post-meta
 			color  var_black
-			font-size  13px
+			font-size  0.8em
 
 
 /* ============================================================================
@@ -228,7 +234,7 @@ footer
 
 
 /* ----------------------------------------------------------------------------
-Stick to bottom footer */
+Stick to bottom footer, thingy */
 
 html, body
 	height  100%

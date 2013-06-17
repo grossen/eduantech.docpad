@@ -11,5 +11,5 @@ layout: default
 		</div>
 	</header>
 
-	<div><%- @content %></div>
+	<%- @content %>
 </article>

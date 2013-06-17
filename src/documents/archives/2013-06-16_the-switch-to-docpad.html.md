@@ -23,7 +23,7 @@ Now I gotta admit, I'm a little promiscuous with my software, but DocPad is defi
 
 Later on this year (say year just to not promise any date) I'll make another post with my exact setup, my CSS styles, the JS I'm using. All the stuff you would need to know to make a website like mine. But for now be happy with my [GitHub repo with my DocPad files](https://github.com/Greduan/docpad-eduantech.com).
 
-So, to conclude:
+So, to recap:
 
 - I switched to Statamic (didn't finish website), then to Docpad, at which I'm currently at.
 - Watch the [Rapid Web Development with DocPad (YouTube)](http://youtu.be/hvQCXDWh7Wg) video if you're a developer, at least to understand what DocPad is and how it works.
