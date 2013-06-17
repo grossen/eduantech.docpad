@@ -3,10 +3,9 @@
 
 # Define the DocPad Configuration
 docpadConfig = {
-	enabledPlugins:
-		sass: false
-
 	plugins:
+		stylus:
+			compress: true
 		menu:
 			menuOptions:
 				optimize: false

@@ -1,0 +1,246 @@
+/*! EduanTech theme by Eduan Lavaque, Licensed under the MIT license */
+
+// Enable nib
+@import 'nib'
+// Import normalize.css
+@import 'normalize.css'
+/* ============================================================================
+SCSS VARIABLES
+ */
+
+light_blue = #69f
+normal_blue = #0e90d2
+dark_blue = #039
+
+light_red = #fc5858
+normal_red = #dd514c
+
+var_black = #323232
+dark_gray = #777
+mid_dark_gray = #111
+gray = #eee
+light_gray = #fafafa
+var_white = #ffffff
+
+normal_blue = normal_blue
+
+// Font
+@import url(http://fonts.googleapis.com/css?family=Open\+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800)
+font = "Open Sans", Helvetica, Arial, sans-serif
+
+
+/* ============================================================================
+BASIC TAGS' STYLES
+============================================================================ */
+
+/* ----------------------------------------------------------------------------
+Heading tags */
+
+h1, h2, h3, h4, h5, h6
+	color  var_black
+	text-rendering  optimizelegibility
+
+h1, h2
+	font-weight  300
+h1
+	color  var_black
+h2
+	color  dark_gray
+h3, h4, h5, h6
+	font-weight  bold
+
+h1
+	font-size  2.5em
+h2
+	font-size  1.5em
+h3
+	font-size  1.25em
+h4
+	font-size  1.125em
+
+
+/* ----------------------------------------------------------------------------
+Anchor tags */
+
+a:link, a:visited
+	color  normal_blue
+	background  inherit
+	text-decoration  none
+	border-bottom  1px gray solid
+
+a:visited, a:hover
+	border-bottom  1px normal_blue solid
+a:focus
+	outline  thin-dotted
+a:active
+	border-bottom  1px light_red solid
+
+
+/* ----------------------------------------------------------------------------
+Horizontal ruler */
+
+hr
+	margin-top  5px
+	margin-bottom  10px
+	border  0
+	height  1px
+	background  var_black
+	background-image  -webkit-linear-gradient(left, #ccc, #333, #ccc)
+	background-image  -moz-linear-gradient(left, #ccc, #333, #ccc)
+	background-image  -o-linear-gradient(left, #ccc, #333, #ccc)
+	background-image  -ms-linear-gradient(left, #ccc, #333, #ccc)
+	background-image  linear-gradient(left, #ccc, #333, #ccc)
+
+
+/* ============================================================================
+WEBSITE HEADER
+============================================================================ */
+
+div#top
+	// Main styles
+	background  light_gray
+	text-align  center
+	border-bottom  1px gray solid
+
+	header
+		h1
+			margin  0
+			font-size  3em
+			font-weight  300
+
+	// Header/logo styles
+	a:link, a:visited
+		color  normal_blue
+
+	// Navigation styles
+	nav
+		a
+			display  inline-block
+			padding  0.2em
+			margin  0.2em 0.5em
+			font-size  1.1em
+			font-weight  600
+			border-bottom  3px light_gray solid
+
+		a#menu-current
+			color  light_red
+			border-bottom  3px light_red solid
+
+		a:link, a:visited
+			color  light_red
+			text-decoration  none
+		a:hover
+			border-bottom  3px light_red solid
+		a:active
+			border-bottom  3px normal_blue solid
+
+
+/* ============================================================================
+CONTAINER AND STUFF
+============================================================================ */
+
+*
+	// Make width/height include margin/padding in calculation
+	-webkit-box-sizing  border-box
+	-moz-box-sizing  border-box
+	-ms-box-sizing  border-box
+	box-sizing  border-box
+
+// The "main" styles for the content
+div#wrapper
+	background  var_white
+	color  very_dark_gray
+	font-family  font
+	font-size  1.0em
+	font-weight  500
+
+.grid-container
+	// Nope... Nothing here... Don't know why this is here...
+
+
+/* ============================================================================
+CONTENT RULES
+============================================================================ */
+
+// What allows the <main> to be in the center without the text being centered
+.sides
+	color  var_white
+	font-size  1px
+
+main
+	margin-bottom  1em
+
+	header
+		text-align  center
+
+	article header
+		text-align  left
+
+	// What `` generates when in Markdown, the <code> tag
+	code.inline-code
+		background  #f8f8f8
+		font  monospace
+		font-size  0.8em
+		font-weight  bold
+		padding  0.1em 0.18em
+		margin  0
+		border  1px solid #ddd
+		var_white-space  nowrap
+
+	a:hover code.inline-code
+		text-decoration  underline
+
+	pre
+		border  1px solid #ddd
+		font-size  0.8em
+
+
+/* ----------------------------------------------------------------------------
+Post styles */
+
+article
+	// The post header and meta info
+	header
+		// The post title
+		h1
+			margin  0.3em 0 0.3em
+			font-weight  600
+			//text-transform  capitalize
+
+		.post-meta
+			color  var_black
+			font-size  13px
+
+
+/* ============================================================================
+FOOTER
+============================================================================ */
+
+footer
+	background  var_white
+	color  dark_gray
+	text-align  center
+	font-size  11px
+
+	display  block
+	border-top  1px gray solid
+	width  100%
+
+
+/* ----------------------------------------------------------------------------
+Stick to bottom footer */
+
+html, body
+	height  100%
+
+div#wrapper
+	min-height  100%
+	margin  0 auto -76px
+
+footer, div#push-footer
+	height  76px // #push-footer must be the same height as the footer
+	clear  both
+
+/* Thanks to Ryan Fait for it's sticky footer trick
+ * http //ryanfait.com/resources/footer-stick-to-bottom-of-page/
+ */

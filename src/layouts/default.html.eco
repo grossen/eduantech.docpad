@@ -12,13 +12,12 @@
 
 		<!-- PLUGINS' STYLES -->
 		<%- @getBlock('styles').toHTML() %>
-		<%- @getBlock('styles').add(['/styles/github.css']).toHTML() %>
+		<link rel="stylesheet" href="/styles/github.css">
 
 		<!-- MY STYLES -->
-		<%- @getBlock('styles').add(['/styles/normalize.css']).toHTML() %>
-		<%- @getBlock('styles').add(['/styles/main.css']).toHTML() %>
+		<link rel="stylesheet" href="/styles/main.css">
 
-		<%- @getBlock('styles').add(['/styles/unsemantic-grid-base.css']).toHTML() %>
+		<link rel="stylesheet" href="/styles/unsemantic-grid-base.css">
 		<script>
 			var ADAPT_CONFIG = {
 				path: '/styles/',
@@ -30,7 +29,7 @@
 				]
 			};
 		</script>
-		<%- @getBlock('scripts').add(['/scripts/adapt.min.js']).toHTML() %>
+		<script>(function(a,b,c,d){function e(){clearTimeout(i);for(var c=a.innerWidth||b.documentElement.clientWidth||b.body.clientWidth||0,e,f,o,p,q=m,u=m-1;q--;){g="",e=l[q].split("="),f=e[0],p=e[1]?e[1].replace(/\s/g,""):d,e=(o=f.match("to"))?parseInt(f.split("to")[0],10):parseInt(f,10),f=o?parseInt(f.split("to")[1],10):d;if(!f&&q===u&&c>e||c>e&&c<=f){p&&(g=k+p);break}}h?h!==g&&(h=n.href=g,j&&j(q,c)):(h=n.href=g,j&&j(q,c),k&&(b.head||b.getElementsByTagName("head")[0]).appendChild(n))}function f(){clearTimeout(i),i=setTimeout(e,16)}if(c){var g,h,i,j=typeof c.callback=="function"?c.callback:d,k=c.path?c.path:"",l=c.range,m=l.length,n=b.createElement("link");n.rel="stylesheet",n.media="screen",e(),c.dynamic&&(a.addEventListener?a.addEventListener("resize",f,!1):a.attachEvent?a.attachEvent("onresize",f):a.onresize=f)}})(this,this.document,ADAPT_CONFIG)</script>
 
 		<!-- IE CONDITIONALS -->
 		<!--[if lt IE 9]>
@@ -57,10 +56,10 @@
 		<%- @partial('footer.html') %>
 
 		<!-- PLUGINS' SCRIPTS -->
-		<%- @getBlock('scripts').add(['/scripts/jquery-1.10.1.min.js']).toHTML() %>
 		<%- @getBlock('scripts').toHTML() %>
 
 		<!-- MY SCRIPTS -->
-		<%- @getBlock('scripts').add(['/scripts/main.js']).toHTML() %>
+		<script src="/scripts/jquery-1.10.1.min.js"></script>
+		<script src="/scripts/main.js"></script>
 	</body>
 </html>

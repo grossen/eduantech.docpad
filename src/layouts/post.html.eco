@@ -7,7 +7,7 @@ layout: default
 		<div class="post-meta">
 			Posted on <%= @document.date %> <em>by</em> <%= @document.author %>. <br>
 			Categorized under <%= @document.categories %>. <br>
-			Tagged as<%= @document.tags %>.
+			Tagged as <%= @document.tags %>.
 		</div>
 	</header>
 
