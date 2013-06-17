@@ -1,11 +1,11 @@
 # License
 
-Unless stated otherwise; all works are Copyright © 2013 [Eduán Lávaque](http://eduantech.com) <eduan@snapsimpletech.com> and licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) for code and the [Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US) for everything else (including content, media and design), enjoy!
+Unless stated otherwise; all works are Copyright © 2013 [Eduán Lávaque](http://eduantech.com) \<eduan@snapsimpletech.com\> and licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) for the source code and the [Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US) for everything else (including content, code snippets, media and design).
 
 
 ## MIT License
 
-Copyright © 2013 [Eduán Lávaque](http://eduantech.com) <eduan@snapsimpletech.com>
+Copyright © 2013 [Eduán Lávaque](http://eduantech.com) \<eduan@snapsimpletech.com\>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
