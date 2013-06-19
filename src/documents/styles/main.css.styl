@@ -7,7 +7,7 @@
 
 /* ============================================================================
 SCSS VARIABLES
- */
+============================================================================ */
 
 light_blue = #69f
 normal_blue = #0e90d2
@@ -19,15 +19,15 @@ normal_red = #dd514c
 var_black = #323232
 dark_gray = #777
 mid_dark_gray = #111
-gray = #eee
+var_gray = #eee
 light_gray = #fafafa
 var_white = #ffffff
 
-normal_blue = normal_blue
-
 // Font
-@import url(http://fonts.googleapis.com/css?family=Open\+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800)
-font = "Open Sans", Helvetica, Arial, sans-serif
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800")
+font = Arial, sans-serif
+title_font = "Open Sans", Helvetica, sans-serif
+mono_font = "DejaVu Sans Mono", Menlo, Monaco, Consolas, monospace
 
 
 /* ============================================================================
@@ -38,8 +38,11 @@ BASIC TAGS' STYLES
 Heading tags */
 
 h1, h2, h3, h4, h5, h6
+	font-family  title_font
 	color  var_black
 	text-rendering  optimizelegibility
+	margin-top  1em
+	margin-bottom  0.5em
 
 h1, h2
 	font-weight  300
@@ -67,7 +70,7 @@ a:link, a:visited
 	color  normal_blue
 	background  inherit
 	text-decoration  none
-	border-bottom  1px gray solid
+	border-bottom  1px var_gray solid
 
 a:visited, a:hover
 	border-bottom  1px normal_blue solid
@@ -101,7 +104,7 @@ div#top
 	// Main styles
 	background  light_gray
 	text-align  center
-	border-bottom  1px gray solid
+	border-bottom  1px var_gray solid
 
 	header
 		h1
@@ -116,6 +119,7 @@ div#top
 	// Navigation styles
 	nav
 		a
+			font-family  title_font
 			display  inline-block
 			padding  0.2em
 			margin  0.2em 0.5em
@@ -125,7 +129,6 @@ div#top
 
 		a#menu-current
 			color  light_red
-			border-bottom  3px light_red solid
 
 		a:link, a:visited
 			color  normal_blue
@@ -140,18 +143,14 @@ CONTAINER AND STUFF
 
 *
 	// Make width/height include margin/padding in calculation
-	-webkit-box-sizing  border-box
-	-moz-box-sizing  border-box
-	-ms-box-sizing  border-box
 	box-sizing  border-box
 
 // The "main" styles for the content
 div#wrapper
 	background  var_white
-	color  very_dark_gray
+	color  dark_gray
 	font-family  font
 	font-size  1.0em
-	font-weight  500
 
 .grid-container
 	// Nope... Nothing here... Don't know why this is here...
@@ -167,7 +166,7 @@ CONTENT RULES
 	font-size  1px
 
 // The styles of the main content
-main
+div#main
 	// Separate the footer from the content, when they come in contact that is
 	margin-bottom  1em
 
@@ -179,11 +178,13 @@ main
 	article header
 		text-align  left
 
+	code
+		font  mono_font
+		font-size  0.8em
+
 	// What `` generates when in Markdown, the <code> tag
 	code.inline-code
 		background  #f8f8f8
-		font  monospace
-		font-size  0.8em
 		font-weight  bold
 		padding  0.1em 0.18em
 		margin  0
@@ -197,7 +198,6 @@ main
 	// Styles for code blocks' container
 	pre
 		border  1px solid #ddd
-		font-size  0.8em
 
 
 /* ----------------------------------------------------------------------------
@@ -206,6 +206,9 @@ Post styles */
 article
 	// The post header and meta info
 	header
+		border-bottom  1px var_gray solid
+		padding-bottom  0.5em
+
 		// The post title
 		h1
 			margin  0.3em 0 0.3em
@@ -213,7 +216,7 @@ article
 			//text-transform  capitalize
 
 		// The post meta stuff
-		.post-meta
+		#post-meta
 			color  var_black
 			font-size  0.8em
 
@@ -229,7 +232,7 @@ footer
 	font-size  11px
 
 	display  block
-	border-top  1px gray solid
+	border-top  1px var_gray solid
 	width  100%
 
 

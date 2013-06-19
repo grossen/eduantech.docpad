@@ -15,7 +15,8 @@
     "docpad-plugin-highlightjs": "~2.1.6",
     "docpad-plugin-datefromfilename": "~1.0.1",
     "docpad-plugin-stylus": "~2.3.0",
-    "docpad-plugin-ignoreincludes": "~2.0.0"
+    "docpad-plugin-ignoreincludes": "~2.0.0",
+    "docpad-plugin-coffeekup": "~2.1.5"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

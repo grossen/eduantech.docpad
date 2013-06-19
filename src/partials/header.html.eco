@@ -4,7 +4,7 @@
 	</header>
 	<nav role="navigation">
 		<% for page in @menuItems.findAllLive({menuShow:true,ignored:false},[{menuOrder:1}]).toJSON(): %>
-			<a href="<%= page.url %>" <%= if page.id is @document.id then 'id=menu-active' %>>
+			<a href="<%= page.url %>"<%= if page.title is @document.title then ' id=menu-current' %>>
 				<%= page.title %>
 			</a>
 		<% end %>
