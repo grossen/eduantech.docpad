@@ -18,42 +18,25 @@ docpadConfig = {
 		highlightjs:
 			replaceTab: null
 
-	environments:
-		debug:
-			# Enable debug mode for "frontend-assets" plugin:
-			# generates files with '-debug' suffix with
-			# assets sources
-			frontendDebug: true
-
-
 	templateData:
 		site:
 			url: "http://eduantech.com"
 			title: "EduanTech"
+			author: "Eduan Lavaque"
+			email: "eduan@snapsimpletech.com"
 			description: """
 				A hacker's advice for Linux (and a lot of stuff that works on Linux), WordPress, s2Member and web development.
 				"""
 			keywords: """
-				hacker, linux, wordpress, s2member, vim, tmux, web development, code
+				greduan, eduan, eduan lavaque, lavaque, hacker, linux, wordpress, s2member, vim, tmux, web development, code
 				"""
 
-		getPreparedTitle: ->
-			# if we have a document title, then we should use that and suffix the site's title onto it
-			if @document.title
-				"#{@document.title} | #{@site.title}"
-			# if our document does not have it's own title, then we should just use the site's title
-			else
-				"Untitled | #{@site.title}"
-
-		# Get the prepared site/document description
-		getPreparedDescription: ->
-			# if we have a document description, then we should use that, otherwise use the site's description
-			@document.description or @site.description
-
-		# Get the prepared site/document keywords
-		getPreparedKeywords: ->
-			# Merge the document keywords with the site keywords
-			@site.keywords.concat(@document.keywords or []).join(', ')
+		# Meta helpers
+		getPreparedTitle: -> if @document.title then "#{@document.title} - #{@site.title}" else @site.title
+		getPreparedAuthor: -> @document.author or @site.author
+		getPreparedEmail: -> @document.email or @site.email
+		getPreparedDescription: -> @document.description or @site.description
+		getPreparedKeywords: -> @site.keywords.concat(@document.keywords or []).join(', ')
 
 	localeCode: "en"
 
@@ -61,6 +44,9 @@ docpadConfig = {
 		posts: ->
 			@getCollection("html").findAllLive({relativeOutDirPath: 'archives'},[{date:-1}]).on "add", (model) ->
 				model.setMetaDefaults({layout: "post"})
+
+		pages: ->
+			@getCollection('documents').findAllLive({menuOrder:$exists:true},[menuOrder:1])
 }
 
 # Export the DocPad Configuration

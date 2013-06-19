@@ -38,6 +38,7 @@ BASIC TAGS' STYLES
 Heading tags */
 
 h1, h2, h3, h4, h5, h6
+	line-height  1.2em
 	font-family  title_font
 	color  var_black
 	text-rendering  optimizelegibility
@@ -129,6 +130,7 @@ div#top
 
 		a#menu-current
 			color  light_red
+			border-bottom  3px light_red solid
 
 		a:link, a:visited
 			color  normal_blue
@@ -150,7 +152,7 @@ div#wrapper
 	background  var_white
 	color  dark_gray
 	font-family  font
-	font-size  1.0em
+	font-size  1em
 
 .grid-container
 	// Nope... Nothing here... Don't know why this is here...
@@ -166,9 +168,10 @@ CONTENT RULES
 	font-size  1px
 
 // The styles of the main content
-div#main
+main
 	// Separate the footer from the content, when they come in contact that is
 	margin-bottom  1em
+	line-height  1.2em
 
 	// Align page headers to the center
 	header
@@ -197,6 +200,7 @@ div#main
 
 	// Styles for code blocks' container
 	pre
+		line-height  1em
 		border  1px solid #ddd
 
 
