@@ -4,30 +4,29 @@
 @import 'nib'
 // Import normalize.css
 @import 'normalize.css'
+// Import responsive.css
+@import 'responsive.css'
 
 /* ============================================================================
 SCSS VARIABLES
 ============================================================================ */
 
-light_blue = #69f
-normal_blue = #0e90d2
-dark_blue = #039
+light_yellow_brown = #f7f1da
+dark_blue          = #355564
+normal_blue        = #4b758b
+light_blue         = #80afbf
+normal_red         = #d24939
+light_gray         = #d9d8d6
+normal_gray        = #757172
+dark_gray          = #333
+var_black          = #0a0a0a
 
-light_red = #fc5858
-normal_red = #dd514c
-
-var_black = #323232
-dark_gray = #777
-mid_dark_gray = #111
-var_gray = #eee
-light_gray = #fafafa
-var_white = #ffffff
 
 // Font
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800")
-font = Arial, sans-serif
-title_font = "Open Sans", Helvetica, sans-serif
-mono_font = "DejaVu Sans Mono", Menlo, Monaco, Consolas, monospace
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Neuton:800,400italic,400,700")
+font       = "Open Sans", Arial, sans-serif
+title_font = "Open Sans", Newton, serif
+mono_font  = "DejaVu Sans Mono", Menlo, Monaco, Consolas, monospace
 
 
 /* ============================================================================
@@ -84,17 +83,7 @@ a:active
 /* ----------------------------------------------------------------------------
 Horizontal ruler */
 
-hr
-	margin-top  5px
-	margin-bottom  10px
-	border  0
-	height  1px
-	background  var_black
-	background-image  -webkit-linear-gradient(left, #ccc, #333, #ccc)
-	background-image  -moz-linear-gradient(left, #ccc, #333, #ccc)
-	background-image  -o-linear-gradient(left, #ccc, #333, #ccc)
-	background-image  -ms-linear-gradient(left, #ccc, #333, #ccc)
-	background-image  linear-gradient(left, #ccc, #333, #ccc)
+// Still gotta add stuff here. You know...
 
 
 /* ============================================================================
@@ -103,40 +92,49 @@ WEBSITE HEADER
 
 div#top
 	// Main styles
-	background  light_gray
-	text-align  center
-	border-bottom  1px var_gray solid
+	font-family  title_font
+	font-weight  800
+	margin-top  5em
+
+	#nav-intro
+		margin-left  0.2em
+		font-size  0.9em
+		font-style  italic
+		font-weight  400
 
 	header
 		h1
 			margin  0
 			font-size  3em
-			font-weight  300
 
 	// Header/logo styles
 	a:link, a:visited
-		color  normal_blue
+		color  #474747
+	a:hover, a:active
+		text-decoration  none
+		transition  color 0.4s ease
+		color  var_black
+		border-bottom  none
 
 	// Navigation styles
 	nav
+		font-size  0.9em
 		a
-			font-family  title_font
 			display  inline-block
-			padding  0.2em
-			margin  0.2em 0.5em
-			font-size  1.1em
-			font-weight  600
-			border-bottom  3px light_gray solid
+			font-weight  800
 
+		// The current selection in the menu
 		a#menu-current
-			color  light_red
-			border-bottom  3px light_red solid
+			color  var_black
 
 		a:link, a:visited
-			color  normal_blue
+			color  #474747
 			text-decoration  none
 		a:hover, a:active
-			border-bottom  3px light_red solid
+			text-decoration  none
+			transition  color 0.4s ease
+			color  var_black
+			border-bottom  none
 
 
 /* ============================================================================
@@ -146,13 +144,18 @@ CONTAINER AND STUFF
 *
 	// Make width/height include margin/padding in calculation
 	box-sizing  border-box
+	// Font smoothing...
+	text-shadow  1px 1px 1px rgba(0,0,0,0.004)
+
 
 // The "main" styles for the content
 div#wrapper
-	background  var_white
-	color  dark_gray
+	background  white
+	color  var_black
 	font-family  font
 	font-size  1em
+	width  80%
+	margin  0 auto
 
 .grid-container
 	// Nope... Nothing here... Don't know why this is here...

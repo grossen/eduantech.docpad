@@ -25,47 +25,43 @@ html lang: 'en', ->
 		link rel: 'stylesheet', href: '/styles/github.css'
 		# My styles
 		link rel: 'stylesheet', href: '/styles/main.css'
-		link rel: 'stylesheet', href: '/styles/unsemantic-grid-base.css'
-		# Adapt.min.js
-		script src: '/scripts/adapt.min.js'
 
 	body ->
 		# Wrapper
 		div '#wrapper', ->
 
 			# Header
-			div '#top', ->
+			div '#top.rgs-section', ->
 				header role: 'banner', ->
-					h1 ->
-						a href: '/', ->
-							'EduanTech'
+					img src: '/images/logo', alt: 'logo', height: '20', width: '20'
+					a href: '/', ->
+						'Eduán Lávaque'
+					span '#nav-intro', 'a web developer and designer'
+				hr()
 
 				nav role: 'navigation', ->
 					for page in @getCollection('pages').toJSON()
 						pageMatch = page.match or page.url
 						documentMatch = @document.match or @document.url
 						cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
-						a 'id':cssname, href: page.url, ->
-							page.title
+						a 'id':cssname, href: page.url, "/#{page.title}"
 
 			# Content
-			div '.grid-container', ->
-				div '.sides.grid-15.mobile-grid-0.tablet-grid-10', 'giiiiiiiiiiin'
-				main '.grid-70.mobile-grid-100.tablet-grid-80', role: 'main',
+			div '.rgs-section', ->
+				main role: 'main',
 					-> @content
-				div '.sides.grid-15.mobile-grid-0.tablet-grid-10', 'giiiiiiiiiiin'
 
 				# Footer pusher
 				div '#push-footer', ''
 
 		# Footer
-		footer '.grid-container', role: 'contentinfo', ->
-			div '.grid-33.mobile-grid-100.tablet-grid-33', -> """
+		footer '.grid-container.rgs-section', role: 'contentinfo', ->
+			div -> """
 				<p>Copyright &copy; 2013 Eduan Lavaque, All Rights Reserved.</p>
 				"""
-			div '.grid-33.mobile-grid-100.tablet-grid-34', ->
-				'stuff'
-			div '.grid-33.mobile-grid-100.tablet-grid-33', -> """
+			div ->
+				img src: '/images/logo', alt: 'logo', height: '20', width: '20'
+			div -> """
 				<p>Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
 				"""
 
