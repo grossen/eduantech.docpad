@@ -1,6 +1,9 @@
 ---
 title: Home
 layout: home
+menuShow: true
+menuOrder: 0
+ignored: false
 ---
 This is home...
 

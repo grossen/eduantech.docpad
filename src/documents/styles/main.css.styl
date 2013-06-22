@@ -4,8 +4,6 @@
 @import 'nib'
 // Import normalize.css
 @import 'normalize.css'
-// Import responsive.css
-@import 'responsive.css'
 
 /* ============================================================================
 SCSS VARIABLES
@@ -19,11 +17,11 @@ normal_red         = #d24939
 light_gray         = #d9d8d6
 normal_gray        = #757172
 dark_gray          = #333
-var_black          = #0a0a0a
+var_black          = #070707
 
 
 // Font
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Neuton:800,400italic,400,700")
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic")
 font       = "Open Sans", Arial, sans-serif
 title_font = "Open Sans", Newton, serif
 mono_font  = "DejaVu Sans Mono", Menlo, Monaco, Consolas, monospace
@@ -93,8 +91,7 @@ WEBSITE HEADER
 div#top
 	// Main styles
 	font-family  title_font
-	font-weight  800
-	margin-top  5em
+	font-weight  700
 
 	#nav-intro
 		margin-left  0.2em
@@ -103,13 +100,9 @@ div#top
 		font-weight  400
 
 	header
-		h1
-			margin  0
-			font-size  3em
-
 	// Header/logo styles
 	a:link, a:visited
-		color  #474747
+		color  black
 	a:hover, a:active
 		text-decoration  none
 		transition  color 0.4s ease
@@ -122,13 +115,14 @@ div#top
 		a
 			display  inline-block
 			font-weight  800
+			margin-right  1em
 
 		// The current selection in the menu
 		a#menu-current
 			color  var_black
 
 		a:link, a:visited
-			color  #474747
+			color  gray
 			text-decoration  none
 		a:hover, a:active
 			text-decoration  none
@@ -146,19 +140,17 @@ CONTAINER AND STUFF
 	box-sizing  border-box
 	// Font smoothing...
 	text-shadow  1px 1px 1px rgba(0,0,0,0.004)
+	line-height  1.2em
 
 
 // The "main" styles for the content
 div#wrapper
-	background  white
+	border  1px solid #000
+	background  #fefaef
 	color  var_black
 	font-family  font
-	font-size  1em
-	width  80%
+	font-size  1.2em
 	margin  0 auto
-
-.grid-container
-	// Nope... Nothing here... Don't know why this is here...
 
 
 /* ============================================================================
@@ -172,9 +164,6 @@ CONTENT RULES
 
 // The styles of the main content
 main
-	// Separate the footer from the content, when they come in contact that is
-	margin-bottom  1em
-	line-height  1.2em
 
 	// Align page headers to the center
 	header

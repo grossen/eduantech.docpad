@@ -25,6 +25,9 @@ html lang: 'en', ->
 		link rel: 'stylesheet', href: '/styles/github.css'
 		# My styles
 		link rel: 'stylesheet', href: '/styles/main.css'
+		link rel: 'stylesheet', media: 'all and (min-width: 1025px)', href: 'styles/desktop.css'
+		link rel: 'stylesheet', media: 'all and (min-width: 641px) and (max-width: 1024px)', href: 'styles/tablet.css'
+		link rel: 'stylesheet', media: 'all and (max-width: 640px)', href: 'styles/mobile.css'
 
 	body ->
 		# Wrapper
