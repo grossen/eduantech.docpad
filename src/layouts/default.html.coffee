@@ -30,24 +30,23 @@ html lang: 'en', ->
 		link rel: 'stylesheet', media: 'all and (max-width: 640px)', href: 'styles/mobile.css'
 
 	body ->
+		# Header
+		div '#top', ->
+			header role: 'banner', ->
+				img src: '/images/logo', alt: 'logo', height: '20', width: '20'
+				text 'Eduán Lávaque'
+				span '#nav-intro', 'a web developer and web designer'
+			hr()
+
+			nav role: 'navigation', ->
+				for page in @getCollection('pages').toJSON()
+					pageMatch = page.match or page.url
+					documentMatch = @document.match or @document.url
+					cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
+					a 'id':cssname, href: page.url, "/#{page.title}"
+
 		# Wrapper
 		div '#wrapper', ->
-
-			# Header
-			div '#top.rgs-section', ->
-				header role: 'banner', ->
-					img src: '/images/logo', alt: 'logo', height: '20', width: '20'
-					a href: '/', ->
-						'Eduán Lávaque'
-					span '#nav-intro', 'a web developer and designer'
-				hr()
-
-				nav role: 'navigation', ->
-					for page in @getCollection('pages').toJSON()
-						pageMatch = page.match or page.url
-						documentMatch = @document.match or @document.url
-						cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
-						a 'id':cssname, href: page.url, "/#{page.title}"
 
 			# Content
 			div '.rgs-section', ->
@@ -58,7 +57,7 @@ html lang: 'en', ->
 				div '#push-footer', ''
 
 		# Footer
-		footer '.grid-container.rgs-section', role: 'contentinfo', ->
+		footer '.rgs-section', role: 'contentinfo', ->
 			div -> """
 				<p>Copyright &copy; 2013 Eduan Lavaque, All Rights Reserved.</p>
 				"""

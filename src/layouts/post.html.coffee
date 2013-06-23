@@ -9,4 +9,4 @@ article ->
 		Categorized under #{@document.categories.join(', ')}.
 		Tagged as #{@document.tags.join(', ')}.
 		"""
-	@content
+	text @content
