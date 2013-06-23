@@ -18,6 +18,9 @@
 ehthumbs.db
 Thumbs.db
 
+# KDE (DE for Linux)
+.directory
+
 
 # Environment specific files
 ############################

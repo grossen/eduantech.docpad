@@ -14,6 +14,8 @@ If your bug report is valid I will try to reproduce, if I am able to reproduce i
 
 If you are a developer and think that something could be achieved in a better way, like the CSS styles (which are coded with [Stylus](http://learnboost.github.io/stylus/)), the HTML structure or the JavaScript. You know, if there's something to improve go ahead and fork the project.
 
+Please understand I like standards, consistency, and that includes commit messages. :wink: So please follow these simple conventions I have when I do a commit: https://gist.github.com/Greduan/3981302
+
 However before doing a pull request make sure that you didn't break anything, and most importantly CHECK THE WEBSITE WORKS CORRECTLY.
 
 For this of course you need to know how to use DocPad. Good luck!
