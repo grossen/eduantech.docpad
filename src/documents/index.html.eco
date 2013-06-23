@@ -1,8 +1,8 @@
 ---
-title: Archives
+title: Home
 layout: page
 menuShow: true
-menuOrder: 1
+menuOrder: 0
 ignored: false
 ---
 <ul>

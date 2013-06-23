@@ -1,22 +1,22 @@
 {
-  "name": "no-skeleton.docpad",
-  "version": "0.1.0",
-  "description": "New DocPad project without using a skeleton",
+  "name": "eduantech.docpad",
+  "version": "0.12.0",
+  "description": "My website/blog/portfolio without using a pre-made skeleton",
   "engines": {
     "node": "0.10",
     "npm": "1.2"
   },
   "dependencies": {
     "docpad": "6.x",
-    "docpad-plugin-marked": "~2.1.1",
-    "docpad-plugin-eco": "~2.0.2",
-    "docpad-plugin-partials": "~2.6.3",
-    "docpad-plugin-livereload": "~2.4.0",
-    "docpad-plugin-highlightjs": "~2.1.6",
-    "docpad-plugin-datefromfilename": "~1.0.1",
-    "docpad-plugin-stylus": "~2.3.0",
-    "docpad-plugin-ignoreincludes": "~2.0.0",
-    "docpad-plugin-coffeekup": "~2.1.5"
+    "docpad-plugin-marked": "~2.1.*",
+    "docpad-plugin-eco": "~2.0.*",
+    "docpad-plugin-partials": "~2.6.*",
+    "docpad-plugin-livereload": "~2.4.*",
+    "docpad-plugin-highlightjs": "~2.1.*",
+    "docpad-plugin-datefromfilename": "~1.0.*",
+    "docpad-plugin-stylus": "~2.3.*",
+    "docpad-plugin-ignoreincludes": "~2.0.*",
+    "docpad-plugin-coffeekup": "~2.1.*"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

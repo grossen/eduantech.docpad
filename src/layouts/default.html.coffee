@@ -25,47 +25,44 @@ html lang: 'en', ->
 		link rel: 'stylesheet', href: '/styles/github.css'
 		# My styles
 		link rel: 'stylesheet', href: '/styles/main.css'
-		link rel: 'stylesheet', media: 'all and (min-width: 1025px)', href: 'styles/desktop.css'
-		link rel: 'stylesheet', media: 'all and (min-width: 641px) and (max-width: 1024px)', href: 'styles/tablet.css'
-		link rel: 'stylesheet', media: 'all and (max-width: 640px)', href: 'styles/mobile.css'
+		link rel: 'stylesheet', media: 'all and (min-width: 1025px)', href: '/styles/desktop.css'
+		link rel: 'stylesheet', media: 'all and (min-width: 641px) and (max-width: 1024px)', href: '/styles/tablet.css'
+		link rel: 'stylesheet', media: 'all and (max-width: 640px)', href: '/styles/mobile.css'
 
 	body ->
-		# Header
-		div '#top', ->
-			header role: 'banner', ->
-				img src: '/images/logo', alt: 'logo', height: '20', width: '20'
-				text 'Eduán Lávaque'
-				span '#nav-intro', 'a web developer and web designer'
-			hr()
-
-			nav role: 'navigation', ->
-				for page in @getCollection('pages').toJSON()
-					pageMatch = page.match or page.url
-					documentMatch = @document.match or @document.url
-					cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
-					a 'id':cssname, href: page.url, "/#{page.title}"
 
 		# Wrapper
 		div '#wrapper', ->
+			# Header
+			header role: 'banner', ->
+				# Logo
+				img src: '/images/logo.png', alt: 'logo', height: '185', width: '140'
+
+				# Navigation
+				nav role: 'navigation', ->
+					ul ->
+						for page in @getCollection('pages').toJSON()
+							# Check to be able to tell the user which is the current menu option (as in currently in it)
+							pageMatch = page.match or page.url
+							documentMatch = @document.match or @document.url
+							cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
+							li 'id':cssname, ->
+								a href: page.url, title: page.title, page.title
 
 			# Content
-			div '.rgs-section', ->
-				main role: 'main',
-					-> @content
+			main role: 'main',
+				-> @content
 
-				# Footer pusher
-				div '#push-footer', ''
-
-		# Footer
-		footer '.rgs-section', role: 'contentinfo', ->
-			div -> """
-				<p>Copyright &copy; 2013 Eduan Lavaque, All Rights Reserved.</p>
-				"""
-			div ->
-				img src: '/images/logo', alt: 'logo', height: '20', width: '20'
-			div -> """
-				<p>Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
-				"""
+			# Footer
+			footer role: 'contentinfo', ->
+				div -> """
+					<p>Copyright &copy; 2013 Eduan Lavaque, All Rights Reserved.</p>
+					"""
+				div ->
+					img src: '/images/logo', alt: 'logo', height: '20', width: '20'
+				div -> """
+					<p>Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
+					"""
 
 
 		# DocPad plugins' scripts

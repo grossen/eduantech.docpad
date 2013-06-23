@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-header ->
-	h1 @document.title
+article ->
+	header ->
+		h1 @document.title
 
-text @content
+	text @content

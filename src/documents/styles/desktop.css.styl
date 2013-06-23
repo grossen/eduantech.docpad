@@ -1,14 +1,45 @@
-div#top
-	margin-top  5em
-	width  80%
-	max-width  1000px
+var_black = #323232
 
 div#wrapper
-	width  80%
-	max-width  1000px
-	padding  0 0.9em
+	width  800px
+	margin-top  50px
 
-/*  SECTIONS
+	header[role='banner']
+		float  left
+		text-align  right
+		width  140px
+		text-transform uppercase
+
+		nav
+			font-weight  bold
+
+			a:link, a:visited
+				color  var_black
+				background  inherit
+				text-decoration  none
+			a:hover, a:active
+				text-decoration  none
+			a:focus
+				outline  thin-dotted
+
+			ul
+				padding-left  0
+				list-style  none
+
+			li
+				padding  0.1em 0
+				padding-right  0.1em
+
+			li#menu-current
+				background  var_black
+				a
+					color  white
+
+	main
+		margin-left  200px
+
+
+/* SECTIONS
  * splits up the page horizontally. You'll need a few of these to break up the
  * content, and you can use them in your main wrapper, or within other divs.
  */
@@ -17,7 +48,7 @@ div#wrapper
 	padding  0
 	margin  0
 
-/*  COLUMN SETUP
+/* COLUMN SETUP
  * divides the section into columns. Each column has a left margin of 1.6%
  * (around 20 pixels on a normal monitor), except the first one. Using
  * `.rgs-col:first-child { margin-left: 0; }` means you don't need to use
@@ -31,7 +62,7 @@ div#wrapper
 .rgs-col:first-child
 	margin-left  0
 
-/*  GROUPING
+/* GROUPING
  * solves floating problems, by forcing the section to self clear its children
  * (aka the clearfix hack). This is good in Firefox 3.5+, Safari 4+, Chrome,
  * Opera 9+ and IE 6+.
@@ -47,7 +78,7 @@ div#wrapper
  * specifies the width of the column. Using percentages means it's 100% fluid.
  */
 
-/*  GRID OF THREE  */
+/* GRID OF THREE */
 .rgs-3-of-3
 	width  100%
 
@@ -58,7 +89,7 @@ div#wrapper
 	width  32.2%
 
 
-/*  GRID OF FOUR  */
+/* GRID OF FOUR */
 .rgs-4-of-4
 	width  100%
 
