@@ -14,16 +14,19 @@ dark_blue          = #27437c
 normal_blue        = #456fc4
 light_blue         = #80afbf
 normal_red         = #d24939
-light_gray         = #d9d8d6
-normal_gray        = #757172
-dark_gray          = #333
+light_gray         = #5c5c5c
+normal_gray        = #525252
+dark_gray          = #3d3d3d
 var_black          = #323232
+
+background = #323232
+foreground = #b8b8b8
 
 
 // Font
-@import url("http://fonts.googleapis.com/css?family=Source\+Sans\+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic")
+@import url("http://fonts.googleapis.com/css?family=Source\+Sans\+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic|Merriweather:400,300,300italic,400italic,700,700italic,900,900italic")
 font       = "Source Sans Pro", Arial, sans-serif
-title_font = "Source Sans Pro", Helvetica, sans-serif
+title_font = Merriweather, Helvetica, sans-serif
 mono_font  = "DejaVu Sans Mono", Menlo, Monaco, Consolas, monospace
 
 
@@ -37,17 +40,13 @@ Heading tags */
 h1, h2, h3, h4, h5, h6
 	line-height  1.2em
 	font-family  title_font
-	color  var_black
+	color  light_gray
 	text-rendering  optimizelegibility
 	margin-top  1em
 	margin-bottom  0.5em
 
 h1, h2
 	font-weight  300
-h1
-	color  var_black
-h2
-	color  dark_gray
 h3, h4, h5, h6
 	font-weight  bold
 
@@ -68,16 +67,13 @@ a:link, a:visited
 	color  normal_blue
 	background  inherit
 	text-decoration  none
-	border-bottom  1px var_gray solid
-
-a:visited
-	color  dark_blue
 a:hover
 	text-decoration  underline
 a:focus
 	outline  thin-dotted
 a:active
-	text-decoration  underline
+	outline  thin-dotted
+
 
 /* ----------------------------------------------------------------------------
 Horizontal ruler */
@@ -93,21 +89,17 @@ code
 
 // What `` generates when in Markdown, the <code> tag
 code.inline-code
-	background  #f8f8f8
+	background  dark_gray
 	font-weight  bold
 	padding  0.1em 0.18em
 	margin  0
-	border  1px solid #ddd
+	border  1px solid normal_gray
 	white-space  nowrap
-
-// Make <code> tags that are a link have an underline when hovered over
-a:hover code.inline-code
-	text-decoration  underline
 
 // Styles for code blocks' container
 pre
 	line-height  1em
-	border  1px solid #ddd
+	border  1px solid normal_gray
 
 
 /* ============================================================================
@@ -119,18 +111,21 @@ CONTAINER AND STUFF
 	box-sizing  border-box
 	// Font smoothing...
 	text-shadow  1px 1px 1px rgba(0,0,0,0.004)
-	line-height  1.2em
-	font-family  font
+	line-height  1.3
 
 
 // The "main" styles for the content
 div#wrapper
-	color  var_black
+	color  white
+	background  var_black
 	font-family  font
 	font-size  1.05em
 	font-weight  400
 	margin  0 auto
 
+html, body
+	color  white
+	background  var_black
 
 /* ============================================================================
 CONTENT RULES
@@ -143,18 +138,13 @@ main
 	header
 		border-bottom  1px normal_gray solid
 
-		h1
-			font-size  2em
-		div#post-meta
-			color  dark_gray
-
 /* ----------------------------------------------------------------------------
 Post styles */
 
 article
 	// The post header and meta info
 	header
-		border-bottom  1px var_gray solid
+		border-bottom  1px normal_gray solid
 		padding-bottom  0.5em
 
 		// The post title
@@ -165,8 +155,8 @@ article
 			//text-transform  capitalize
 
 		// The post meta stuff
-		#post-meta
-			color  var_black
+		div#post-meta
+			color  normal_gray
 			font-size  0.8em
 
 
@@ -175,13 +165,13 @@ FOOTER
 ============================================================================ */
 
 footer
-	background  var_white
-	color  dark_gray
+	background  background
+	color  foreground
 	text-align  center
 	font-size  11px
 
 	display  block
-	border-top  1px var_black solid
+	border-top  1px normal_gray solid
 	width  100%
 	clear  both
 

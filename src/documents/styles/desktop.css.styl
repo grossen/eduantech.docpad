@@ -1,17 +1,23 @@
+background = #323232
+foreground = #b8b8b8
 
-light_gray = #d9d8d6
+light_gray = #666
+normal_gray = #525252
+dark_gray = #3d3d3d
 var_black = #323232
 
 div#wrapper
 	width  800px
 	margin-top  100px
 
+	// The header, i.e. the logo and navigation
 	header[role='banner']
 		float  left
 		text-align  right
 		width  140px
 		text-transform uppercase
 
+		// Navigation
 		nav
 			font-weight  bold
 
@@ -19,29 +25,33 @@ div#wrapper
 				display  block
 
 			a:link, a:visited
-				color  var_black
+				color  white
 				background  inherit
 				text-decoration  none
+				border-bottom  none
 			a:hover, a:active
 				text-decoration  none
-			a:focus
-				outline  thin-dotted
 
 			ul
 				padding-left  0
 				list-style  none
 
 			li
-				padding  0.1em 0
-				padding-right  0.3em
+				border-bottom  1px dark_gray solid
+				a
+					padding  0.1em 0
+					padding-right  0.3em
+			li:first-child
+				border-top  1px dark_gray solid
 
 			li#menu-current
-				background  var_black
 				a
-					color  white
+					color  normal_gray
+			li#menu-current:hover
+
 
 			li:hover
-				background  light_gray
+				background  dark_gray
 
 	main
 		margin-left  200px

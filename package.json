@@ -1,6 +1,6 @@
 {
   "name": "eduantech.docpad",
-  "version": "0.12.0",
+  "version": "0.10.0",
   "description": "My website/blog/portfolio without using a pre-made skeleton",
   "engines": {
     "node": "0.10",

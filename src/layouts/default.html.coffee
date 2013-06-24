@@ -22,7 +22,7 @@ html lang: 'en', ->
 
 		# DocPad plugins' styles
 		text  @getBlock('styles').toHTML()
-		link rel: 'stylesheet', href: '/styles/github.css'
+		link rel: 'stylesheet', href: '/styles/solarized-dark.css'
 		# My styles
 		link rel: 'stylesheet', href: '/styles/main.css'
 		link rel: 'stylesheet', media: 'all and (min-width: 1025px)', href: '/styles/desktop.css'
@@ -36,7 +36,7 @@ html lang: 'en', ->
 			# Header
 			header role: 'banner', ->
 				# Logo
-				img src: '/images/logo.png', alt: 'logo', height: '185', width: '140'
+				img src: '/images/logo.png', alt: 'logo', height: '140', width: '140'
 
 				# Navigation
 				nav role: 'navigation', ->
