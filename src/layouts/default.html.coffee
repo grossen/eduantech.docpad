@@ -36,7 +36,7 @@ html lang: 'en', ->
 			# Header
 			header '.rgs-section.rgs-col', role: 'banner', ->
 				# Logo
-				img '.nav-rgs-1-of-3', src: '/images/logo.png', alt: 'logo', height: '140', width: '140'
+				img '.nav-rgs-1-of-3', src: '/images/logo.png', alt: 'logo', height: '0', width: '0'
 
 				# Navigation
 				nav '.nav-rgs-2-of-3', role: 'navigation', ->
@@ -69,4 +69,5 @@ html lang: 'en', ->
 		text @getBlock('scripts').toHTML()
 		# My scripts
 		script src: '/scripts/jquery-1.10.1.min.js'
+		script src: '/scripts/modernizr.js'
 		script src: '/scripts/main.js'

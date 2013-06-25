@@ -9,7 +9,7 @@ tags:
 ---
 I did it! I re-designed my website! w00t! Oh that was one hell of a challenge. It's the first time I don't have a theme do all the CSS and JS for me.
 
-So why did I re-design? Well first, I needed a look different than the default WordPress theme. So that's one reason. Second, I don't like WordPress. It's good for blogs and all, but I don't like it, too bloated and slow and (IMO) badly coded.
+So why did I re-design? Well first, I needed a look different than the default WordPress theme, and WordPress themes are so damn complicated for me. So that's one reason. Second, I don't like WordPress. It's good for blogs and all, but I don't like it, too bloated and slow and (IMO) badly coded.
 
 So the solution? In the end it was [DocPad](http://docpad.org), which in my opinion is currently the best way for developers/coders/programmers to make their websites.
 
