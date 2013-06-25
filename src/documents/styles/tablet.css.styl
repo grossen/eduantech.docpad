@@ -1,4 +1,62 @@
+background = #323232
+foreground = #d6d6d6
 
+light_gray = #666
+normal_gray = #525252
+dark_gray = #3d3d3d
+var_black = #323232
+
+div#wrapper
+	min-width  600px
+	width  93%
+	max-width  800px
+
+	// The header, i.e. the logo and navigation
+	header[role='banner']
+		margin-bottom  30px
+		margin-top  50px
+
+		// Navigation
+		nav
+			position  relative
+			width  200px
+			//margin-left  150px
+			margin  0 auto
+			font-weight  bold
+
+			a
+				display  block
+
+			a:link, a:visited
+				color  foreground
+				background  inherit
+				text-decoration  none
+				border-bottom  none
+			a:hover, a:active
+				text-decoration  none
+
+			ul
+				padding-left  0
+				list-style  none
+
+				li
+					border-bottom  1px dark_gray solid
+					a
+						padding  0.1em 0
+						padding-right  0.3em
+
+				li:hover
+					background  dark_gray
+
+				li:first-child
+					border-top  1px dark_gray solid
+
+				li#menu-current
+					a
+						color  normal_gray
+
+	footer
+		margin-top  50px
 
 /* SECTIONS
  * splits up the page horizontally. You'll need a few of these to break up the
@@ -39,18 +97,19 @@
  * specifies the width of the column. Using percentages means it's 100% fluid.
  */
 
-/* GRID OF THREE */
-.rgs-3-of-3
+/* GRID OF THREE (NAV) */
+.nav-rgs-3-of-3
 	width  100%
 
-.rgs-2-of-3
+.nav-rgs-2-of-2
 	width  66.1%
 
-.rgs-1-of-3
+.nav-rgs-1-of-2
 	width  32.2%
 
 
 /* GRID OF FOUR */
+/*
 .rgs-4-of-4
 	width  100%
 
@@ -62,4 +121,4 @@
 
 .rgs-1-of-4
 	width  23.8%
-
+*/

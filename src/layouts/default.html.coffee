@@ -34,12 +34,12 @@ html lang: 'en', ->
 		# Wrapper
 		div '#wrapper', ->
 			# Header
-			header role: 'banner', ->
+			header '.rgs-section.rgs-col', role: 'banner', ->
 				# Logo
-				img src: '/images/logo.png', alt: 'logo', height: '140', width: '140'
+				img '.nav-rgs-1-of-3', src: '/images/logo.png', alt: 'logo', height: '140', width: '140'
 
 				# Navigation
-				nav role: 'navigation', ->
+				nav '.nav-rgs-2-of-3', role: 'navigation', ->
 					ul ->
 						for page in @getCollection('pages').toJSON()
 							# Check to be able to tell the user which is the current menu option (as in currently in it)
