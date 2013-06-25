@@ -1,10 +1,4 @@
-background = #323232
-foreground = #d6d6d6
-
-light_gray = #666
-normal_gray = #525252
-dark_gray = #3d3d3d
-var_black = #323232
+@import 'vars.inc'
 
 div#wrapper
 	min-width  600px
@@ -18,6 +12,12 @@ div#wrapper
 		margin-bottom  30px
 		margin-top  50px
 
+		// Social icons
+		div#social-icons
+			//display  none
+			float  right
+
+		// Logo
 		img
 			float  left
 
@@ -27,6 +27,7 @@ div#wrapper
 			margin-top  auto
 			margin-bottom auto
 			//margin  0 auto
+			text-transform uppercase
 			font-weight  bold
 
 			a
@@ -45,20 +46,20 @@ div#wrapper
 				list-style  none
 
 				li
-					border-bottom  1px dark_gray solid
+					border-bottom  1px light_gray solid
 					a
 						padding  0.1em 0
 						padding-left  0.3em
 
 				li:hover
-					background  dark_gray
+					background  lighter_gray
 
 				li:first-child
-					border-top  1px dark_gray solid
+					border-top  1px light_gray solid
 
 				li#menu-current
 					a
-						color  normal_gray
+						color  dark_gray
 
 	main
 		clear  both
@@ -106,13 +107,13 @@ div#wrapper
  */
 
 /* GRID OF THREE (NAV) */
-.nav-rgs-3-of-3
+.rgs-3-of-3
 	width  100%
 
-.nav-rgs-2-of-2
+.rgs-2-of-2
 	width  66.1%
 
-.nav-rgs-1-of-2
+.rgs-1-of-2
 	width  32.2%
 
 

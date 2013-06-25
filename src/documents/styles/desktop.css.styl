@@ -1,10 +1,4 @@
-background = #323232
-foreground = #d6d6d6
-
-light_gray = #666
-normal_gray = #525252
-dark_gray = #3d3d3d
-var_black = #323232
+@import 'vars.inc'
 
 div#wrapper
 	width  800px
@@ -15,10 +9,13 @@ div#wrapper
 		float  left
 		text-align  right
 		width  140px
-		text-transform uppercase
+
+		// Social icons
+		div#social-icons
 
 		// Navigation
 		nav
+			text-transform uppercase
 			font-weight  bold
 
 			a
@@ -37,23 +34,88 @@ div#wrapper
 				list-style  none
 
 				li
-					border-bottom  1px dark_gray solid
+					border-bottom  1px light_gray solid
 					a
 						padding  0.1em 0
 						padding-right  0.3em
 
 				li:hover
-					background  dark_gray
+					background  lighter_gray
 
 				li:first-child
-					border-top  1px dark_gray solid
+					border-top  1px light_gray solid
 
 				li#menu-current
 					a
-						color  normal_gray
+						color  dark_gray
 
 	main
 		margin-left  200px
 
 	footer
 		margin-top  50px
+
+/* SECTIONS
+ * splits up the page horizontally. You'll need a few of these to break up the
+ * content, and you can use them in your main wrapper, or within other divs.
+ */
+.rgs-section
+	clear  both
+	padding  0
+	margin  0
+
+/* COLUMN SETUP
+ * divides the section into columns. Each column has a left margin of 1.6%
+ * (around 20 pixels on a normal monitor), except the first one. Using
+ * `.rgs-col:first-child { margin-left: 0; }` means you don't need to use
+ * `class="last"` anywhere. It works in all browsers since IE6.
+ */
+.rgs-col
+	display  block
+	float left
+	margin  1% 0 1% 1.6%
+
+.rgs-col:first-child
+	margin-left  0
+
+/* GROUPING
+ * solves floating problems, by forcing the section to self clear its children
+ * (aka the clearfix hack). This is good in Firefox 3.5+, Safari 4+, Chrome,
+ * Opera 9+ and IE 6+.
+ */
+.rgs-group:before, .rgs-group:after
+	content  ""
+	display  table
+
+.rgs-group:after
+	clear  both
+
+/* .rgs-span-1-of-3 / .rgs-span-1-of-4
+ * specifies the width of the column. Using percentages means it's 100% fluid.
+ */
+
+/* GRID OF THREE (NAV) */
+.rgs-3-of-3
+	width  100%
+
+.rgs-2-of-2
+	width  66.1%
+
+.rgs-1-of-2
+	width  32.2%
+
+
+/* GRID OF FOUR */
+/*
+.rgs-4-of-4
+	width  100%
+
+.rgs-3-of-4
+	width  74.6%
+
+.rgs-2-of-4
+	width  49.2%
+
+.rgs-1-of-4
+	width  23.8%
+*/

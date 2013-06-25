@@ -36,10 +36,11 @@ html lang: 'en', ->
 			# Header
 			header '.rgs-section.rgs-col', role: 'banner', ->
 				# Logo
-				img '.nav-rgs-1-of-3', src: '/images/logo.png', alt: 'logo', height: '0', width: '0'
+				a href: '/', title: @site.title, ->
+					img '.rgs-1-of-3', src: '/images/logo.png', alt: 'logo', height: '0', width: '0'
 
 				# Navigation
-				nav '.nav-rgs-2-of-3', role: 'navigation', ->
+				nav '.rgs-2-of-3', role: 'navigation', ->
 					ul ->
 						for page in @getCollection('pages').toJSON()
 							# Check to be able to tell the user which is the current menu option (as in currently in it)
@@ -49,18 +50,22 @@ html lang: 'en', ->
 							li 'id':cssname, ->
 								a href: page.url, title: page.title, page.title
 
+				# Social icons
+				#div '#social-icons', ->
+					#'some place holder text, icons with links should go here...'
+
 			# Content
 			main role: 'main',
 				-> @content
 
 			# Footer
-			footer role: 'contentinfo', ->
-				div -> """
+			footer '.rgs-section.rgs-col', role: 'contentinfo', ->
+				div '.rgs-1-of-3', -> """
 					<p>Copyright &copy; 2013 Eduan Lavaque, All Rights Reserved.</p>
 					"""
-				div ->
-					img src: '/images/logo', alt: 'logo', height: '20', width: '20'
-				div -> """
+				div '.rgs-1-of-3', ->
+					img src: '/images/logo.png', alt: 'logo', height: '30', width: '30'
+				div '.rgs-1-of-3', -> """
 					<p>Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
 					"""
 
