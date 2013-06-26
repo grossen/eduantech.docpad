@@ -14,8 +14,21 @@ div#wrapper
 
 		// Social icons
 		div#social-icons
-			//display  none
 			float  right
+			a
+				opacity  0.5
+				zoom  1
+			a:hover
+				transition  opacity 0.3s ease-in-out
+				opacity  1
+
+			a:link, a:visited
+				color  foreground
+				background  inherit
+				text-decoration  none
+				border-bottom  none
+			a:hover, a:active
+				text-decoration  none
 
 		// Logo
 		img

@@ -6,10 +6,6 @@ docpadConfig = {
 	plugins:
 		stylus:
 			compress: true
-		menu:
-			menuOptions:
-				optimize: false
-				skipEmpty: true
 		sitemap:
 			cachetime: 600000
 			changefreq: 'hourly'

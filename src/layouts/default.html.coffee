@@ -50,8 +50,21 @@ html lang: 'en', ->
 								a href: page.url, title: page.title, page.title
 
 				# Social icons
-				#div '#social-icons', ->
-					#'some place holder text, icons with links should go here...'
+				div '#social-icons', ->
+					a href: 'https://github.com/Greduan', title: 'GitHub - Greduan', ->
+						span '.icon-github-squared', ''
+					a href: 'https://www.gittip.com/Greduan', title: 'Gittip - Greduan', ->
+						span '.icon-gittip', ''
+					a href: 'https://bitbucket.org/Greduan', title: 'BitBucket - Greduan', ->
+						span '.icon-bitbucket-squared', ''
+					a href: 'http://stackoverflow.com/users/1622940/eduan', title: 'StackOverflow - Greduan', ->
+						span '.icon-stackoverflow', ''
+					a href: 'https://plus.google.com/u/0/101160916170411335097/', title: 'Eduan Lávaque (Eduan) - Google+', ->
+						span '.icon-gplus-squared', ''
+					a href: 'http://steamcommunity.com/id/greduan/', title: 'Steam Community - Greduan', ->
+						span '.icon-steam', ''
+					#a href: '', title: 'RSS Feed', ->
+						#span '.icon-rss-squared', ''
 
 			# Content
 			main role: 'main',
