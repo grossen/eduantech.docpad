@@ -77,9 +77,6 @@ html lang: 'en', ->
 					"""
 				div '.rgs-1-of-3', ->
 					img src: '/images/logo.png', alt: 'logo', height: '30', width: '30'
-				div '.rgs-1-of-3', -> """
-
-					"""
 
 
 		# DocPad plugins' scripts

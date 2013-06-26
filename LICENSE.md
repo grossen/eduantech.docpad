@@ -1,8 +1,8 @@
 # License
 
-Unless stated otherwise; all works are Copyright © 2013 [Eduán Lávaque](http://eduantech.com) \<eduan@snapsimpletech.com\> and licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) for the source code and the [Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US) for everything else (including content, code snippets, media and design).
+Unless stated otherwise; all works are Copyright © 2013 [Eduán Lávaque](http://eduantech.com) \<eduan@snapsimpletech.com\> and licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) for the source code and the [Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US) for everything else (including content, code snippets and design).
 
-The logo and it's variations are Copyright © 2013 [Eduán Lávaque](http://eduantech.com) \<eduan@snapsimpletech.com\>, can't do anything about it. All Rights Reserved.
+The "Et" logo, the EduanTech name, and media are Copyright © 2013 [Eduán Lávaque](http://eduantech.com). All Rights Reserved.
 
 
 ## MIT License
