@@ -11,3 +11,8 @@ article ->
 		Tagged as #{@document.tags.join(', ')}.
 		"""
 	text @content
+
+	div '#back-to-top', ->
+		a href: '#', title: 'Back to Top', 'Back to Top'
+
+	#@getAddThisBlock('std','right:13px;top:115px;', false)

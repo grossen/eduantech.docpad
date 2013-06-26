@@ -73,12 +73,12 @@ html lang: 'en', ->
 			# Footer
 			footer '.rgs-section.rgs-col', role: 'contentinfo', ->
 				div '.rgs-1-of-3', -> """
-					<p>Copyright &copy; 2013 Eduan Lavaque, All Rights Reserved.</p>
+					<p><a href="https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md" title="License Terms">License Terms</a> | Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
 					"""
 				div '.rgs-1-of-3', ->
 					img src: '/images/logo.png', alt: 'logo', height: '30', width: '30'
 				div '.rgs-1-of-3', -> """
-					<p>Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
+
 					"""
 
 
