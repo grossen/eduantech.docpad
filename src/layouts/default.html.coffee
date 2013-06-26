@@ -22,7 +22,6 @@ html lang: 'en', ->
 
 		# DocPad plugins' styles
 		text  @getBlock('styles').toHTML()
-		link rel: 'stylesheet', href: '/styles/solarized-dark.css'
 		# My styles
 		link rel: 'stylesheet', href: '/styles/main.css'
 		link rel: 'stylesheet', media: 'all and (min-width: 1025px)', href: '/styles/desktop.css'
