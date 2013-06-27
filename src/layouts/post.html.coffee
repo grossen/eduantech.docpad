@@ -12,7 +12,8 @@ article ->
 		"""
 	text @content
 
+	div '#addthis', ->
+		@getAddThisBlock('std','right:13px;top:115px;', false)
+
 	div '#back-to-top', ->
 		a href: '#', title: 'Back to Top', 'Back to Top'
-
-	#@getAddThisBlock('std','right:13px;top:115px;', false)
