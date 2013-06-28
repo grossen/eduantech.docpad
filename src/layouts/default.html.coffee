@@ -36,7 +36,7 @@ html lang: 'en', ->
 			header '.rgs-section.rgs-col', role: 'banner', ->
 				# Logo
 				a href: '/', title: @site.title, ->
-					img '.rgs-1-of-3', src: '/images/logo.png', alt: 'logo', height: '0', width: '0'
+					img '.rgs-1-of-3', src: '/images/etlogo-color.png', alt: 'logo', height: '0', width: '0'
 
 				# Navigation
 				nav '.rgs-2-of-3', role: 'navigation', ->
