@@ -1,6 +1,5 @@
 ---
 title: Re-designing my website, the switch to DocPad
-author: Eduan Lavaque
 categories:
     - CMS
 tags:

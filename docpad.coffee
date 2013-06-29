@@ -1,8 +1,39 @@
 # DocPad Configuration File
 # http://docpad.org/docs/config
 
+# Import
+moment = require('moment')
+
+class App
+constructor: ->
+	# Anchor Change Event
+	@$window.on('anchorchange', @anchorChange)
+
+	# State Change Event
+	@$window.on('statechangecomplete', @stateChange)
+
+anchorChange: =>
+	hash = History.getHash()
+	return  unless hash
+	el = document.getElementById(hash)
+	return  unless el
+	if el.tagName.toLowerCase() is 'h2'
+		$(el).trigger('select')
+	else
+		$(el).ScrollTo(@config.sectionScrollOpts)
+
+stateChange: =>
+	$('h1,h2,h3,h4,h5,h6').each ->
+		return  if @id
+		id = @innerText.toLowerCase().replace(/\s+/g,' ').replace(/[^a-zA-Z0-9]+/g,'-').replace(/--+/g,'-').replace(/^-|-$/g,'')
+		return  if document.getElementById(id)
+		@id = id
+		@setAttribute('data-href', '#'+@id)  unless @getAttribute('data-href')
+		@className += 'hover-link'  unless @className.indexOf('hover-link') isnt -1
+
 # Define the DocPad Configuration
 docpadConfig = {
+
 	plugins:
 		stylus:
 			compress: true
@@ -40,6 +71,10 @@ docpadConfig = {
 		posts: ->
 			@getCollection("html").findAllLive({relativeOutDirPath: 'archives'},[{date:-1}]).on "add", (model) ->
 				model.setMetaDefaults({layout: "post"})
+
+			#@getCollection('documents').findAllLive({relativeOutDirPath:'archives'},[{date:-1}]).on 'add', (model) ->
+				#dateUrl = '/archives' + moment(model.get('date')).format("/YYYY/MM") + '/' + model.get('basename')
+				#model.addUrl(dateUrl).setMetaDefaults({url:dateUrl})
 
 		pages: ->
 			@getCollection('documents').findAllLive({menuOrder:$exists:true},[menuOrder:1])

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?34150902');
-  src: url('../font/fontello.eot?34150902#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff?34150902') format('woff'),
-       url('../font/fontello.ttf?34150902') format('truetype'),
-       url('../font/fontello.svg?34150902#fontello') format('svg');
+  src: url('../font/fontello.eot?3007689');
+  src: url('../font/fontello.eot?3007689#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?3007689') format('woff'),
+       url('../font/fontello.ttf?3007689') format('truetype'),
+       url('../font/fontello.svg?3007689#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,43 +14,44 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?34150902#fontello') format('svg');
+    src: url('../font/fontello.svg?3007689#fontello') format('svg');
   }
 }
 */
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-     
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
 .icon-steam:before { content: '\e808'; } /* '' */
+.icon-menu:before { content: '\e809'; } /* '' */
 .icon-gplus-squared:before { content: '\e802'; } /* '' */
 .icon-rss-squared:before { content: '\e806'; } /* '' */
 .icon-youtube-squared:before { content: '\e807'; } /* '' */
@@ -59,3 +60,4 @@
 .icon-bitbucket-squared:before { content: '\e804'; } /* '' */
 .icon-gittip:before { content: '\e800'; } /* '' */
 .icon-github-squared:before { content: '\e801'; } /* '' */
+.icon-link:before { content: '\e80a'; } /* '' */
