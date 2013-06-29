@@ -37,6 +37,7 @@ Thumbs.db
 sftp-config.json
 
 # DocPad stuff
-/out
 /node_modules
+/out
+/plugins
 .build-catalog.json
