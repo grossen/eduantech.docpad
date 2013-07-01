@@ -5,31 +5,31 @@
 moment = require('moment')
 
 class App
-constructor: ->
-	# Anchor Change Event
-	@$window.on('anchorchange', @anchorChange)
+	constructor: ->
+		# Anchor Change Event
+		@$window.on('anchorchange', @anchorChange)
 
-	# State Change Event
-	@$window.on('statechangecomplete', @stateChange)
+		# State Change Event
+		@$window.on('statechangecomplete', @stateChange)
 
-anchorChange: =>
-	hash = History.getHash()
-	return  unless hash
-	el = document.getElementById(hash)
-	return  unless el
-	if el.tagName.toLowerCase() is 'h2'
-		$(el).trigger('select')
-	else
-		$(el).ScrollTo(@config.sectionScrollOpts)
+	anchorChange: =>
+		hash = History.getHash()
+		return  unless hash
+		el = document.getElementById(hash)
+		return  unless el
+		if el.tagName.toLowerCase() is 'h2'
+			$(el).trigger('select')
+		else
+			$(el).ScrollTo(@config.sectionScrollOpts)
 
-stateChange: =>
-	$('h1,h2,h3,h4,h5,h6').each ->
-		return  if @id
-		id = @innerText.toLowerCase().replace(/\s+/g,' ').replace(/[^a-zA-Z0-9]+/g,'-').replace(/--+/g,'-').replace(/^-|-$/g,'')
-		return  if document.getElementById(id)
-		@id = id
-		@setAttribute('data-href', '#'+@id)  unless @getAttribute('data-href')
-		@className += 'hover-link'  unless @className.indexOf('hover-link') isnt -1
+	stateChange: =>
+		$('h1,h2,h3,h4,h5,h6').each ->
+			return  if @id
+			id = @innerText.toLowerCase().replace(/\s+/g,' ').replace(/[^a-zA-Z0-9]+/g,'-').replace(/--+/g,'-').replace(/^-|-$/g,'')
+			return  if document.getElementById(id)
+			@id = id
+			@setAttribute('data-href', '#'+@id)  unless @getAttribute('data-href')
+			@className += 'hover-link'  unless @className.indexOf('hover-link') isnt -1
 
 # Define the DocPad Configuration
 docpadConfig = {
