@@ -1,8 +1,8 @@
 ---
 title: Re-designing my website, the switch to DocPad
-categories:
-    - CMS
+author: Eduan Lavaque
 tags:
+    - CMS
     - docpad
     - statamic
 ---

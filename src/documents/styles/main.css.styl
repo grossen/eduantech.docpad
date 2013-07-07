@@ -100,25 +100,32 @@ CONTAINER AND STUFF
 
 // The "main" styles for the content
 div#wrapper
-	color  foreground
+	color  content_color
 	background  background
 	font-family  font
-	font-size  0.95em
+	font-size  1.002em
 	font-weight  400
 	margin  0 auto
 
 	header[role='banner']
+		font-family  title_font
+		font-size  1em
 		top  0
+		a, a:link, a:visited, a:hover, a:active
+			padding-top 4px
 
 		div#social-icons
+			font-size  0.7em
+			line-height  0.9em
 			a
+				font-size  1.5em
 				opacity  0.5
 				zoom  1
 			a:hover
 				opacity  1
 
 			a:link, a:visited
-				color  foreground
+				color  content_color
 				background  inherit
 				text-decoration  none
 				border-bottom  none
@@ -126,7 +133,7 @@ div#wrapper
 				text-decoration  none
 
 html, body
-	color  foreground
+	color  content_color
 	background  background
 
 /* ============================================================================
@@ -147,7 +154,6 @@ article
 			padding-bottom  0.1em
 			font-weight  400
 			font-size  1.8em
-			text-align  justify
 			//text-transform  capitalize
 			//border-bottom  1px normal_gray solid
 
@@ -166,7 +172,7 @@ FOOTER
 
 footer
 	background  background
-	color  foreground
+	color  content_color
 	text-align  center
 	font-size  0.7em
 

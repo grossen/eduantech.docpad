@@ -7,7 +7,7 @@
     "npm": "1.2"
   },
   "dependencies": {
-    "docpad": "6.x",
+    "docpad": "~6.45.0",
     "moment": "~2.0.x",
     "docpad-plugin-addthis": "~2.0.x",
     "docpad-plugin-coffeekup": "~2.1.x",

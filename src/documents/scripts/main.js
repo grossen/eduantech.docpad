@@ -17,6 +17,7 @@ function resizeLogo() {
 		headerHeight = $('header[role=\'banner\']').height();
 		$('header[role=\'banner\'] img').prop('height', headerHeight);
 		$('header[role=\'banner\'] img').prop('width', headerHeight);
+		$('header[role=\'banner\'] nav').prop('margin-left', headerHeight);
 	} else if (isMobile) {
 		//headerWidth = $('header[role=\'banner\']').width();
 		$('header[role=\'banner\'] img').prop('height', 150);

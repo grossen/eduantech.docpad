@@ -33,13 +33,13 @@ html lang: 'en', ->
 		# Wrapper
 		div '#wrapper', ->
 			# Header
-			header '.rgs-section.rgs-col', role: 'banner', ->
+			header role: 'banner', ->
 				# Logo
 				a href: '/', title: @site.title, ->
-					img '.rgs-1-of-3', src: '/images/etlogo-color.png', alt: 'logo', height: '0', width: '0'
+					img src: '/images/etlogo-color.png', alt: 'logo', height: '0', width: '0'
 
 				# Navigation
-				nav '.rgs-2-of-3', role: 'navigation', ->
+				nav role: 'navigation', ->
 					ul ->
 						for page in @getCollection('pages').toJSON()
 							# Check to be able to tell the user which is the current menu option (as in currently in it)
@@ -61,6 +61,8 @@ html lang: 'en', ->
 						span '.icon-stackoverflow', ''
 					a href: 'https://plus.google.com/u/0/101160916170411335097/', title: 'Eduan Lávaque (Eduan) - Google+', ->
 						span '.icon-gplus-squared', ''
+					a href: 'http://www.youtube.com/user/eduantech', title: 'Eduan Lávaque - YouTube', ->
+						span '.icon-youtube-squared', ''
 					a href: 'http://steamcommunity.com/id/greduan/', title: 'Steam Community - Greduan', ->
 						span '.icon-steam', ''
 					#a href: '', title: 'RSS Feed', ->
@@ -71,12 +73,10 @@ html lang: 'en', ->
 				-> @content
 
 			# Footer
-			footer '.rgs-section.rgs-col', role: 'contentinfo', ->
-				div '.rgs-1-of-3', -> """
+			footer role: 'contentinfo', ->
+				div -> """
 					<p><a href="https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md" title="License Terms">License Terms</a> | Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
 					"""
-				div '.rgs-1-of-3', ->
-					img src: '/images/logo.png', alt: 'logo', height: '30', width: '30'
 
 
 		# DocPad plugins' scripts
