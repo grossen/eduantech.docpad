@@ -57,96 +57,44 @@ html({
       media: 'all and (min-width: 641px) and (max-width: 1024px)',
       href: '/styles/tablet.css'
     });
-    return link({
+    link({
       rel: 'stylesheet',
       media: 'all and (max-width: 640px)',
       href: '/styles/mobile.css'
     });
+    return script({
+      src: '/scripts/jquery-1.10.1.min.js'
+    });
   });
   return body(function() {
+    nav('.pushy pushy-left', {
+      role: 'navigation'
+    }, function() {
+      return ul(function() {
+        var cssname, documentMatch, page, pageMatch, _i, _len, _ref, _results;
+        _ref = this.getCollection('pages').toJSON();
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          page = _ref[_i];
+          pageMatch = page.match || page.url;
+          documentMatch = this.document.match || this.document.url;
+          cssname = documentMatch.indexOf(pageMatch) === 0 ? 'menu-current' : 'not-menu-current';
+          _results.push(li({
+            'id': cssname
+          }, function() {
+            return a({
+              href: page.url,
+              title: page.title
+            }, page.title);
+          }));
+        }
+        return _results;
+      });
+    });
+    div('.site-overlay', '');
     div('#wrapper', function() {
-      header({
-        role: 'banner'
-      }, function() {
-        a({
-          href: '/',
-          title: this.site.title
-        }, function() {
-          return img({
-            src: '/images/etlogo-color.png',
-            alt: 'logo',
-            height: '0',
-            width: '0'
-          });
-        });
-        nav({
-          role: 'navigation'
-        }, function() {
-          return ul(function() {
-            var cssname, documentMatch, page, pageMatch, _i, _len, _ref, _results;
-            _ref = this.getCollection('pages').toJSON();
-            _results = [];
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              page = _ref[_i];
-              pageMatch = page.match || page.url;
-              documentMatch = this.document.match || this.document.url;
-              cssname = documentMatch.indexOf(pageMatch) === 0 ? 'menu-current' : 'not-menu-current';
-              _results.push(li({
-                'id': cssname
-              }, function() {
-                return a({
-                  href: page.url,
-                  title: page.title
-                }, page.title);
-              }));
-            }
-            return _results;
-          });
-        });
-        return div('#social-icons', function() {
-          a({
-            href: 'https://github.com/Greduan',
-            title: 'GitHub - Greduan'
-          }, function() {
-            return span('.icon-github-squared', '');
-          });
-          a({
-            href: 'https://www.gittip.com/Greduan',
-            title: 'Gittip - Greduan'
-          }, function() {
-            return span('.icon-gittip', '');
-          });
-          a({
-            href: 'https://bitbucket.org/Greduan',
-            title: 'BitBucket - Greduan'
-          }, function() {
-            return span('.icon-bitbucket-squared', '');
-          });
-          a({
-            href: 'http://stackoverflow.com/users/1622940/eduan',
-            title: 'StackOverflow - Greduan'
-          }, function() {
-            return span('.icon-stackoverflow', '');
-          });
-          a({
-            href: 'https://plus.google.com/u/0/101160916170411335097/',
-            title: 'Eduan Lávaque (Eduan) - Google+'
-          }, function() {
-            return span('.icon-gplus-squared', '');
-          });
-          a({
-            href: 'http://www.youtube.com/user/eduantech',
-            title: 'Eduan Lávaque - YouTube'
-          }, function() {
-            return span('.icon-youtube-squared', '');
-          });
-          return a({
-            href: 'http://steamcommunity.com/id/greduan/',
-            title: 'Steam Community - Greduan'
-          }, function() {
-            return span('.icon-steam', '');
-          });
-        });
+      div('.menu-btn', function() {
+        return text('&#9776; MENU');
       });
       main({
         role: 'main'
@@ -163,10 +111,10 @@ html({
     });
     text(this.getBlock('scripts').toHTML());
     script({
-      src: '/scripts/jquery-1.10.1.min.js'
+      src: '/scripts/modernizr.js'
     });
     script({
-      src: '/scripts/modernizr.js'
+      src: '/scripts/pushy.js'
     });
     return script({
       src: '/scripts/main.js'

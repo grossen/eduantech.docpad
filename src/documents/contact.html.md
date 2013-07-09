@@ -14,9 +14,9 @@ If you want to request me as a freelancer please include "Freelancer: " at the s
 - Your budget, i.e. how much you *can* pay me for this job.
 - The description of what you want/need.
 
-I also take requests for making you an entire website using [DocPad](https://docpad.org). This does not include design, you need to design the website and have it on paper, my job is to put your already drawn and 100% finished vision into DocPad terms. If you want to request help from me for this go ahead and include that in the description of what you need from me.
+**Before you contact me for help with s2Member, please post it in the [s2Member forums](http://www.s2member.com/forums/) first, wait a week or so, and then contact me. :smile:**
 
-Now, the only requirement I have in order for you to hire me is that you aren't a [Client From Hell](http://clientsfromhell.net/) (no offense).
+Now, the only requirement I have in order for you to hire me as a freelancer is that you aren't a [Client From Hell](http://clientsfromhell.net/) (no offense). So keep that in mind.
 
 <!--
 Lastly, if you just want to say thanks you can just send me an email saying so, although you can also do so using [Flattr](https://flattr.com/howflattrworks) or [Gittip](https://www.gittip.com/about/):

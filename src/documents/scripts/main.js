@@ -5,6 +5,7 @@ $('code').filter(function(){
 
 
 // Logo size control stuff
+/*
 function resizeLogo() {
 	isDesktop = Modernizr.mq('all and (min-width: 1025px)');
 	isTablet = Modernizr.mq('all and (min-width: 641px) and (max-width: 1024px)');
@@ -19,9 +20,9 @@ function resizeLogo() {
 		$('header[role=\'banner\'] img').prop('width', headerHeight);
 		$('header[role=\'banner\'] nav').prop('margin-left', headerHeight);
 	} else if (isMobile) {
-		//headerWidth = $('header[role=\'banner\']').width();
-		$('header[role=\'banner\'] img').prop('height', 150);
-		$('header[role=\'banner\'] img').prop('width', 150);
+		headerHeight = $('header[role=\'banner\']').height();
+		$('header[role=\'banner\'] img').prop('height', headerHeight);
+		$('header[role=\'banner\'] img').prop('width', headerHeight);
 	}
 }
 resizeLogo();
@@ -29,3 +30,4 @@ resizeLogo();
 $(window).resize(function(){
 	resizeLogo();
 });
+*/
