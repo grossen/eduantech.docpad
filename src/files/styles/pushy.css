@@ -86,11 +86,3 @@
 	left: 200px;
 	z-index: 9999;
 }
-
-/* Example Media Query */
-
-@media screen and (max-width: 768px){
-	.pushy{
-		font-size: 1.0em;
-	}
-}

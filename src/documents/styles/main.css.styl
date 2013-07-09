@@ -98,19 +98,31 @@ CONTAINER AND STUFF
 	text-shadow  1px 1px 1px rgba(0,0,0,0.02)
 	line-height  1.5
 
+nav
+	ul
+		list-style  none
+		padding  0
+		margin  0
+
+	a, a:link, a:visited
+		color  normal_gray
+
 // The "main" styles for the content
-div#wrapper
+#wrapper
 	overflow-x  hidden
 	color  content_color
 	background  background
 	position  relative
 	font-family  font
-	font-size  1.002em
-	font-weight  400
+	font-size  1.05em
+	font-weight  300
 	margin  0 auto
 
 	ul, ol
 		text-align  left
+
+pre
+	text-align  left
 
 html, body
 	color  content_color
@@ -123,13 +135,13 @@ html, body
 	padding  10px
 	margin-bottom  30px
 	background  dark_gray
-	color  #FFF
+	color  #fff
 	text-align  center
 	cursor  pointer
 
 .menu-btn:hover
 	background  #00b4ff
-	color  #FFF
+	color  #fff
 
 /* ============================================================================
 CONTENT RULES
@@ -148,8 +160,6 @@ article
 			margin  0.3em 0 0.3em
 			padding-bottom  0.1em
 			font-weight  400
-			font-size  1.8em
-			//text-transform  capitalize
 			//border-bottom  1px normal_gray solid
 
 		// The post meta stuff
