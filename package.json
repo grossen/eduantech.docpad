@@ -8,21 +8,22 @@
   },
   "dependencies": {
     "docpad": "~6.45.0",
-    "moment": "~2.0.x",
-    "docpad-plugin-addthis": "~2.0.x",
-    "docpad-plugin-coffeekup": "~2.1.x",
-    "docpad-plugin-datefromfilename": "~1.0.x",
-    "docpad-plugin-eco": "~2.0.x",
-    "docpad-plugin-highlightjs": "~2.1.x",
-    "docpad-plugin-ignoreincludes": "~2.0.x",
-    "docpad-plugin-livereload": "~2.4.x",
-    "docpad-plugin-marked": "~2.1.x",
-    "docpad-plugin-partials": "~2.6.x",
-    "docpad-plugin-stylus": "~2.3.x",
-    "docpad-plugin-uglify": "~2.2.x"
+    "moment": "~2.0.0",
+    "docpad-plugin-addthis": "~2.0.3",
+    "docpad-plugin-coffeekup": "~2.1.6",
+    "docpad-plugin-datefromfilename": "~2.0.0",
+    "docpad-plugin-eco": "~2.0.2",
+    "docpad-plugin-highlightjs": "~2.1.7",
+    "docpad-plugin-ignoreincludes": "~2.0.0",
+    "docpad-plugin-livereload": "~2.4.0",
+    "docpad-plugin-marked": "~2.1.1",
+    "docpad-plugin-partials": "~2.6.3",
+    "docpad-plugin-stylus": "~2.3.1",
+    "docpad-plugin-uglify": "~2.2.0"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
     "start": "node_modules/docpad/bin/docpad-server"
-  }
+  },
+  "devDependencies": {}
 }

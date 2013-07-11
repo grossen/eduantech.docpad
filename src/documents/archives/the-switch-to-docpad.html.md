@@ -1,6 +1,7 @@
 ---
 title: Re-designing my website, the switch to DocPad
 author: Eduan Lavaque
+date: 2013-06-16
 tags:
     - CMS
     - docpad

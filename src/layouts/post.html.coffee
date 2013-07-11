@@ -4,7 +4,8 @@ layout: default
 article ->
 	div '.meta', ->
 		p @document.author
-		p @document.date
+		p 'Posted on ' + @document.date
+		p '## Comments'
 
 	header ->
 		h1 @document.title
