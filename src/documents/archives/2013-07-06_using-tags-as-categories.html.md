@@ -1,5 +1,5 @@
 ---
-title: How to not use categories in your blog
+title: Using tags as categories
 author: Eduan Lavaque
 tags:
     - CMS

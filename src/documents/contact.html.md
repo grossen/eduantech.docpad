@@ -1,5 +1,6 @@
 ---
 title: Contact Me
+menuTitle: Contact
 layout: page
 menuShow: true
 menuOrder: 4

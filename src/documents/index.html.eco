@@ -1,5 +1,6 @@
 ---
 title: Home
+menuTitle: Home
 layout: page
 menuShow: true
 menuOrder: 0

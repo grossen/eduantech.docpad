@@ -23,7 +23,7 @@ Heading tags */
 h1, h2, h3, h4, h5, h6
 	line-height  1.2em
 	font-family  title_font
-	color  title_color
+	color  content_color
 	text-rendering  optimizelegibility
 	margin-top  1em
 	margin-bottom  0.5em
@@ -34,7 +34,7 @@ h3, h4, h5, h6
 	font-weight  bold
 
 h1
-	font-size  2.5em
+	font-size  1.9em
 h2
 	font-size  1.5em
 h3
@@ -51,7 +51,7 @@ a:link, a:visited
 	background  inherit
 	text-decoration  none
 a:visited
-	color  dark_blue
+	//color  dark_blue
 a:hover
 	text-decoration  underline
 a:focus
@@ -68,13 +68,14 @@ Horizontal ruler */
 
 /* ----------------------------------------------------------------------------
 Code/pre styles */
+
 code
 	font  mono_font !important
 	font-size  0.75em
 
 // What `` generates when in Markdown, the <code> tag
 code.inline-code
-	background  lighter_gray
+	background  normal_gray
 	font-weight  bold
 	padding  0.1em 0.18em
 	margin  0
@@ -93,82 +94,86 @@ CONTAINER AND STUFF
 
 *
 	// Make width/height include margin/padding in calculation
-	box-sizing  border-box
+	//box-sizing  border-box
 	// Font smoothing...
-	text-shadow  1px 1px 1px rgba(0,0,0,0.02)
+	text-shadow  1px 1px 1px rgba(0,0,0,0.01)
+
+html
+	border-top  10px #333 solid
+
+header[role="banner"]
+	margin  0 auto
+	padding  0 30px 15px 0
+	width  500px
+	position  relative
+	a#title
+		font-size  1.2em
+		font-weight  bold
+		text-align  right
+
+		top  -4px
+		left  -200px
+		display  block
+		position  absolute
+
+		margin 0
+		width  150px
+
+	a#title:link, a#title:visited
+		color  foreground
+	a#title:hover
+		text-decoration  none
+
+	nav
+		a
+			margin-right  10px
+			font-size  0.9em
+
+body
 	line-height  1.5
+	font-family  font
+	font-size  0.9em
+	font-weight  300
 
-nav
-	ul
-		list-style  none
-		padding  0
-		margin  0
-
-	a, a:link, a:visited
-		color  normal_gray
-
-// The "main" styles for the content
-#wrapper
-	overflow-x  hidden
 	color  content_color
 	background  background
-	position  relative
-	font-family  font
-	font-size  1.05em
-	font-weight  300
-	margin  0 auto
+	//margin  0 auto
 
-	ul, ol
+	padding-top  20px
+	overflow-x: hidden; // prevents horizontal scroll bars (for the menu)
+	-webkit-tap-highlight-color: rgba(0,0,0,0); // disable webkit tap highlight
+
+	pre
 		text-align  left
 
-pre
-	text-align  left
-
-html, body
-	color  content_color
-	background  background
-	overflow-x: hidden; /* prevents horizontal scroll bars */
-	-webkit-tap-highlight-color: rgba(0,0,0,0); /* disable webkit tap highlight */
-
-.menu-btn
-	width  100px
-	padding  10px
-	margin-bottom  30px
-	background  dark_gray
-	color  #fff
-	text-align  center
-	cursor  pointer
-
-.menu-btn:hover
-	background  #00b4ff
-	color  #fff
-
-/* ============================================================================
-CONTENT RULES
-============================================================================ */
-
-/* ----------------------------------------------------------------------------
-Post styles */
+	main
+		border-top 1px normal_gray solid
 
 article
-	// The post header and meta info
-	header
-		margin-bottom  0.5em
+	// The post meta stuff
+	margin  0 auto
+	padding  50px 230px 50px 200px
+	//padding-top  50px
+	//padding-left  200px
+	min-height  200px
+	max-width  500px
+	position  relative
 
-		// The post title
-		h1
-			margin  0.3em 0 0.3em
-			padding-bottom  0.1em
-			font-weight  400
-			//border-bottom  1px normal_gray solid
+	h1
+		margin-top  0px
 
-		// The post meta stuff
-		div#post-meta
-			color  normal_gray
-			font-size  0.8em
+	.meta
+		position  absolute
+		width  150px
+		left  0px
 
-	div#back-to-top
-		text-align  center
+		font-size  13px
+		color  dark_gray
+		//line-height  18px
+		text-align  right
+
+		p
+			margin 0
 
 
 /* ============================================================================
@@ -179,11 +184,10 @@ footer
 	background  background
 	color  content_color
 	text-align  center
-	font-size  0.7em
+	font-size  0.8em
 
 	display  block
 	border-top  1px normal_gray solid
-	width  100%
 	clear  both
 
 	position  relative
@@ -198,3 +202,12 @@ Stick to bottom footer, thingy */
 /* Thanks to Ryan Fait for it's sticky footer trick
  * http //ryanfait.com/resources/footer-stick-to-bottom-of-page/
  */
+
+@media all and (min-width: 1025px)
+	// Desktop styles
+
+@media all and (min-width: 641px) and (max-width: 1024px)
+	// Tablet styles
+
+@media all and (max-width: 640px)
+	// Mobile styles

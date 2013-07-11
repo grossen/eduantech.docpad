@@ -2,13 +2,13 @@
 layout: default
 ---
 article ->
+	div '.meta', ->
+		p @document.author
+		p @document.date
+
 	header ->
 		h1 @document.title
 
-		div '#post-meta', -> """
-		Posted on #{@document.date} <em>by</em> #{@document.author}.
-		Tagged as #{@document.tags.join(', ')}.
-		"""
 	text @content
 
 	div '#addthis', ->

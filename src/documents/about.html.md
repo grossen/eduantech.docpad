@@ -1,5 +1,6 @@
 ---
 title: About Me
+menuTitle: About
 layout: page
 menuShow: true
 menuOrder: 3
@@ -20,6 +21,6 @@ Now that that is done, let's check some info about my website:
 - It was built using DocPad, the Node.js based static website generator (yes this website is static).
 - It is being hosted by my good friend [Daniel Voogsgerd](https://github.com/DanielVoogsgerd) and his company [RealiseWeb](http://realiseweb.nl). Instead of giving you a server that works with everything, he provides you with a server that works for *you*.
 - It makes use of [jQuery](http://jquery.com/) (duh) and [Modernizr.js](http://modernizr.com/) as well.
-- The title font is the [Merriweather](http://www.google.com/fonts/specimen/Merriweather) font, the content font is the [Open Sans](http://www.google.com/fonts/specimen/Open+Sans) font. Both beautiful fonts that go along well.
+- The Serif is the [Merriweather](http://www.google.com/fonts/specimen/Merriweather) font, The rest of the fonts are Helvetica (or Arial if you don't have Helvetica). Both beautiful fonts that go along well.
 
 I don't think I missed anything important... If you want to contact me please go to my [Contact Me](/contact.html) page.

@@ -24,67 +24,54 @@ html lang: 'en', ->
 		text  @getBlock('styles').toHTML()
 		# My styles
 		link rel: 'stylesheet', href: '/styles/main.css'
-		link rel: 'stylesheet', media: 'all and (min-width: 1025px)', href: '/styles/desktop.css'
-		link rel: 'stylesheet', media: 'all and (min-width: 641px) and (max-width: 1024px)', href: '/styles/tablet.css'
-		link rel: 'stylesheet', media: 'all and (max-width: 640px)', href: '/styles/mobile.css'
-
-
-		script src: '/scripts/jquery-1.10.1.min.js'
 
 	body ->
-
 		# Navigation
-		nav '.pushy pushy-left', role: 'navigation', ->
-			ul ->
-				for page in @getCollection('pages').toJSON()
-					# Check to be able to tell the user which is the current menu option (as in currently in it)
-					pageMatch = page.match or page.url
-					documentMatch = @document.match or @document.url
-					cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
-					li 'id':cssname, ->
-						a href: page.url, title: page.title, page.title
+		header role: 'banner', ->
+			#img src: '/images/etlogo-white.gif', alt: 'logo', height: '170', width: '170'
+			nav role: 'navigation', ->
+					for page in @getCollection('pages').toJSON()
+						# Check to be able to tell the user which is the current menu option (as in currently in it)
+						pageMatch = page.match or page.url
+						documentMatch = @document.match or @document.url
+						cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
+						a 'id':cssname, href: page.url, title: page.menuTitle, page.menuTitle
+			a '#title', href: '/', title: 'EduanTech', 'EduanTech'
 
-#		# Social icons
-#		div '#social-icons', ->
-#			a href: 'https://github.com/Greduan', title: 'GitHub - Greduan', ->
-#				span '.icon-github-squared', ''
-#			a href: 'https://www.gittip.com/Greduan', title: 'Gittip - Greduan', ->
-#				span '.icon-gittip', ''
-#			a href: 'https://bitbucket.org/Greduan', title: 'BitBucket - Greduan', ->
-#				span '.icon-bitbucket-squared', ''
-#			a href: 'http://stackoverflow.com/users/1622940/eduan', title: 'StackOverflow - Greduan', ->
-#				span '.icon-stackoverflow', ''
-#			a href: 'https://plus.google.com/u/0/101160916170411335097/', title: 'Eduan Lávaque (Eduan) - Google+', ->
-#				span '.icon-gplus-squared', ''
-#			a href: 'http://www.youtube.com/user/eduantech', title: 'Eduan Lávaque - YouTube', ->
-#				span '.icon-youtube-squared', ''
-#			a href: 'http://steamcommunity.com/id/greduan/', title: 'Steam Community - Greduan', ->
-#				span '.icon-steam', ''
-#			a href: '', title: 'RSS Feed', ->
-#				span '.icon-rss-squared', ''
+#			# Social icons
+#			div '#social-icons', ->
+#				a href: 'https://github.com/Greduan', title: 'GitHub - Greduan', ->
+#					span '.icon-github-squared', ''
+#				a href: 'https://www.gittip.com/Greduan', title: 'Gittip - Greduan', ->
+#					span '.icon-gittip', ''
+#				a href: 'https://bitbucket.org/Greduan', title: 'BitBucket - Greduan', ->
+#					span '.icon-bitbucket-squared', ''
+#				a href: 'http://stackoverflow.com/users/1622940/eduan', title: 'StackOverflow - Greduan', ->
+#					span '.icon-stackoverflow', ''
+#				a href: 'https://plus.google.com/u/0/101160916170411335097/', title: 'Eduan Lávaque (Eduan) - Google+', ->
+#					span '.icon-gplus-squared', ''
+#				a href: 'http://www.youtube.com/user/eduantech', title: 'Eduan Lávaque - YouTube', ->
+#					span '.icon-youtube-squared', ''
+#				a href: 'http://steamcommunity.com/id/greduan/', title: 'Steam Community - Greduan', ->
+#					span '.icon-steam', ''
+#				a href: '', title: 'RSS Feed', ->
+#					span '.icon-rss-squared', ''
 
-		div '.site-overlay', ''
+		# Content
+		main role: 'main',
+			-> @content
 
-		# Wrapper
-		div '#wrapper', ->
-
-			div '.menu-btn', ->
-				text '&#9776; MENU'
-
-			# Content
-			main role: 'main',
-				-> @content
-
-			# Footer
-			footer role: 'contentinfo', ->
-				div -> """
-					<p><a href="https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md" title="License Terms">License Terms</a> | Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
-					"""
+		# Footer
+		footer role: 'contentinfo', ->
+			div -> """
+				<p><a href="https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md" title="License Terms">License Terms</a> | Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
+				"""
 
 
 		# DocPad plugins' scripts
 		text @getBlock('scripts').toHTML()
 		# My scripts
+		script src: '/scripts/jquery-1.10.1.min.js'
 		script src: '/scripts/modernizr.js'
 		script src: '/scripts/pushy.js'
 		script src: '/scripts/main.js'
