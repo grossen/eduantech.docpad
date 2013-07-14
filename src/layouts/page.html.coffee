@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-article ->
+article 'page', ->
 	header ->
 		h1 @document.title
 

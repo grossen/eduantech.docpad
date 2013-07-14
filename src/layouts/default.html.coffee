@@ -73,5 +73,4 @@ html lang: 'en', ->
 		# My scripts
 		script src: '/scripts/jquery-1.10.1.min.js'
 		script src: '/scripts/modernizr.js'
-		script src: '/scripts/pushy.js'
 		script src: '/scripts/main.js'

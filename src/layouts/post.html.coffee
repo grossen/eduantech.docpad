@@ -1,19 +1,18 @@
 ---
 layout: default
 ---
-article ->
+article 'post', ->
 	div '.meta', ->
 		p @document.author
-		p 'Posted on ' + @document.date
-		p '## Comments'
+		p ->
+			time datetime: @postDatetime(@document.date), @postDate(@document.date)
+#		p ->
+#			a href: '#comments', title: '#{comments##}', '#{comments##} comments'
 
 	header ->
 		h1 @document.title
 
 	text @content
 
-	div '#addthis', ->
-		@getAddThisBlock('std', 'right:13px; top:115px;', true)
-
-	#div '#back-to-top', ->
-		#a href: '#', title: 'Back to Top', 'Back to Top'
+#	div '#addthis', ->
+#		@getAddThisBlock('std', 'right:13px; top:115px;', true)

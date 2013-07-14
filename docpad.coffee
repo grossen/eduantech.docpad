@@ -28,7 +28,7 @@ docpadConfig = {
 				A hacker's advice for Linux (and a lot of stuff that works on Linux), WordPress, s2Member and web development.
 				"""
 			keywords: """
-				greduan, eduan, eduan lavaque, lavaque, hacker, linux, wordpress, s2member, vim, tmux, web development, code
+				greduan, eduan, eduán, eduan lavaque, lavaque, lávaque, hacker, linux, wordpress, s2member, web development, code
 				"""
 
 		# Meta helpers
@@ -37,6 +37,10 @@ docpadConfig = {
 		getPreparedEmail: -> @document.email or @site.email
 		getPreparedDescription: -> @document.description or @site.description
 		getPreparedKeywords: -> @site.keywords.concat(@document.keywords or []).join(', ')
+
+		# Post meta
+		postDatetime: (date, format="YYYY-MM-DD") -> return moment(date).format(format)
+		postDate: (date, format="MMMM DD, YYYY") -> return moment(date).format(format)
 
 	localeCode: "en"
 

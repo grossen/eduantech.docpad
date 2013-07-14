@@ -12,6 +12,8 @@ OK so if you're using DocPad, or Statamic, or anything similar you might come ac
 
 So here's a system I've come up with a system to use *tags* as *categories*.
 
+<!-- read more -->
+
 First. All of your tags should be **all lowercase**, this is important. If it's all lowercase your users know (maybe) and your code knows it's to be treated as a tag.
 
 Here's some examples of some *tags*:
