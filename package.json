@@ -11,7 +11,6 @@
     "moment": "~2.0.0",
     "docpad-plugin-addthis": "~2.0.3",
     "docpad-plugin-coffeekup": "~2.1.6",
-    "docpad-plugin-datefromfilename": "~2.0.1",
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-highlightjs": "~2.1.7",
     "docpad-plugin-ignoreincludes": "~2.0.0",
