@@ -86,7 +86,7 @@ MAIN LAYOUT STYLES
 
 *
 	// Make width/height include margin/padding in calculation
-	box-sizing: border-box
+	//box-sizing: border-box
 	// Font smoothing...
 	//text-shadow: 1px 1px 1px rgba(0,0,0,0.01)
 
@@ -100,9 +100,8 @@ body
 	background: background
 
 main
-
 	margin: 0 auto
-	padding-top: 50px
+	padding-top: 120px // nice separation from initial menu
 	min-height: 200px
 	min-width: 500px
 	max-width: 800px
@@ -112,47 +111,65 @@ main
 Header & navigation */
 
 header[role="banner"]
-	position: fixed
+	z-index: 1 // on top of everything
+	position: fixed // stay on top of page at all times
 	top: 0
 	left: 0
-	width 100%
-	background: var_black
-	border-bottom: 1px lighter_gray solid
+	width: 100%
+	background: lighter_gray
+	opacity: .9
+	border-bottom: 1px darker_gray solid
+
+	//padding: 8px 0
 
 	a#title
+		margin-left: 50px
+		float: left
+		width: 340px
 		font-size: 1.2em
 		font-weight: bold
-		text-align: right
-
-		top: -4px
-		left: -200px
-		display: block
-
-		margin: 0 auto
-		width: 150px
 
 	a#title:hover
 		text-decoration: none
 
 	a#title:link, a#title:visited
-		color: foreground
+		color: var_black
 
 	nav
-		text-align: center
+		margin: 0 auto
+
+		ul
+			margin: 0
+			list-style: none
+
+			li
+				margin: 0
+				height: 100%
+				float: left
+				border-left: 1px darker_gray solid
+			li:last-child
+				border-right: 1px darker_gray solid
+
 		a
+			text-align: center
+			font-size: .9em
 			font-weight: 600
 			text-transform: uppercase
 
-			margin: 0 5px
-			margin-bottom: 10px
-			border-bottom: 3px background solid
+			letter-spacing: 1px
+			line-height: 3em
+
+			padding: .9em 30px
+			border-bottom: 3px lighter_gray solid
 
 		a:hover
-			border-bottom: 3px var_black solid
 			text-decoration: none
+			transition: border-color 0.15s ease, color 0.15s ease
+			border-color: var_black
+			color: var_black
 
 		a:link, a:visited
-			color: foreground
+			color: var_black
 
 /* ----------------------------------------------------------------------------
 Content */
