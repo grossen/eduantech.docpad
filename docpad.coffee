@@ -10,11 +10,9 @@ docpadConfig = {
 	plugins:
 		stylus:
 			compress: true
-		sitemap:
-			cachetime: 600000
-			changefreq: 'hourly'
-			priority: 0.5
-			sitemap: true
+			environment:
+				development:
+					compress: false
 		highlightjs:
 			replaceTab: null
 

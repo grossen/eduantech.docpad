@@ -23,7 +23,7 @@ html lang: 'en', ->
 		# DocPad plugins' styles
 		text  @getBlock('styles').toHTML()
 		# My styles
-		link rel: 'stylesheet', href: '/styles/main.css'
+		link rel: 'stylesheet', href: '/styles/all.css'
 
 		# IE, HTML5 shiv
 		ie 'IE', ->
@@ -32,22 +32,20 @@ html lang: 'en', ->
 	body ->
 		# Navigation
 		header role: 'banner', ->
+			#a '#title', href: '/', title: 'EduanTech', 'EduanTech'
 			nav role: 'navigation', ->
 					for page in @getCollection('pages').toJSON()
 						# Check to be able to tell the user which is the current menu option (as in currently in it)
 						pageMatch = page.match or page.url
 						documentMatch = @document.match or @document.url
 						cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
-						a 'id':cssname, href: page.url, title: page.menuTitle, page.menuTitle
-			a '#title', href: '/', title: 'EduanTech', 'EduanTech'
+						a 'class':cssname, href: page.url, title: page.menuTitle, page.menuTitle
 
 		# Content
-		hr()
 		main role: 'main',
 			-> @content
 
 		# Footer
-		hr()
 		footer role: 'contentinfo', ->
 			div -> """
 				<p><a href="https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md" title="License Terms">License Terms</a> | Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
@@ -56,5 +54,5 @@ html lang: 'en', ->
 		# DocPad plugins' scripts
 		text @getBlock('scripts').toHTML()
 		# My scripts
-		script src: '/scripts/jquery-1.10.1.min.js'
+		script src: '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
 		script src: '/scripts/main.js'

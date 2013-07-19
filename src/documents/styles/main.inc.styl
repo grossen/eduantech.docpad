@@ -1,0 +1,219 @@
+/*! main.inc file */
+
+/* ============================================================================
+TAGS' STYLES
+============================================================================ */
+
+/* ----------------------------------------------------------------------------
+Heading tags */
+
+h1, h2, h3, h4, h5, h6
+	line-height: 1.2em
+	font-family: title_font
+	color: content_color
+	text-rendering: optimizelegibility
+	margin-top: 1em
+	margin-bottom: 0.5em
+
+h1, h2
+	font-weight: 400
+h3, h4, h5, h6
+	font-weight: bold
+
+h1
+	font-size: 1.9em
+h2
+	font-size: 1.5em
+h3
+	font-size: 1.25em
+h4
+	font-size: 1.125em
+
+
+/* ----------------------------------------------------------------------------
+Anchor tags */
+
+a:link, a:visited
+	color: normal_blue
+	background: inherit
+	text-decoration: none
+a:visited
+	//color: dark_blue
+a:hover
+	text-decoration: underline
+a:focus
+	outline: thin-dotted
+a:active
+	outline: thin-dotted
+
+
+/* ----------------------------------------------------------------------------
+Horizontal ruler */
+
+hr
+	border: 0
+	margin: 0
+	height: 1px
+	width: 100%
+	border-bottom: solid 1px normal_gray
+
+/* ----------------------------------------------------------------------------
+Code/pre styles */
+
+code
+	font: mono_font !important
+	font-size: 0.75em
+
+// What `` generates when in Markdown, the <code> tag
+code.inline-code
+	background: normal_gray
+	font-weight: bold
+	padding: 0.1em 0.18em
+	margin: 0
+	border: 1px solid light_gray
+	white-space: nowrap
+
+// Styles for code blocks' container
+pre
+	text-align: left
+	line-height: 1em
+	border: 1px solid light_gray
+
+
+/* ============================================================================
+MAIN LAYOUT STYLES
+============================================================================ */
+
+*
+	// Make width/height include margin/padding in calculation
+	box-sizing: border-box
+	// Font smoothing...
+	//text-shadow: 1px 1px 1px rgba(0,0,0,0.01)
+
+body
+	line-height: 1.5
+	font-family: font
+	font-size: 1em
+	font-weight: 300
+
+	color: content_color
+	background: background
+
+main
+
+	margin: 0 auto
+	padding-top: 50px
+	min-height: 200px
+	min-width: 500px
+	max-width: 800px
+	position: relative
+
+/* ----------------------------------------------------------------------------
+Header & navigation */
+
+header[role="banner"]
+	position: fixed
+	top: 0
+	left: 0
+	width 100%
+	background: var_black
+	border-bottom: 1px lighter_gray solid
+
+	a#title
+		font-size: 1.2em
+		font-weight: bold
+		text-align: right
+
+		top: -4px
+		left: -200px
+		display: block
+
+		margin: 0 auto
+		width: 150px
+
+	a#title:hover
+		text-decoration: none
+
+	a#title:link, a#title:visited
+		color: foreground
+
+	nav
+		text-align: center
+		a
+			font-weight: 600
+			text-transform: uppercase
+
+			margin: 0 5px
+			margin-bottom: 10px
+			border-bottom: 3px background solid
+
+		a:hover
+			border-bottom: 3px var_black solid
+			text-decoration: none
+
+		a:link, a:visited
+			color: foreground
+
+/* ----------------------------------------------------------------------------
+Content */
+
+article.post, article.page
+	//
+
+article.post
+	h1
+		margin-top: 0px
+		margin-bottom: 40px
+
+	.meta
+		position: absolute
+		width: 150px
+		left: 0px
+
+		font-size: 13px
+		color: dark_gray
+		//line-height: 18px
+		text-align: right
+
+		p
+			margin 0
+
+/* ----------------------------------------------------------------------------
+Footer */
+
+footer
+	background: background
+	color: content_color
+	text-align: center
+	font-size: 0.8em
+
+	display: block
+	//border-top: 1px normal_gray solid
+	clear: both
+
+	position: relative
+	bottom: 0
+
+// Stick to bottom footer, thingy
+// Not being used temporarily
+
+/* Thanks to Ryan Fait for it's sticky footer trick
+ * http //ryanfait.com/resources/footer-stick-to-bottom-of-page/
+ */
+
+/* ============================================================================
+DEVICE SPECIFIC STYLES
+============================================================================ */
+
+@media (min-width: 320px)
+	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width: 480px)
+	/* smartphones, Android phones, landscape iPhone */
+@media (min-width: 600px)
+	/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 801px)
+	/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width: 1025px)
+	/* big landscape tablets, laptops, and desktops */
+@media (min-width: 1281px)
+	/* hi-res laptops and desktops */

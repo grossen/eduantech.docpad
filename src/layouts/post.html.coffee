@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-article 'post', ->
+article '.post', ->
 	div '.meta', ->
 		p @document.author
 		p ->
