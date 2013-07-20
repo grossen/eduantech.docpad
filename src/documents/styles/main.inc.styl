@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6
 	color: content_color
 	text-rendering: optimizelegibility
 	margin-top: 1em
-	margin-bottom: 0.5em
+	margin-bottom: .5em
 
 h1, h2
 	font-weight: 400
@@ -62,13 +62,13 @@ Code/pre styles */
 
 code
 	font: mono_font !important
-	font-size: 0.75em
+	font-size: .75em
 
 // What `` generates when in Markdown, the <code> tag
 code.inline-code
 	background: normal_gray
 	font-weight: bold
-	padding: 0.1em 0.18em
+	padding: .1em .18em
 	margin: 0
 	border: 1px solid light_gray
 	white-space: nowrap
@@ -88,12 +88,12 @@ MAIN LAYOUT STYLES
 	// Make width/height include margin/padding in calculation
 	//box-sizing: border-box
 	// Font smoothing...
-	//text-shadow: 1px 1px 1px rgba(0,0,0,0.01)
+	//text-shadow: 1px 1px 1px rgba(0,0,0,.01)
 
 body
 	line-height: 1.5
 	font-family: font
-	font-size: 1em
+	font-size: 15px
 	font-weight: 300
 
 	color: content_color
@@ -147,26 +147,31 @@ header[role="banner"]
 				height: 100%
 				float: left
 				border-left: 1px darker_gray solid
+
 			li:last-child
 				border-right: 1px darker_gray solid
 
 		a
+			color: var_black
 			text-align: center
 			font-size: .9em
-			font-weight: 600
+			font-weight: bold
 			text-transform: uppercase
 
 			letter-spacing: 1px
 			line-height: 3em
 
 			padding: .9em 30px
-			border-bottom: 3px lighter_gray solid
+			border-bottom: 3px var_black solid
+
+		a.menu-current
+			border-bottom: 3px normal_blue solid
 
 		a:hover
 			text-decoration: none
-			transition: border-color 0.15s ease, color 0.15s ease
-			border-color: var_black
-			color: var_black
+			transition: border-color .15s ease
+			border-color: normal_blue
+			color: black
 
 		a:link, a:visited
 			color: var_black
@@ -202,7 +207,7 @@ footer
 	background: background
 	color: content_color
 	text-align: center
-	font-size: 0.8em
+	font-size: .8em
 
 	display: block
 	//border-top: 1px normal_gray solid
