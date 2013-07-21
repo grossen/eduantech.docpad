@@ -32,7 +32,6 @@ html lang: 'en', ->
 	body ->
 		# Navigation
 		header role: 'banner', ->
-			a '#title', href: '/', title: 'EduanTech', 'EduanTech'
 			nav role: 'navigation', ->
 				ul ->
 					for page in @getCollection('pages').toJSON()
