@@ -34,7 +34,7 @@ h4
 Anchor tags */
 
 a:link, a:visited
-	color: normal_blue
+	color: link_unvisited
 	background: inherit
 	text-decoration: none
 a:visited
@@ -113,64 +113,42 @@ Header & navigation */
 header[role="banner"]
 	z-index: 1 // on top of everything
 	position: fixed // stay on top of page at all times
-	top: 0
-	left: 0
-	width: 100%
+
 	background: lighter_gray
 	opacity: .9
 	border-bottom: 1px darker_gray solid
 
-	//padding: 8px 0
-
-	a#title
-		margin-left: 50px
-		float: left
-		width: 340px
-		font-size: 1.2em
-		font-weight: bold
-
-	a#title:hover
-		text-decoration: none
-
-	a#title:link, a#title:visited
-		color: var_black
-
 	nav
-		//width: 800px
-		padding: 0 auto
-
 		ul
 			margin: 0
 			list-style: none
 
 			li
-				margin: 0 auto
-				height: 100%
+				margin: 0
 				float: left
+
 				border-left: 1px darker_gray solid
 
 			li:last-child
 				border-right: 1px darker_gray solid
 
 		a
-			color: var_black
+			//display: block
+
 			font-size: .9em
 			font-weight: bold
 			text-transform: uppercase
-
 			letter-spacing: 1px
-			line-height: 3em
 
-			padding: .9em 30px
 			border-bottom: 3px var_black solid
 
 		a.menu-current
-			border-bottom: 3px normal_blue solid
+			border-bottom: 3px link_unvisited solid
 
 		a:hover
 			text-decoration: none
 			transition: border-color .15s ease
-			border-color: normal_blue
+			border-color: link_unvisited
 			color: black
 
 		a:link, a:visited
