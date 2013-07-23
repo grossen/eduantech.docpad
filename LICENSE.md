@@ -1,8 +1,6 @@
 # License
 
-Unless stated otherwise; all works are Copyright © 2013 [Eduán Lávaque](http://eduantech.com) \<eduan@snapsimpletech.com\> and licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) for the source code and the [Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US) for everything else (including content, code snippets and design).
-
-The "Et" logo, the EduanTech name, and media are Copyright © 2013 [Eduán Lávaque](http://eduantech.com). All Rights Reserved.
+Unless stated otherwise; all works are licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) for the source code (this includes code snippets and design) and the [Creative Commons Attribution-NoDerivs 3.0 Unported (CC BY-ND 3.0)](http://creativecommons.org/licenses/by-nd/3.0/deed.en_US) for everything else (including content and media).
 
 
 ## MIT License
@@ -16,6 +14,6 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-## Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)
+## Creative Commons Attribution-NoDerivs 3.0 Unported (CC BY-ND 3.0)
 
-See http://creativecommons.org/licenses/by-sa/3.0/deed.en_US for full legal text.
+See http://creativecommons.org/licenses/by-nd/3.0/deed.en_US for full legal text.

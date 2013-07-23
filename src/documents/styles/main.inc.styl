@@ -38,7 +38,7 @@ a:link, a:visited
 	background: inherit
 	text-decoration: none
 a:visited
-	//color: dark_blue
+	// nothing here
 a:hover
 	text-decoration: underline
 a:focus
@@ -61,7 +61,7 @@ hr
 Code/pre styles */
 
 code
-	font: mono_font !important
+	font: mono_font
 	font-size: .75em
 
 // What `` generates when in Markdown, the <code> tag
@@ -113,33 +113,38 @@ Header & navigation */
 header[role="banner"]
 	z-index: 1 // on top of everything
 	position: fixed // stay on top of page at all times
+	clear: both
+	width: 100%
 
 	background: lighter_gray
 	opacity: .9
 	border-bottom: 1px darker_gray solid
 
 	nav
+		//margin: 0 auto
+
 		ul
 			margin: 0
+			padding: 0
 			list-style: none
 
 			li
-				margin: 0
 				float: left
 
+				//padding: .1em 1em 1em 1em
 				border-left: 1px darker_gray solid
 
 			li:last-child
 				border-right: 1px darker_gray solid
 
 		a
-			//display: block
-
 			font-size: .9em
 			font-weight: bold
 			text-transform: uppercase
 			letter-spacing: 1px
 
+			//display: block
+			margin: .5em .3em
 			border-bottom: 3px var_black solid
 
 		a.menu-current
@@ -149,7 +154,7 @@ header[role="banner"]
 			text-decoration: none
 			transition: border-color .15s ease
 			border-color: link_unvisited
-			color: black
+			color: var_black
 
 		a:link, a:visited
 			color: var_black
@@ -191,11 +196,8 @@ footer
 	//border-top: 1px normal_gray solid
 	clear: both
 
-	position: relative
-	bottom: 0
-
 // Stick to bottom footer, thingy
-// Not being used temporarily
+// Not being used...
 
 /* Thanks to Ryan Fait for it's sticky footer trick
  * http //ryanfait.com/resources/footer-stick-to-bottom-of-page/
