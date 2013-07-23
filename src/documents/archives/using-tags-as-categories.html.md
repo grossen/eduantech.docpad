@@ -1,4 +1,4 @@
----
+--- yaml
 title: Using tags as categories
 author: Eduan Lavaque
 date: 2013-07-06

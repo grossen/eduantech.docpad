@@ -1,4 +1,4 @@
----
+--- yaml
 title: This is an extra long title so that I can see what happens if the title is long
 author: Eduan Lavaque
 date: 2013-07-25

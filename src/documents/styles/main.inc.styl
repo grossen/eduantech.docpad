@@ -105,7 +105,7 @@ main
 	min-height: 200px
 	min-width: 500px
 	max-width: 800px
-	position: relative
+	//position: relative
 
 /* ----------------------------------------------------------------------------
 Header & navigation */
@@ -121,7 +121,11 @@ header[role="banner"]
 	border-bottom: 1px darker_gray solid
 
 	nav
-		//margin: 0 auto
+		margin: 0 auto
+		min-width: 500px
+		max-width: 800px
+		float: none
+		text-align: center
 
 		ul
 			margin: 0
@@ -129,9 +133,10 @@ header[role="banner"]
 			list-style: none
 
 			li
-				float: left
+				display: inline
+				margin: inherit
+				padding: inherit
 
-				//padding: .1em 1em 1em 1em
 				border-left: 1px darker_gray solid
 
 			li:last-child
@@ -143,8 +148,8 @@ header[role="banner"]
 			text-transform: uppercase
 			letter-spacing: 1px
 
-			//display: block
-			margin: .5em .3em
+			display: inline-block
+			//margin: .5em .3em
 			border-bottom: 3px var_black solid
 
 		a.menu-current

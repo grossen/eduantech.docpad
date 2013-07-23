@@ -1,6 +1,6 @@
 # License
 
-Unless stated otherwise; all works are licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) for the source code (this includes code snippets and design) and the [Creative Commons Attribution-NoDerivs 3.0 Unported (CC BY-ND 3.0)](http://creativecommons.org/licenses/by-nd/3.0/deed.en_US) for everything else (including content and media).
+Unless stated otherwise; all works are licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) for the source code (this includes code snippets and design) and the [Creative Commons Attribution-NoDerivs 3.0 Unported (CC BY-ND 3.0)](http://creativecommons.org/licenses/by-nd/3.0/deed.en_US) license for everything else (including content and media).
 
 
 ## MIT License
