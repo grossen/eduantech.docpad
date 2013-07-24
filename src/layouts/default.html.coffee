@@ -23,7 +23,7 @@ html lang: 'en', ->
 		# DocPad plugins' styles
 		text  @getBlock('styles').toHTML()
 		# My styles
-		link rel: 'stylesheet', href: '/styles/all.css'
+		link rel: 'stylesheet', href: '/styles/all.min.css'
 
 		# IE, HTML5 shiv
 		ie 'IE', ->
