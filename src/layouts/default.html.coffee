@@ -56,4 +56,4 @@ html lang: 'en', ->
 		text @getBlock('scripts').toHTML()
 		# My scripts
 		script src: '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
-		script src: '/scripts/main.js'
+		script src: '/scripts/all.min.js'
