@@ -46,6 +46,7 @@ docpadConfig = {
 			@getCollection('documents').findAllLive({menuOrder:$exists:true},[menuOrder:1])
 
 	events:
+		# Write After
 		# Used to minify our assets with grunt
 		writeAfter: (opts,next) ->
 			# Prepare
@@ -56,8 +57,7 @@ docpadConfig = {
 			gruntPath = pathUtil.join(rootPath, 'node_modules', '.bin', 'grunt')
 
 			# Perform the grunt `min` task
-			# https://github.com/gruntjs/grunt/blob/0.3-stable/docs/task_min.md
-			command = [gruntPath, 'min']
+			command = [gruntPath, 'uglify']
 
 			# Execute
 			safeps.spawn(command, {cwd:rootPath,output:true}, next)
