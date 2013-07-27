@@ -5,7 +5,7 @@ article '.post', ->
 	div '.meta', ->
 		p @document.author
 		p ->
-			time datetime: @moment(@document.date).format('YYYY-MM-DD'), @moment(@document.date).format('MMMM DD, YYYY')
+			time datetime: @postDatetime(@document.date), @postDatetime(@document.date, 'MMMM DD, YYYY')
 #		p ->
 #			a href: '#comments', title: '#{comments##}', '#{comments##} comments'
 

@@ -31,7 +31,7 @@ docpadConfig = {
 		getPreparedKeywords: -> @site.keywords.concat(@document.keywords or []).join(', ')
 
 		# Post meta
-		#postDatetime: (date, format="YYYY-MM-DD") -> return moment(date).format(format)
+		postDatetime: (date, format="YYYY-MM-DD") -> return moment(date).format(format)
 
 	localeCode: "en"
 
