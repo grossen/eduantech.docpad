@@ -5,7 +5,7 @@ Unless stated otherwise; all works are licensed [permissively](http://en.wikiped
 
 ## MIT License
 
-Copyright © 2013 [Eduán Lávaque](http://eduantech.com) \<eduan@snapsimpletech.com\>
+Copyright © 2013 [Eduán Lávaque](http://eduantech.com) \<eduanlavaque@gmail.com\>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

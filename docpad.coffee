@@ -6,31 +6,7 @@ moment = require('moment')
 
 # Define the DocPad Configuration
 docpadConfig = {
-	# Used to minify our assets with grunt
-	writeAfter: (opts,next) ->
-		# Prepare
-		safeps = require('safeps')
-		pathUtil = require('path')
-		docpad = @docpad
-		rootPath = docpad.getConfig().rootPath
-		gruntPath = pathUtil.join(rootPath, 'node_modules', '.bin', 'grunt')
-
-		# Perform the grunt `min` task
-		# https://github.com/gruntjs/grunt/blob/0.3-stable/docs/task_min.md
-		command = [gruntPath, 'min']
-
-		# Execute
-		spafeps.spawn(command, {cwd:rootPath,output:true}, next)
-
-		# Chain
-		@
-
 	plugins:
-		stylus:
-			compress: true
-			environment:
-				development:
-					compress: false
 		highlightjs:
 			replaceTab: null
 
@@ -55,20 +31,39 @@ docpadConfig = {
 		getPreparedKeywords: -> @site.keywords.concat(@document.keywords or []).join(', ')
 
 		# Post meta
-		postDatetime: (date, format="YYYY-MM-DD") -> return moment(date).format(format)
-		postDate: (date, format="MMMM DD, YYYY") -> return moment(date).format(format)
+		#postDatetime: (date, format="YYYY-MM-DD") -> return moment(date).format(format)
 
 	localeCode: "en"
 
 	collections:
 		posts: ->
 			@getCollection('html').findAllLive({relativeOutDirPath:'archives'},[{date:-1}]).on 'add', (model) ->
-				dateUrl = '/archives' + moment(model.get('date')).format('/YYYY/MM/DD') + '/' + model.get('basename')
+				dateUrl = '/archives' + moment(model.get('date')).format('/YYYY/MM') + '/' + model.get('basename')
 				model.addUrl(dateUrl).setMetaDefaults({url: dateUrl})
 				model.setMetaDefaults({layout: 'post'})
 
 		pages: ->
 			@getCollection('documents').findAllLive({menuOrder:$exists:true},[menuOrder:1])
+
+	events:
+		# Used to minify our assets with grunt
+		writeAfter: (opts,next) ->
+			# Prepare
+			safeps = require('safeps')
+			pathUtil = require('path')
+			docpad = @docpad
+			rootPath = docpad.getConfig().rootPath
+			gruntPath = pathUtil.join(rootPath, 'node_modules', '.bin', 'grunt')
+
+			# Perform the grunt `min` task
+			# https://github.com/gruntjs/grunt/blob/0.3-stable/docs/task_min.md
+			command = [gruntPath, 'min']
+
+			# Execute
+			safeps.spawn(command, {cwd:rootPath,output:true}, next)
+
+			# Chain
+			@
 }
 
 # Export the DocPad Configuration

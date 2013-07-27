@@ -1,6 +1,6 @@
 {
   "name": "eduantech.docpad",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "My website/blog/portfolio without using a pre-made skeleton",
   "engines": {
     "node": "0.10",
@@ -15,11 +15,11 @@
     "docpad-plugin-highlightjs": "~2.1.7",
     "docpad-plugin-ignoreincludes": "~2.0.0",
     "docpad-plugin-livereload": "~2.4.0",
-    "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-less": "~2.1.3",
     "safeps": "~2.2.6",
     "grunt": "~0.4.1",
-    "docpad-plugin-coffeescript": "~2.2.2"
+    "docpad-plugin-coffeescript": "~2.2.2",
+    "docpad-plugin-robotskirt": "~2.0.3"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
