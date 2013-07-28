@@ -57,7 +57,7 @@ docpadConfig = {
 			gruntPath = pathUtil.join(rootPath, 'node_modules', '.bin', 'grunt')
 
 			# Perform the grunt `min` task
-			command = [gruntPath, 'uglify']
+			command = [gruntPath]
 
 			# Execute
 			safeps.spawn(command, {cwd:rootPath,output:true}, next)

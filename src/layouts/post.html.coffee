@@ -2,7 +2,7 @@
 layout: default
 ---
 article '.post', ->
-	div '.meta', ->
+	section '.meta', ->
 		p @document.author
 		p ->
 			time datetime: @postDatetime(@document.date), @postDatetime(@document.date, 'MMMM DD, YYYY')
@@ -14,5 +14,5 @@ article '.post', ->
 
 	text @content
 
-#	div '#addthis', ->
+#	section '#addthis', ->
 #		@getAddThisBlock('std', 'right:13px; top:115px;', true)

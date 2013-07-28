@@ -18,9 +18,10 @@
     "docpad-plugin-addthis": "~2.0.3",
     "moment": "~2.0.0",
     "safeps": "~2.2.6",
+    "grunt-cli": "~0.1.9",
     "grunt": "~0.4.1",
-    "grunt-contrib-mincss": "~0.3.2",
-    "grunt-contrib-uglify": "~0.2.2"
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-cssmin": "~0.6.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
