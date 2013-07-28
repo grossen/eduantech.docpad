@@ -6,29 +6,29 @@ serif-family: Merriweather, serif;
 monospace-family: "DejaVu Sans Mono", Menlo, Monaco, Consolas, monospace;
 
 // Colors
-normal-blue: #2793e6;
-normal-red: #d24939;
-lighter-gray: #ebebeb;
-light-gray: #b8b8b8;
-normal-gray: #eee;
-dark-gray: #aaa;
-darker-gray: #525252;
-var-black: #333;
+normal-blue:#2793e6;
+normal-red:#d24939;
+lighter-gray:#ebebeb;
+light-gray:#b8b8b8;
+normal-gray:#eee;
+dark-gray:#aaa;
+darker-gray:#525252;
+var-black:#333;
 
-background: #fefefe;
+background:#fefefe;
 
-title-color: #000;
-content-color: #333;
-link-unvisited: #2793e6;
-link-visited: #2793e6;
+title-color:#000;
+content-color:#333;
+link-unvisited:#2793e6;
+link-visited:#2793e6;
 
 h1, h2, h3, h4, h5, h6 {
 	line-height:1.2em;
-	font-family: "Merriweather Sans", Helvetica, sans-serif;
-	color: #333;
-	text-rendering: optimizelegibility;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
+	font-family:$sans-serif-family;
+	color:#333;
+	text-rendering:optimizelegibility;
+	margin-top:1em;
+	margin-bottom:0.5em;
 }
 
 
@@ -83,7 +83,7 @@ hr {
 }
 
 code {
-	font:"DejaVu Sans Mono", Menlo, Monaco, Consolas, monospace;
+	font:$monospace-family;
 	font-size:0.75em;
 }
 
@@ -104,7 +104,7 @@ pre {
 
 body {
 	line-height:1.5;
-	font-family:"Merriweather Sans", Helvetica, sans-serif;
+	font-family:$sans-serif-family;
 	font-size:15px;
 	font-weight:300;
 	color:#333;
@@ -125,9 +125,7 @@ header[role="banner"] {
 	clear:both;
 	width:100%;
 	background:#ebebeb;
-	opacity:0.9;
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-	filter:alpha(opacity=90);
+	opacity:.9;
 	border-bottom:1px #525252 solid;
 	nav {
 		margin:0 auto;

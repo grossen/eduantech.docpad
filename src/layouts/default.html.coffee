@@ -24,6 +24,7 @@ html lang: 'en', ->
 		text  @getBlock('styles').toHTML()
 		# My styles
 		link rel: 'stylesheet', href: '/styles/all.min.css'
+		script src: '/scripts/prefixfree.min.js'
 
 		# IE, HTML5 shiv
 		ie 'IE', ->
