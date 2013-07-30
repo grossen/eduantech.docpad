@@ -1,5 +1,5 @@
 --- yaml
-title: Re-designing my website, the switch to DocPad
+title: Re-designing My Website, the Switch to DocPad
 author: Eduan Lavaque
 date: 2013-06-16
 tags:

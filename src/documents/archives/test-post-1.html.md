@@ -1,5 +1,5 @@
 --- yaml
-title: This is an extra long title so that I can see what happens if the title is long
+title: This Is an Extra Long Title So That I Can See What Happens If The Title Is Long
 author: Eduan Lavaque
 date: 2013-07-25
 categories:
