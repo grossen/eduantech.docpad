@@ -6,6 +6,7 @@ html lang: 'en', ->
 		meta 'http-equiv': 'X-UA-Compatible', content: 'ie=edge,chrome=1'
 		meta 'http-equiv': 'content-type', content: 'text/html; charset=utf-8'
 		meta name: 'viewport', content: 'width=device-width, initial-scale=1'
+		link rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon'
 		# DocPad plugins' meta
 		text @getBlock('meta').toHTML()
 
@@ -31,27 +32,28 @@ html lang: 'en', ->
 			script src: 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
 
 	body ->
-		# Navigation
-		header role: 'banner', ->
-			nav role: 'navigation', ->
-				ul ->
-					for page in @getCollection('pages').toJSON()
-						# Check to be able to tell the user which is the current menu option (as in currently in it)
-						pageMatch = page.match or page.url
-						documentMatch = @document.match or @document.url
-						cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
-						li ->
-							a 'class':cssname, href: page.url, title: page.menuTitle, page.menuTitle
+		div '#wrapper', ->
+			# Navigation
+			header role: 'banner', ->
+				nav role: 'navigation', ->
+					ul ->
+						for page in @getCollection('pages').toJSON()
+							# Check to be able to tell the user which is the current menu option (as in currently in it)
+							pageMatch = page.match or page.url
+							documentMatch = @document.match or @document.url
+							cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
+							li ->
+								a 'class':cssname, href: page.url, title: page.menuTitle, page.menuTitle
 
-		# Content
-		main role: 'main',
-			-> @content
+			# Content
+			main role: 'main',
+				-> @content
 
-		# Footer
-		footer role: 'contentinfo', ->
-			div -> """
-				<p><a href="https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md" title="License Terms">License Terms</a> | Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
-				"""
+			# Footer
+			footer role: 'contentinfo', ->
+				div -> """
+					<p><a href="https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md" title="License Terms">License Terms</a> | Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
+					"""
 
 		# DocPad plugins' scripts
 		text @getBlock('scripts').toHTML()

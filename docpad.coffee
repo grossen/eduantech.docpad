@@ -9,13 +9,16 @@ docpadConfig = {
 	plugins:
 		highlightjs:
 			replaceTab: null
+		coffeekup:
+			coffeecup:
+				format: false
 
 	templateData:
 		site:
 			url: "http://eduantech.com"
 			title: "EduanTech"
 			author: "Eduan Lavaque"
-			email: "eduan@snapsimpletech.com"
+			email: "eduanlavaque@gmail.com"
 			description: """
 				A hacker's advice for Linux (and a lot of stuff that works on Linux), WordPress, s2Member and web development.
 				"""

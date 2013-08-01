@@ -3,8 +3,8 @@ title: Using Tags as Categories
 author: Eduan Lavaque
 date: 2013-07-06
 tags:
-    - CMS
-    - Tutorials
+    - cms
+    - tutorials
     - gist
     - docpad
 ---

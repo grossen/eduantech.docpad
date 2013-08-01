@@ -2,15 +2,12 @@
 layout: default
 ---
 article '.post', ->
-	section '.meta', ->
-		p @document.author
-		p ->
-			time datetime: @postDatetime(@document.date), @postDatetime(@document.date, 'MMMM DD, YYYY')
-#		p ->
-#			a href: '#comments', title: '#{comments##}', '#{comments##} comments'
-
 	header ->
 		h1 @document.title
+
+		section '.meta', ->
+			text @document.author + ', '
+			time datetime: @postDatetime(@document.date), @postDatetime(@document.date, 'DD-MM-YYYY')
 
 	text @content
 
