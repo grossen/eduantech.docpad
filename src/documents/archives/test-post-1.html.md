@@ -20,7 +20,7 @@ https://www.wordnik.com
 
 Some testie testie `code` <a href="some url">`link code`</a>, y'know. Here's a code *block*:
 
-``` xml
+```xml
 <!DOCTYPE html>
 <title>Title</title>
 

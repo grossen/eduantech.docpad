@@ -6,7 +6,7 @@ article '.post', ->
 		h1 @document.title
 
 		section '.meta', ->
-			text @document.author + ', '
+			text @document.author + ' ⋅ '
 			time datetime: @postDatetime(@document.date), @postDatetime(@document.date, 'DD-MM-YYYY')
 
 	text @content

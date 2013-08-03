@@ -6,7 +6,7 @@ menuShow: true
 menuOrder: 4
 ignored: false
 ---
-If you want or need to contact me you can easily do so by sending an email to my email account <eduan@snapsimpletech.com>.
+If you want or need to contact me you can easily do so by sending an email to my email account <eduanlavaque@gmail.com>.
 
 If you want to request me as a freelancer please include "Freelancer: " at the start of the message title. Also please include the following info in your email:
 

@@ -10,7 +10,7 @@
     "docpad": "~6.47.0",
     "docpad-plugin-coffeekup": "~2.2.0",
     "docpad-plugin-eco": "~2.0.2",
-    "docpad-plugin-multimarkdown": "~2.0.0",
+    "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-coffeescript": "~2.2.2",
     "docpad-plugin-sass": "~2.6.0",
     "docpad-plugin-livereload": "~2.5.0",

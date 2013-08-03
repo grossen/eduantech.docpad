@@ -24,6 +24,7 @@ html lang: 'en', ->
 		# DocPad plugins' styles
 		text  @getBlock('styles').toHTML()
 		# My styles
+		link href:'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600', rel:'stylesheet', type:'text/css'
 		link rel: 'stylesheet', href: '/styles/all.min.css'
 		script src: '/scripts/prefixfree.min.js'
 
@@ -37,6 +38,8 @@ html lang: 'en', ->
 			header role: 'banner', ->
 				nav role: 'navigation', ->
 					ul ->
+						li ->
+							a '.webtitle', href: '/', title: 'EduanTech', 'EduanTech'
 						for page in @getCollection('pages').toJSON()
 							# Check to be able to tell the user which is the current menu option (as in currently in it)
 							pageMatch = page.match or page.url
