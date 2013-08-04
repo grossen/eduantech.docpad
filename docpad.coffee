@@ -40,13 +40,13 @@ docpadConfig = {
 
 	collections:
 		posts: ->
-			@getCollection('html').findAllLive({relativeOutDirPath:'archives'},[{date:-1}]).on 'add', (model) ->
-				dateUrl = '/archives' + moment(model.get('date')).format('/YYYY/MM') + '/' + model.get('basename')
-				model.addUrl(dateUrl).setMetaDefaults({url: dateUrl})
-				model.setMetaDefaults({layout: 'post'})
+			@getCollection('html').findAllLive({relativeOutDirPath:'posts'},[{date:-1}]).on 'add', (model) ->
+				dateUrl = moment(model.get('date')).format('/YYYY/MM') + '/' + model.get('basename')
+				model.addUrl(dateUrl).setMetaDefaults({url:dateUrl})
+				model.setMetaDefaults({layout:'post'})
 
 		pages: ->
-			@getCollection('documents').findAllLive({menuOrder:$exists:true},[menuOrder:1])
+			@getCollection('documents').findAllLive({isPage:true},[menuOrder:1])
 
 	events:
 		# Write After

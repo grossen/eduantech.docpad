@@ -1,10 +1,9 @@
 ---
 title: Archives
-menuTitle: Archives
-layout: page
 menuShow: true
+isPage: true
+layout: page
 menuOrder: 1
-ignored: false
 ---
 <ul>
 <% for post in @getCollection("posts").findAll({layout:'post'}).toJSON(): %>

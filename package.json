@@ -14,7 +14,6 @@
     "docpad-plugin-coffeescript": "~2.2.2",
     "docpad-plugin-sass": "~2.6.0",
     "docpad-plugin-livereload": "~2.5.0",
-    "docpad-plugin-highlightjs": "~2.1.7",
     "docpad-plugin-addthis": "~2.0.3",
     "moment": "~2.0.0",
     "safeps": "~2.2.6",

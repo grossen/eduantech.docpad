@@ -1,10 +1,9 @@
 ---
 title: Contact Me
-menuTitle: Contact
-layout: page
 menuShow: true
+isPage: true
+layout: page
 menuOrder: 4
-ignored: false
 ---
 If you want or need to contact me you can easily do so by sending an email to my email account <eduanlavaque@gmail.com>.
 

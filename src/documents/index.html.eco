@@ -1,10 +1,6 @@
 ---
 title: Home
-menuTitle: Home
 layout: page
-menuShow: true
-menuOrder: 0
-ignored: false
 ---
 <ul>
 <% for post in @getCollection('posts').findAll({layout:'post'}).toJSON(): %>

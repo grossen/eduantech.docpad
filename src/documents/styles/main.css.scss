@@ -10,8 +10,8 @@ $monospace-family: Consolas, Menlo, Monaco, "DejaVu Sans Mono", monospace;
 
 $normal-blue:#2793e6;
 
-$normal-red:#d24939;
-$dark-red:#a00;
+$normal-red:#C83D2D;
+$dark-red:#85281E;
 
 $lighter-gray:#ebebeb;
 $light-gray:#b8b8b8;
@@ -41,9 +41,11 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom:0.5em;
 }
 
+// font weights
 h1, h2 { font-weight:400; }
 h3, h4, h5, h6 { font-weight:bold; }
 
+// heading sizes
 h1 { font-size:24px; }
 h2 { font-size:18px; }
 h3 { font-size:14px; }
@@ -74,49 +76,48 @@ hr {
 
 /* TEXT/CONTENT */
 
-p {
-	margin:1.1em 0;
-}
+p { margin:1.1em 0; }
 
 /* LISTS */
 
-ol, ul {
-	padding-left:50px;
-}
+ol, ul { padding-left:50px; }
 
 ul {
 	list-style-type:disc;
 	ul {
 		list-style-type:circle;
-		ul {
-			list-style-type:square;
-		}
+		ul { list-style-type:square; }
 	}
 }
 
-ol {
-	list-style-type:decimal;
-}
+ol { list-style-type:decimal; }
 
 /* CODE RELATED TAGS */
 
-pre > code, p > code {
+// styles for all code related tags
+pre, pre>code, p>code, a>code {
 	font-family:$monospace-family;
 	line-height:18px;
-	font-size:14px;
+	font-size:13px;
+	background:$lighter-gray;
+	margin:0;
+	padding:0;
 }
 
+// border(s)
+pre, p>code, a>code { border:1px solid $light-gray; }
+
+// inline code blocks
+p>code, a>code {
+	padding:1px 5px;
+	//margin:0 2px;
+}
+
+// pre tags, code blocks
 pre {
 	text-align:left;
-	border:1px solid $light-gray;
-}
-
-p > code, a > code {
-	background:#eee;
-	padding:1px 5px;
-	margin:0;
-	border:1px solid $light-gray;
-	white-space:nowrap;
+	padding:5px 5px;
+	margin:0 10px;
 }
 
 
@@ -129,8 +130,19 @@ header[role="banner"] {
 	margin-top:50px;
 	nav {
 		float:none;
-		text-align:center;
+		div.webtitle {
+			a {
+				font-size:18px;
+				padding:0;
+			}
+			text-align:center;
+			display:inline-block;
+			width:30%;
+		}
 		ul {
+			text-align:left;
+			width:70%;
+			display:inline-block;
 			margin:0;
 			padding:0;
 			list-style:none;
@@ -145,7 +157,7 @@ header[role="banner"] {
 		a:link, a:visited { color:$var-black; }
 		a.menu-current { color:$link-unvisited; }
 		a:hover { text-decoration:none; color:$link-unvisited; }
-		a.webtitle:link, a.webtitle:visited { color:$dark-red; }
+		a.webtitle:link, a.webtitle:visited { color:$var-black; }
 		a.webtitle.menu-current { color:$dark-red; }
 		a.webtitle:hover { text-decoration:none; color:$normal-red; }
 	}
@@ -158,7 +170,7 @@ header[role="banner"] {
 #wrapper {
 	line-height:1.5;
 	font-family:$sans-serif-family;
-	font-size:16px;
+	font-size:15px;
 	font-weight:400;
 	color:$var-black;
 
@@ -169,6 +181,12 @@ header[role="banner"] {
 main {
 	//padding-top:50px;
 	min-height:200px;
+}
+
+article {
+	p:last-child {
+		margin-bottom:0;
+	}
 }
 
 article.post {
@@ -191,6 +209,7 @@ footer {
 	display:block;
 	clear:both;
 
+	margin-top:24px;
 	border-top:1px $light-gray solid;
 	padding-top:1em;
 	margin-bottom:2em;

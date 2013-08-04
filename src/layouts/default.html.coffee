@@ -37,16 +37,16 @@ html lang: 'en', ->
 			# Navigation
 			header role: 'banner', ->
 				nav role: 'navigation', ->
+					div '.webtitle', ->
+						a href: '/', title: 'EduanTech', 'EduanTech'
 					ul ->
-						li ->
-							a '.webtitle', href: '/', title: 'EduanTech', 'EduanTech'
-						for page in @getCollection('pages').toJSON()
+						for page in @getCollection('pages').findAllLive({layout:'page'}).toJSON()
 							# Check to be able to tell the user which is the current menu option (as in currently in it)
 							pageMatch = page.match or page.url
 							documentMatch = @document.match or @document.url
 							cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
 							li ->
-								a 'class':cssname, href: page.url, title: page.menuTitle, page.menuTitle
+								a 'class':cssname, href: page.url, title: page.title, page.title
 
 			# Content
 			main role: 'main',
