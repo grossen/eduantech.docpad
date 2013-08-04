@@ -126,21 +126,21 @@ pre {
 
 header[role="banner"] {
 	clear:both;
-	background:$lighter-gray;
 	margin-top:50px;
+	padding-bottom:24px;
+	border-bottom:1px $light-gray solid;
 	nav {
 		float:none;
 		div.webtitle {
 			a {
 				font-size:18px;
-				padding:0;
 			}
 			text-align:center;
 			display:inline-block;
 			width:30%;
 		}
 		ul {
-			text-align:left;
+			text-align:center;
 			width:70%;
 			display:inline-block;
 			margin:0;
@@ -152,7 +152,7 @@ header[role="banner"] {
 			letter-spacing:1px;
 			line-height:1.1em;
 			display:inline-block;
-			padding:10px 10px;
+			padding:0 12px;
 		}
 		a:link, a:visited { color:$var-black; }
 		a.menu-current { color:$link-unvisited; }
