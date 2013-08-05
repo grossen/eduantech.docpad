@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
 			},
 			files: {
-				src: ['out/scripts/main.js'],
+				src: ['out/scripts/cssemoticons.min.js', 'out/scripts/main.js'],
 				dest: 'out/scripts/all.min.js'
 			}
 		},
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */'
 			},
 			files: {
-				src: ['out/styles/reset.css', 'out/styles/main.css'],
+				src: ['out/styles/reset.css', 'out/styles/main.css', 'out/styles/cssemoticons.css'],
 				dest: 'out/styles/all.min.css'
 			}
 		}

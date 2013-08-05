@@ -1,9 +1,9 @@
 ---
-title: Contact Me
+title: Contact
 menuShow: true
 isPage: true
 layout: page
-menuOrder: 4
+menuOrder: 2
 ---
 If you want or need to contact me you can easily do so by sending an email to my email account <eduanlavaque@gmail.com>.
 
@@ -27,5 +27,3 @@ Lastly, if you just want to say thanks you can just send me an email saying so, 
 		src="https://www.gittip.com/Greduan/widget.html"
 		width="48pt" height="22pt"></iframe>
 -->
-
-Oh, BTW, for freelancer work I accept payments in PayPal only (for now).

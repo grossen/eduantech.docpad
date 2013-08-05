@@ -3,7 +3,7 @@ title: Posts
 menuShow: true
 isPage: true
 layout: page
-menuOrder: 1
+menuOrder: 0
 ---
 <ul>
 <% for post in @getCollection("posts").findAll({layout:'post'}).toJSON(): %>

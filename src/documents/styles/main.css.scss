@@ -157,9 +157,6 @@ header[role="banner"] {
 		a:link, a:visited { color:$var-black; }
 		a.menu-current { color:$link-unvisited; }
 		a:hover { text-decoration:none; color:$link-unvisited; }
-		a.webtitle:link, a.webtitle:visited { color:$var-black; }
-		a.webtitle.menu-current { color:$dark-red; }
-		a.webtitle:hover { text-decoration:none; color:$normal-red; }
 	}
 }
 
@@ -167,15 +164,19 @@ header[role="banner"] {
 
 /* CONTENT STYLES AND LAYOUT */
 
+html { font-size:15px; }
+
 #wrapper {
 	line-height:1.5;
 	font-family:$sans-serif-family;
-	font-size:15px;
 	font-weight:400;
 	color:$var-black;
 
 	margin:0 auto;
-	width:650px;
+	padding:0 10px; // make it nice for really small screens
+
+	min-width:300px;
+	max-width:650px;
 }
 
 main {
@@ -184,15 +185,20 @@ main {
 }
 
 article {
+	h1 {
+		//padding-left:1rem;
+	}
 	p:last-child {
 		margin-bottom:0;
 	}
+	font-size:1rem;
 }
 
 article.post {
 	section.meta {
-		font-size:13px;
+		font-size:.8rem;
 		color:$dark-gray;
+		//padding-left:1rem;
 	}
 }
 
@@ -202,7 +208,7 @@ article.post {
 
 footer {
 	background:$background;
-	font-size:0.8em;
+	font-size:0.8rem;
 	color:$var-black;
 	text-align:center;
 
@@ -222,20 +228,4 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 320px) {
-}
-
-@media (min-width: 480px) {
-}
-
-@media (min-width: 600px) {
-}
-
-@media (min-width: 801px) {
-}
-
-@media (min-width: 1025px) {
-}
-
-@media (min-width: 1281px) {
-}
+// nothing here...
