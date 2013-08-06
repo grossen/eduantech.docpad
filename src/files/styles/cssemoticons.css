@@ -32,10 +32,10 @@ span.css-emoticon {
   -moz-border-radius: 1.54em;
   -webkit-border-radius: 1.54em;
   border-radius: 1.54em;
-  /*-ms-box-shadow: 1px -1px 2px rgba(0,0,0,0.5);
-  -moz-box-shadow: 1px -1px 2px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 1px -1px 2px rgba(0,0,0,0.5);
-  box-shadow: 1px -1px 2px rgba(0,0,0,0.5);*/
+  -ms-box-shadow: 1px -1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 1px -1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 1px -1px 1px rgba(0,0,0,0.1);
+  box-shadow: 1px -1px 2px rgba(0,0,0,0.1);
   border: 1px solid rgba(0,0,0,0.25);
   background-color: #ffcc00;
   /*background-image: -webkit-gradient(
@@ -92,7 +92,7 @@ span.css-emoticon.small-emoticon.spaced-emoticon {
 /* Styles for additional colors */
 span.css-emoticon.red-emoticon {
   background-color: #eb0542;
-  background-image: -webkit-gradient(
+  /*background-image: -webkit-gradient(
     linear,
     right top,
     left top,
@@ -105,12 +105,12 @@ span.css-emoticon.red-emoticon {
     rgb(235,5,66) 41%,
     rgb(235,38,90) 56%,
     rgb(250,55,110) 100%
-  );
+  );*/
 }
 
 span.css-emoticon.pink-emoticon {
   background-color: #ff8fd4;
-  background-image: -webkit-gradient(
+  /*background-image: -webkit-gradient(
     linear,
     right top,
     left top,
@@ -123,7 +123,7 @@ span.css-emoticon.pink-emoticon {
     rgb(255,143,212) 41%,
     rgb(255,153,216) 56%,
     rgb(255,173,225) 100%
-  );
+  );*/
 }
 
 /* styles for emoticons that need no rotation, like O_o */
@@ -132,9 +132,9 @@ span.css-emoticon.no-rotate {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-  -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
   font-size: 0.45em;
   width: 2.2em;
   height: 2.2em;
@@ -142,7 +142,7 @@ span.css-emoticon.no-rotate {
   -moz-border-radius: 2.2em;
   -webkit-border-radius: 2.2em;
   border-radius: 2.2em;
-  background-image: -webkit-gradient(
+  /*background-image: -webkit-gradient(
     linear,
     right bottom,
     right top,
@@ -155,11 +155,11 @@ span.css-emoticon.no-rotate {
     rgb(255,204,0) 41%,
     rgb(255,221,85) 56%,
     rgb(255,238,170) 100%
-  );
+  );*/
 }
 
 span.css-emoticon.no-rotate.red-emoticon {
-  background-image: -webkit-gradient(
+  /*background-image: -webkit-gradient(
     linear,
     right bottom,
     right top,
@@ -172,11 +172,11 @@ span.css-emoticon.no-rotate.red-emoticon {
     rgb(235,5,66) 41%,
     rgb(235,38,90) 56%,
     rgb(250,55,110) 100%
-  );
+  );*/
 }
 
 span.css-emoticon.no-rotate.pink-emoticon {
-  background-image: -webkit-gradient(
+  /*background-image: -webkit-gradient(
     linear,
     right bottom,
     right top,
@@ -189,7 +189,7 @@ span.css-emoticon.no-rotate.pink-emoticon {
     rgb(255,143,212) 41%,
     rgb(255,153,216) 56%,
     rgb(255,173,225) 100%
-  );
+  /*);*/
 }
 
 /* Styles for emoticons that need to be rotated counter-clockwise, like <3 */
@@ -198,10 +198,10 @@ span.css-emoticon.counter-rotated {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
-  -moz-box-shadow: -1px 1px 2px rgba(0,0,0,0.5);
-  -webkit-box-shadow: -1px 1px 2px rgba(0,0,0,0.5);
-  box-shadow: -1px 1px 2px rgba(0,0,0,0.5);
-  background-image: -webkit-gradient(
+  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
+  /*background-image: -webkit-gradient(
     linear,
     left top,
     right top,
@@ -214,11 +214,11 @@ span.css-emoticon.counter-rotated {
     rgb(255,204,0) 41%,
     rgb(255,221,85) 56%,
     rgb(255,238,170) 100%
-  );
+  );*/
 }
 
 span.css-emoticon.counter-rotated.red-emoticon {
-  background-image: -webkit-gradient(
+  /*background-image: -webkit-gradient(
     linear,
     left top,
     right top,
@@ -231,11 +231,11 @@ span.css-emoticon.counter-rotated.red-emoticon {
     rgb(235,5,66) 41%,
     rgb(235,38,90) 56%,
     rgb(250,55,110) 100%
-  );
+  );*/
 }
 
 span.css-emoticon.counter-rotated.pink-emoticon {
-  background-image: -webkit-gradient(
+  /*background-image: -webkit-gradient(
     linear,
     left top,
     right top,
@@ -248,7 +248,7 @@ span.css-emoticon.counter-rotated.pink-emoticon {
     rgb(255,143,212) 41%,
     rgb(255,153,216) 56%,
     rgb(255,173,225) 100%
-  );
+  );*/
 }
 
 /* Styles for animated states */
@@ -282,7 +282,7 @@ span.css-emoticon.nintendo-controller {
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  background: -webkit-gradient(
+  /*background: -webkit-gradient(
       linear,
       left bottom,
       left top,
@@ -293,5 +293,5 @@ span.css-emoticon.nintendo-controller {
       center bottom,
       rgb(116,121,140) 9%,
       rgb(165,170,189) 55%
-  );
+  );*/
 }
