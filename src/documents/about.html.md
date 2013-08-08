@@ -7,7 +7,7 @@ menuOrder: 1
 ---
 Hi, my name is Eduardo Lávaque (please call me Eduan) and I am a hobby freelancer and I specialize in clean designs and code. I've been coding since around 2009 or so, so I sorta know my way around, I'm not much compared to the experts though.
 
-I am a blogger, entrepreneur, designer, web developer, moderator for the s2Member forums and overall little-above-average person (IMO ;)).
+I am a blogger, entrepreneur, designer, web developer, moderator for the s2Member forums and overall thinker).
 
 I love open source, in fact I like contributing to open source software (when I can). I'm always on the lookout for new exciting stuff that's useful.
 

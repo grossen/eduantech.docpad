@@ -361,6 +361,6 @@ span.css-emoticon.nintendo-controller {
       center bottom,
       rgb(116,121,140) 9%,
       rgb(165,170,189) 55%
-  );*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#74798C, endColorstr=#A5AABD)";
+  );
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#74798C, endColorstr=#A5AABD)";*/
 }

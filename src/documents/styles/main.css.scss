@@ -24,14 +24,24 @@ $background:#fefefe;
 $content-color:#333;
 $title-color:#000;
 $link-unvisited:#2793e6;
-$link-visited:#2793e6;
+$link-visited:#1365A4;
 
 
 
 /* UNDOING THE CSS RESET */
 
+/* BLOCK QUOTES */
+
+blockquote {
+	//margin-left:2rem;
+	border-left:4px $lighter-gray solid;
+	padding-left:1rem;
+	color:$dark-gray;
+}
+
 /* HEADING TAGS */
 
+// general
 h1, h2, h3, h4, h5, h6 {
 	line-height:1.2;
 	text-rendering:optimizelegibility;
@@ -60,6 +70,7 @@ a:link, a:visited {
 	background:inherit;
 	text-decoration:none;
 }
+a:visited { color:$link-visited; }
 a:hover { text-decoration:underline; }
 a:focus { outline:thin-dotted; }
 a:active { outline:thin-dotted; }
@@ -80,7 +91,7 @@ p { margin:1.1em 0; }
 
 /* LISTS */
 
-ol, ul { padding-left:50px; }
+ol, ul { padding-left:3rem; }
 
 ul {
 	list-style-type:disc;

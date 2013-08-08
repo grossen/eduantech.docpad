@@ -23,6 +23,6 @@ First let's look at the rules there are for this, the following rules tell you w
 - Articles. This means "the", "a", "an" and sometimes "some".
 - Prepositions. Of *four or fewer letters*.
 - Conjuctions. Of *four or fewer letters*.
-- The particle "to" used with an infinitive[ˆparticleto].
+- The particle "to" used with an infinitive*.
 
-[ˆparticleto]: For an example of the infinitive particle "to" capitalized at the end of the title, take this title as an example "It's My Participle, and I'll Dangle It if I Want To".
+\* For an example of the infinitive particle "to" capitalized at the end of the title, take this title as an example "It's My Participle, and I'll Dangle It if I Want To".

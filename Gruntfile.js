@@ -14,6 +14,14 @@ module.exports = function(grunt) {
 				dest: 'out/scripts/all.min.js'
 			}
 		},
+		// Parse CSS and add vendor prefixes to rules using values from the Can I Use website
+		autoprefixer: {
+			files: {
+				'out/styles/reset.css': ['out/styles/reset.css'],
+				'out/styles/main.css': ['out/styles/main.css'],
+				'out/styles/cssemoticons.css': ['out/styles/cssemoticons.css'],
+			}
+		},
 		// Minify CSS into one file
 		cssmin: {
 			options: {
@@ -26,6 +34,7 @@ module.exports = function(grunt) {
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.registerTask('default', ['uglify', 'cssmin']);
+	grunt.registerTask('default', ['uglify', 'autoprefixer', 'cssmin']);
 };
