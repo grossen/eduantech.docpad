@@ -63,7 +63,7 @@ docpadConfig = {
 			command = [gruntPath]
 
 			# Execute
-			safeps.spawn(command, {cwd:rootPath,output:true}, next)
+			safeps.spawn(command, {cwd:rootPath,output:false}, next)
 
 			# Chain
 			@

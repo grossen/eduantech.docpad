@@ -13,7 +13,7 @@
     "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-textile": "~2.1.0",
     "docpad-plugin-coffeescript": "~2.2.2",
-    "docpad-plugin-sass": "~2.6.0",
+    "docpad-plugin-nodesass": "~2.0.0",
     "docpad-plugin-livereload": "~2.5.1",
     "docpad-plugin-addthis": "~2.0.3",
     "moment": "~2.0.0",
@@ -22,7 +22,8 @@
     "grunt": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-autoprefixer": "~0.2.20130806",
-    "grunt-contrib-cssmin": "~0.6.1"
+    "grunt-contrib-cssmin": "~0.6.1",
+    "time-grunt": "~0.1.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

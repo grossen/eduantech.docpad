@@ -1,5 +1,8 @@
 module.exports = function(grunt) {
-	// Project configuration.
+	// require it at the top and pass in the grunt instance
+	require('time-grunt')(grunt);
+
+	// Project configuration
 	grunt.initConfig({
 		// Import package.json file, we get some info from here
 		pkg: grunt.file.readJSON('package.json'),
