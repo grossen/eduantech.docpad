@@ -14,7 +14,7 @@ If you want to request me as a freelancer please include "Freelancer: " at the s
 - Your budget, i.e. how much you *can* pay me for this job.
 - The description of what you want/need.
 
-**Before you contact me for help with s2Member, please post it in the [s2Member forums](http://www.s2member.com/forums/) first, wait a week or so, and then contact me. :smile:**
+**Before you contact me for help with s2Member, please post it in the [s2Member forums](http://www.s2member.com/forums/) first, wait a week or so, and then contact me. :)**
 
 Now, the only requirement I have in order for you to hire me as a freelancer is that you aren't a [Client From Hell](http://clientsfromhell.net/) (no offense). So keep that in mind.
 

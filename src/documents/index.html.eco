@@ -1,9 +1,0 @@
----
-title: Home
-layout: page
----
-<ul>
-<% for post in @getCollection('posts').findAll({layout:'post'}).toJSON(): %>
-	<li><a href="<%= post.url %>"><%= post.title %></a></li>
-<% end %>
-</ul>
