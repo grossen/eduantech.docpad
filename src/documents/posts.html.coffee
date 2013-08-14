@@ -5,14 +5,10 @@ isPage: true
 layout: page
 menuOrder: 0
 ---
-for post in @getCollection('posts').toJSON()
+ul '.posts-list', ->
+	for post in @getCollection('posts').toJSON()
 
-	for year in post.date
-		h1 @moment(post.date).format('YYYY')
+		li ->
+			time datetime: @postDatetime(post.date), @postDatetime(post.date, 'DD MMM YYYY') + ' ⋅ '
+			a href:post.url, post.title
 
-		for month in post.date
-			h2 @moment(post.date).format('MMMM')
-			ul ->
-				li ->
-					@postDatetime(post.date, 'll') + ' » '
-					a href:'post.url', post.title

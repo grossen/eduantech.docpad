@@ -24,7 +24,7 @@ $background:#fff;
 $content-color:#333;
 $title-color:#000;
 $link-unvisited:#2793e6;
-$link-visited:#1365A4;
+$link-visited:#7A007A;
 
 
 
@@ -87,13 +87,14 @@ hr {
 
 /* TEXT/CONTENT */
 
-p { margin:1.1em 0; }
+p { margin:1.1rem 0; }
 
 /* LISTS */
 
 ol, ul {
 	padding-left:3rem;
 	list-style-position:inside;
+	margin:1.1rem 0;
 }
 
 ul {
@@ -143,8 +144,8 @@ header[role="banner"] {
 	margin-top:50px;
 	padding-bottom:24px;
 	border-bottom:1px $light-gray solid;
+	margin-bottom:24px;
 	nav {
-		float:none;
 		div.webtitle {
 			a {
 				font-size:18px;
@@ -170,7 +171,10 @@ header[role="banner"] {
 		}
 		a:link, a:visited { color:$var-black; }
 		a.menu-current { color:$link-unvisited; }
-		a:hover { text-decoration:none; color:$link-unvisited; }
+		a:hover {
+			text-decoration:none;
+			color:$link-unvisited;
+		}
 	}
 }
 
@@ -194,17 +198,10 @@ html { font-size:15px; }
 }
 
 main {
-	//padding-top:50px;
 	min-height:200px;
 }
 
 article {
-	h1 {
-		//padding-left:1rem;
-	}
-	p:last-child {
-		margin-bottom:0;
-	}
 	font-size:.9rem;
 }
 
@@ -212,16 +209,12 @@ article.post {
 	section.meta {
 		font-size:.8rem;
 		color:$dark-gray;
-		//padding-left:1rem;
-		time {
-			//text-transform:uppercase;
-		}
 	}
 }
 
-article.page {
-	ol, ul { padding-left:0; }
-}
+article.page { ol, ul { padding-left:0; }
+	ul.posts-list { list-style-type:none; margin-left:1rem;
+		time { color:$darker-gray; font-size:.7rem; text-transform:uppercase; } } }
 
 
 
@@ -238,11 +231,7 @@ footer {
 
 	margin-top:24px;
 	border-top:1px $light-gray solid;
-	padding-top:1em;
 	margin-bottom:2em;
-	p {
-		margin:0;
-	}
 }
 
 
