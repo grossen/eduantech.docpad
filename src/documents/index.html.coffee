@@ -1,5 +1,5 @@
 ---
-title: Home
+title: EduanTech
 layout: page
 ---
 ul '.posts-list', ->

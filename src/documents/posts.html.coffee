@@ -1,8 +1,8 @@
 ---
 title: Posts
+layout: page
 menuShow: true
 isPage: true
-layout: page
 menuOrder: 0
 ---
 ul '.posts-list', ->
@@ -11,4 +11,3 @@ ul '.posts-list', ->
 		li ->
 			time datetime: @postDatetime(post.date), @postDatetime(post.date, 'DD MMM YYYY') + ' ⋅ '
 			a href:post.url, post.title
-

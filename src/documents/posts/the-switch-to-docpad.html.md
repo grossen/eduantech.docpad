@@ -1,6 +1,5 @@
 --- yaml
 title: The Switch to DocPad
-author: Eduan Lavaque
 date: 2013-06-16
 tags:
     - cms

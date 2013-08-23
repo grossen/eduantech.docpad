@@ -15,15 +15,15 @@ docpadConfig = {
 
 	templateData:
 		site:
-			url: "http://eduantech.com"
+			url: "/"
 			title: "EduanTech"
 			author: "Eduan Lavaque"
 			email: "eduanlavaque@gmail.com"
 			description: """
-				A hacker's advice for Linux (and a lot of stuff that works on Linux), WordPress, s2Member and web development.
+				A hacker's advice for Mac OS X, s2Member and web development.
 				"""
 			keywords: """
-				greduan, eduan, eduán, eduan lavaque, lavaque, lávaque, hacker, linux, wordpress, s2member, web development, code
+				greduan, eduan, eduán, eduan lavaque, lavaque, lávaque, hacker, mac, osx, os x, mac os x, mac osx, s2member, web development, code
 				"""
 
 		# Meta helpers
@@ -34,6 +34,9 @@ docpadConfig = {
 		getPreparedKeywords: -> @site.keywords.concat(@document.keywords or []).join(', ')
 
 		# Post meta
+		postAuthorUrl: () -> if @document.authorUrl then "#{@document.authorUrl}" else @site.url
+		postAuthor: () -> if @document.author then "#{@document.author}" else @site.author
+		postAuthorEmail: () -> if @document.authorEmail then "#{@document.authorEmail}" else @site.email
 		postDatetime: (date, format="YYYY-MM-DD") -> return moment(date).format(format)
 
 	localeCode: "en"

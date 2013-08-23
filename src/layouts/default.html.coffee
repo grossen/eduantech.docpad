@@ -11,7 +11,7 @@ html lang: 'en', ->
 		text @getBlock('meta').toHTML()
 
 		# Feed
-		# https://github.com/balupton/balupton.docpad/blob/master/src/layouts/default.html.coffee#L19
+		link rel: 'alternate', type: 'application/rss+xml', title: 'RSS', href: '/atom.xml'
 
 		# SEO
 		title @getPreparedTitle()
@@ -24,7 +24,7 @@ html lang: 'en', ->
 		# DocPad plugins' styles
 		text  @getBlock('styles').toHTML()
 		# My styles
-		link href:'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600', rel:'stylesheet', type:'text/css'
+		link href:'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600|Libre+Baskerville:400,700,400italic', rel:'stylesheet', type:'text/css'
 		link rel: 'stylesheet', href: '/styles/all.min.css'
 		script src: '/scripts/prefixfree.min.js'
 
@@ -34,19 +34,6 @@ html lang: 'en', ->
 
 	body ->
 		div '#wrapper', ->
-			# Navigation
-			header role: 'banner', ->
-				nav role: 'navigation', ->
-					div '.webtitle', ->
-						a href: '/', title: 'EduanTech', 'EduanTech'
-					ul ->
-						for page in @getCollection('pages').findAllLive({layout:'page'}).toJSON()
-							# Check to be able to tell the user which is the current menu option (as in currently in it)
-							pageMatch = page.match or page.url
-							documentMatch = @document.match or @document.url
-							cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
-							li ->
-								a 'class':cssname, href: page.url, title: page.title, page.title
 
 			# Content
 			main role: 'main',
@@ -54,9 +41,24 @@ html lang: 'en', ->
 
 			# Footer
 			footer role: 'contentinfo', ->
-				div -> """
-					<p><a href="https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md" title="License Terms">License Terms</a> | Powered by <a href="http://docpad.org/">DocPad</a> and <a href="http://realiseweb.nl">Realiseweb</a>.</p>
-					"""
+				# Navigation
+				nav role: 'navigation', ->
+						a href: '/', title: 'EduanTech', 'Home'
+						for page in @getCollection('pages').findAllLive({layout:'page'}).toJSON()
+							# Check to be able to tell the user which is the current menu option (as in currently in it)
+							pageMatch = page.match or page.url
+							documentMatch = @document.match or @document.url
+							cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
+							a 'class':cssname, href: page.url, title: page.title, page.title
+				# Footer
+				div '#footer', ->
+					p ->
+						a href:'https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md', title:'License Terms', 'License Terms'
+						text ' | Powered by '
+						a href:'http://docpad.org/', 'DocPad'
+						text ' and '
+						a href:'http://realiseweb.nl', 'Realiseweb'
+						text '.'
 
 		# DocPad plugins' scripts
 		text @getBlock('scripts').toHTML()

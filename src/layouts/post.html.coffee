@@ -6,10 +6,10 @@ article '.post', ->
 		h1 @document.title
 
 		section '.meta', ->
-			text @document.author + ' ⋅ '
+			text 'Written by '
+			a href: @postAuthorUrl(), @postAuthor()
+			text ' on '
 			time datetime: @postDatetime(@document.date), @postDatetime(@document.date, 'DD MMMM YYYY')
+			text '.'
 
 	text @content
-
-#	section '#addthis', ->
-#		@getAddThisBlock('std', 'right:13px; top:115px;', true)

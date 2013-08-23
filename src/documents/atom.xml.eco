@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title><%= @site.title %></title>
 	<subtitle><%= @site.description %></subtitle>
-	<link href="http://balupton.com/atom.xml" rel="self" />
-	<link href="http://balupton.com" />
+	<link href="<%= @site.url %>/atom.xml" rel="self" />
+	<link href="<%= @site.url %>" />
 	<updated><%= @site.date.toISOString() %></updated>
 	<id><%= @site.url %></id>
 	<author>
-		<name><%= @site.author %></name>
-		<email><%= @site.email %></email>
+		<name><%= @postAuthor() %></name>
+		<email><%= @postAuthorEmail() %></email>
 	</author>
 
 	<% for document in @getCollection('posts').toJSON(): %>
