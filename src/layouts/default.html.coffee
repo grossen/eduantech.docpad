@@ -34,13 +34,7 @@ html lang: 'en', ->
 
 	body ->
 		div '#wrapper', ->
-
-			# Content
-			main role: 'main',
-				-> @content
-
-			# Footer
-			footer role: 'contentinfo', ->
+			header role: 'banner', ->
 				# Navigation
 				nav role: 'navigation', ->
 						a href: '/', title: 'EduanTech', 'Home'
@@ -50,11 +44,28 @@ html lang: 'en', ->
 							documentMatch = @document.match or @document.url
 							cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
 							a 'class':cssname, href: page.url, title: page.title, page.title
+
+			# Content
+			main role: 'main', ->
+				@content
+
+			# Footer
+			footer role: 'contentinfo', ->
+#				# Navigation
+#				nav role: 'navigation', ->
+#						a href: '/', title: 'EduanTech', 'Home'
+#						for page in @getCollection('pages').findAllLive({layout:'page'}).toJSON()
+#							# Check to be able to tell the user which is the current menu option (as in currently in it)
+#							pageMatch = page.match or page.url
+#							documentMatch = @document.match or @document.url
+#							cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
+#							a 'class':cssname, href: page.url, title: page.title, page.title
+
 				# Footer
 				div '#footer', ->
 					p ->
 						a href:'https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md', title:'License Terms', 'License Terms'
-						text ' | Powered by '
+						text '. Powered by '
 						a href:'http://docpad.org/', 'DocPad'
 						text ' and '
 						a href:'http://realiseweb.nl', 'Realiseweb'

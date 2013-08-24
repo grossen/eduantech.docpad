@@ -23,7 +23,7 @@ $var-black:#333;
 $background:#fff;
 $content-color:#575757;
 $title-color:#262626;
-$link-unvisited:#f66;
+$link:#f66;
 $link-visited:#f66;
 
 
@@ -72,7 +72,7 @@ h6 { font-size:8px; }
 /* ANCHOR TAGS */
 
 a:link, a:visited {
-	color:$link-unvisited;
+	color:$link;
 	background:inherit;
 	text-decoration:none;
 }
@@ -94,6 +94,10 @@ hr {
 /* TEXT/CONTENT */
 
 p { margin:1.1rem 0; }
+
+abbr {
+	border-bottom:1px $light-gray dotted;
+}
 
 /* LISTS */
 
@@ -136,6 +140,8 @@ p>code, a>code {
 
 // pre tags, code blocks
 pre {
+	overflow:auto;
+	white-space:nowrap;
 	text-align:left;
 	padding:5px 5px;
 	margin:0 10px;
@@ -162,18 +168,22 @@ html { font-size:16px; }
 }
 
 header[role="banner"] {
-	a, a:link, a:visited { color:$content-color; transition:.3s; }
-	a:hover { text-decoration:none; color:$link-unvisited; }
+	text-align:center;
+	margin-top:30px;
 
+	a, a:link, a:visited { color:$content-color; transition:.3s; }
+	a:hover { text-decoration:none; color:$link; }
 	nav {
 		padding:0;
 		margin:0;
 		a {
+			font-size:1rem;
 			display:inline-block;
-			padding:0 15px;
+			padding:0 20px;
 			border-left:1px $lighter-gray solid;
 		}
-		a:first-child { border-left:none; }
+		a:last-child { border-right:1px $lighter-gray solid; }
+		a:hover { background:#f5f5f5; }
 	}
 }
 
@@ -186,15 +196,15 @@ article {
 	}
 }
 
-article.post {
-	section.meta {
+article.post, article.page {
+	.meta {
 		font-family:$serif-family;
 		text-align:center;
 		font-size:1.1rem;
 		color:$normal-gray;
 		margin-bottom:1.5em;
 		a:link, a:visited { color:$normal-gray; transition:0.2s; }
-		a:hover { color:$link-unvisited; text-decoration:none; }
+		a:hover { color:$link; text-decoration:none; }
 	}
 }
 
@@ -219,26 +229,13 @@ footer {
 	font-size:.9rem;
 
 	margin-top:24px;
-	border-top:1px $light-gray solid;
-	padding:15px;
-	padding-top:24px;
-	margin-bottom:2em;
+	border-top:1px $lighter-gray solid;
+	//padding:15px;
+	//padding-top:24px;
+	//margin-bottom:2em;
 	text-align:center;
 
-
-	a, a:link, a:visited { color:$content-color; transition:.3s; }
-	a:hover { text-decoration:none; color:$link-unvisited; }
-
-	nav {
-		padding:0;
-		margin:0;
-		a {
-			display:inline-block;
-			padding:0 15px;
-			border-left:1px $lighter-gray solid;
-		}
-		a:first-child { border-left:none; }
-	}
+	p { margin-top:24px; }
 }
 
 

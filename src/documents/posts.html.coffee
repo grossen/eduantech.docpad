@@ -1,6 +1,7 @@
 ---
 title: Posts
 layout: page
+subHeadline: Explore all my posts
 menuShow: true
 isPage: true
 menuOrder: 0

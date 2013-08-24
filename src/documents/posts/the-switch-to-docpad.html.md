@@ -1,4 +1,4 @@
---- yaml
+---
 title: The Switch to DocPad
 date: 2013-06-16
 tags:

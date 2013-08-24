@@ -1,4 +1,4 @@
---- yaml
+---
 title: Why We Should Drop Support For IE8 And How
 date: 2013-08-15
 ignore: true

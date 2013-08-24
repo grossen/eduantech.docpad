@@ -1,6 +1,7 @@
 ---
 title: EduanTech
 layout: page
+subHeadline: My corner of the internet
 ---
 ul '.posts-list', ->
 	for post in @getCollection('posts').toJSON()
