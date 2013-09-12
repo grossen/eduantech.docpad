@@ -1,8 +1,5 @@
 ---
 layout: default
 ---
-article '.page', ->
-	header ->
-		h1 @document.title
-
+article '.home', ->
 	text @content

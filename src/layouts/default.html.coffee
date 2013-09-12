@@ -24,9 +24,8 @@ html lang: 'en', ->
 		# DocPad plugins' styles
 		text  @getBlock('styles').toHTML()
 		# My styles
-		link href:'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600|Libre+Baskerville:400,700,400italic', rel:'stylesheet', type:'text/css'
+		link href:'http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Serif:400,400italic,700,700italic', rel:'stylesheet', type:'text/css'
 		link rel: 'stylesheet', href: '/styles/all.min.css'
-		script src: '/scripts/prefixfree.min.js'
 
 		# IE, HTML5 shiv
 		ie 'IE', ->
@@ -35,34 +34,23 @@ html lang: 'en', ->
 	body ->
 		div '#wrapper', ->
 			header role: 'banner', ->
-				# Navigation
 				nav role: 'navigation', ->
-						a href: '/', title: 'EduanTech', 'Home'
+					ul ->
+						li ->
+							a href: '/', title: 'EduanTech', 'Home'
 						for page in @getCollection('pages').findAllLive({layout:'page'}).toJSON()
 							# Check to be able to tell the user which is the current menu option (as in currently in it)
 							pageMatch = page.match or page.url
 							documentMatch = @document.match or @document.url
 							cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
-							a 'class':cssname, href: page.url, title: page.title, page.title
+							li ->
+								a 'class':cssname, href: page.url, title: page.title, page.title
 
-			# Content
 			main role: 'main', ->
 				@content
 
-			# Footer
 			footer role: 'contentinfo', ->
-#				# Navigation
-#				nav role: 'navigation', ->
-#						a href: '/', title: 'EduanTech', 'Home'
-#						for page in @getCollection('pages').findAllLive({layout:'page'}).toJSON()
-#							# Check to be able to tell the user which is the current menu option (as in currently in it)
-#							pageMatch = page.match or page.url
-#							documentMatch = @document.match or @document.url
-#							cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
-#							a 'class':cssname, href: page.url, title: page.title, page.title
-
-				# Footer
-				div '#footer', ->
+				div '.footerinfo', ->
 					p ->
 						a href:'https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md', title:'License Terms', 'License Terms'
 						text '. Powered by '
