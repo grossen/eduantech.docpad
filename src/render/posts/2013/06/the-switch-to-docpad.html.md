@@ -12,7 +12,7 @@ I switched to [DocPad][1], the [Node.js][2] based static website generator. It's
 
 I am using Markdown to write my posts. Using [CoffeeKup][3] and [Eco][4] as templating languages and [CoffeeScript][5] for the JavaScript logic.
 
-Also now my website is being hosted by my good friend's server, so that's nice. It's being hosted by [Realiseweb](http://realiseweb.nl), [Daniel Voogsgerd's](https://github.com/DanielVoogsgerd) company.
+Also, now my website is being hosted by GitHub Pages, so that's cool.
 
 That is all. Hope you like the changes. :)
 

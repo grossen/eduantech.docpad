@@ -18,7 +18,7 @@ docpadConfig = {
 
 	templateData:
 		site:
-			url: "https://greduan.github.io/"
+			url: "http://greduan.github.io/"
 			title: "EduanTech"
 			author: "Eduan Lavaque"
 			email: "eduanlavaque@gmail.com"
@@ -47,8 +47,6 @@ docpadConfig = {
 	collections:
 		posts: ->
 			@getCollection('html').findAllLive({relativeOutDirPath:'posts'},[{date:-1}]).on 'add', (model) ->
-				dateUrl = moment(model.get('date')).format('/YYYY/MM') + '/' + model.get('basename') + '.' + model.get('outExtension')
-				model.addUrl(dateUrl).setMetaDefaults({url:dateUrl})
 				model.setMetaDefaults({layout:'post'})
 
 		pages: ->

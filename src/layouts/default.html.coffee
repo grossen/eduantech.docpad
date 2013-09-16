@@ -55,8 +55,6 @@ html lang: 'en', ->
 						a href:'https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md', title:'License Terms', 'License Terms'
 						text '. Powered by '
 						a href:'http://docpad.org/', 'DocPad'
-						text ' and '
-						a href:'http://realiseweb.nl', 'Realiseweb'
 						text '.'
 
 		# DocPad plugins' scripts
