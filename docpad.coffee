@@ -46,7 +46,7 @@ docpadConfig = {
 
 	collections:
 		posts: ->
-			@getCollection('html').findAllLive({relativeOutDirPath:'posts'},[{date:-1}]).on 'add', (model) ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:'posts'},[{date:-1}]).on 'add', (model) ->
 				model.setMetaDefaults({layout:'post'})
 
 		pages: ->

@@ -18,6 +18,6 @@ I am a gamer when I can. I'm on Steam and on Desura and other places that don't 
 Now let's check some info about my website:
 
 - It was built using DocPad, the Node.js based static website generator.
-- It is being hosted by my good friend, [Daniel Voogsgerd](https://github.com/DanielVoogsgerd) and his company [RealiseWeb](http://realiseweb.nl). Instead of giving you a server that works with everything, he provides you with a server that works for *you* and *your* needs.
+- It is being hosted by GitHub Pages, so thanks GitHub!
 
 If you want to contact me for whatever reason please go to my [Contact Me](/contact.html) page.
