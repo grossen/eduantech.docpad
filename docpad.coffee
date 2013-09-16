@@ -6,6 +6,9 @@ moment = require('moment')
 
 # Define the DocPad Configuration
 docpadConfig = {
+	watchOptions:
+		preferredMethods:
+			['watchFile','watch']
 	plugins:
 		highlightjs:
 			replaceTab: null
@@ -15,7 +18,7 @@ docpadConfig = {
 
 	templateData:
 		site:
-			url: "/"
+			url: "https://greduan.github.io/"
 			title: "EduanTech"
 			author: "Eduan Lavaque"
 			email: "eduanlavaque@gmail.com"

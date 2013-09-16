@@ -24,7 +24,7 @@ html lang: 'en', ->
 		# DocPad plugins' styles
 		text  @getBlock('styles').toHTML()
 		# My styles
-		link href:'http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Serif:400,400italic,700,700italic', rel:'stylesheet', type:'text/css'
+		link href:'http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|Open+Sans:400,400italic,700,700italic', rel:'stylesheet', type:'text/css'
 		link rel: 'stylesheet', href: '/styles/all.min.css'
 
 		# IE, HTML5 shiv
