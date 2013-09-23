@@ -7,7 +7,7 @@
     "npm": "1.2"
   },
   "dependencies": {
-    "docpad": "~6.52.2",
+    "docpad": "~6.53.0",
     "docpad-plugin-coffeekup": "~2.2.0",
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-multimarkdown": "~2.0.0",

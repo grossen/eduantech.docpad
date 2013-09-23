@@ -46,7 +46,7 @@ docpadConfig = {
 
 	collections:
 		posts: ->
-			@getCollection('documents').findAllLive({relativeOutDirPath:'posts'},[{date:-1}]).on 'add', (model) ->
+			@getCollection('documents').findAllLive({relativeDirPath:'posts'},[{date:-1}]).on 'add', (model) ->
 				model.setMetaDefaults({layout:'post'})
 
 		pages: ->
@@ -54,7 +54,7 @@ docpadConfig = {
 
 	events:
 		# Write After
-		# Used to minify our assets with grunt
+		# Run some Grunt on this stuff
 		writeAfter: (opts,next) ->
 			# Prepare
 			safeps = require('safeps')

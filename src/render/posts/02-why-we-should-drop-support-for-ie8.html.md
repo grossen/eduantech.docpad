@@ -5,6 +5,8 @@ ignore: true
 tags:
     - web development
     - internet explorer
+outPath: why-we-should-drop-support-for-ie8.html
+
 ---
 This is draft #2 of this post. The first one was way too long so I'm gonna keep it short this time.
 
