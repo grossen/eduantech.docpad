@@ -5,8 +5,6 @@ tags:
     - cms
     - docpad
     - statamic
-outPath: the-switch-to-docpad.html
-
 ---
 Well I finally switched to something else than WordPress.
 
