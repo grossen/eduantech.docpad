@@ -38,7 +38,7 @@ html lang: 'en', ->
 					ul ->
 						li ->
 							a href: '/', title: 'EduanTech', 'Home'
-						for page in @getCollection('pages').findAllLive({layout:'page'}).toJSON()
+						for page in @getCollection('pages').toJSON()
 							# Check to be able to tell the user which is the current menu option (as in currently in it)
 							pageMatch = page.match or page.url
 							documentMatch = @document.match or @document.url

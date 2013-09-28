@@ -18,7 +18,7 @@ docpadConfig = {
 
 	templateData:
 		site:
-			url: "http://greduan.github.io/"
+			url: "http://greduan.github.io"
 			title: "EduanTech"
 			author: "Eduan Lavaque"
 			email: "eduanlavaque@gmail.com"
