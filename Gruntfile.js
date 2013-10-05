@@ -13,26 +13,17 @@ module.exports = function(grunt) {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
 			},
 			files: {
-				src: ['out/scripts/cssemoticons.min.js', 'out/scripts/main.js'],
-				dest: 'out/scripts/all.min.js'
+				src: ['out/js/cssemoticons.min.js', 'out/js/main.js'],
+				dest: 'out/js/all.min.js'
 			}
 		},
-		// Parse CSS and add vendor prefixes to rules using values from the Can I Use website
-		// autoprefixer: {
-		// 	files: {
-		// 		'out/styles/reset.css': ['out/styles/reset.css'],
-		// 		'out/styles/main.css': ['out/styles/main.css'],
-		// 		'out/styles/cssemoticons.css': ['out/styles/cssemoticons.css'],
-		// 	}
-		// },
-		// Minify CSS into one file
 		cssmin: {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */'
 			},
 			files: {
-				src: ['out/styles/reset.css', 'out/styles/main.css', 'out/styles/cssemoticons.css'],
-				dest: 'out/styles/all.min.css'
+				src: ['out/css/reset.css', 'out/css/main.css', 'out/css/cssemoticons.css'],
+				dest: 'out/css/all.min.css'
 			}
 		}
 	});

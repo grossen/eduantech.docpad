@@ -25,7 +25,7 @@ html lang: 'en', ->
 		text  @getBlock('styles').toHTML()
 		# My styles
 		link href:'http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic', rel:'stylesheet', type:'text/css'
-		link rel: 'stylesheet', href: '/styles/all.min.css'
+		link rel: 'stylesheet', href: '/css/all.min.css'
 
 		# IE, HTML5 shiv
 		ie 'IE', ->
@@ -63,4 +63,4 @@ html lang: 'en', ->
 		text @getBlock('scripts').toHTML()
 		# My scripts
 		script src: '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
-		script src: '/scripts/all.min.js'
+		script src: '/js/all.min.js'
