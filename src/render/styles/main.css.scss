@@ -1,6 +1,5 @@
 /*! all.css */
 @import 'bourbon/bourbon';
-// @import 'neat/neat';
 
 /* VARIABLES */
 
@@ -180,9 +179,9 @@ html {
 
 #header {
 	text-align:center;
-	border-bottom:1px #eee solid;
 	padding-top:30px;
 
+	nav { border-bottom:1px #eee solid; }
 	ul { list-style-type:none; margin:0; padding:0; }
 	li { display:inline-block; }
 	li:hover {
@@ -195,6 +194,7 @@ html {
 		@include transition(.2s);
 		border-bottom:#fff 3px solid;
 		padding:10px 23px;
+		padding-bottom:7px;
 	}
 	a:hover {
 		// background:#f6f6f6;
