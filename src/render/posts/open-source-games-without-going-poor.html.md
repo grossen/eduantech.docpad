@@ -39,4 +39,10 @@ This is just a crazy but not impossible idea I had while thinking on my bed, so 
 
 Also it's kinda hastily written, so if there's something you think could be said better in this post feel free to [modify it][1] and make a pull request for it!
 
+Here is some further reading you might be interested in:
+
+- [Income Ethics - Raam Dev][2] - A very deep look into a similar subject, he mentions something similar in [this section][3] of his post.
+
 [1]: https://github.com/Greduan/eduantech.docpad/blob/master/src/render/posts/open-source-games-without-going-poor.html.md
+[2]: http://raamdev.com/income-ethics-series/
+[3]: http://raamdev.com/income-ethics-series/#public_domain
