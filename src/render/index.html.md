@@ -3,7 +3,8 @@ title: Homepage
 layout: home
 headline: EduanTech
 subHeadline: My corner of the internet
-
+menuShow: true
+menuOrder: 1
 ---
 Hi! Welcome to my website! I'm Eduán Lávaque.
 

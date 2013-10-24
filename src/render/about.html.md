@@ -4,8 +4,7 @@ layout: page
 headline: About Me
 subHeadline: Get to know me
 menuShow: true
-isPage: true
-menuOrder: 1
+menuOrder: 3
 ---
 Hi, my name is Eduardo Lávaque (please call me Eduan) and I am a hobby freelancer and I specialize in clean designs and code. I've been coding since around 2009 or so, so I sorta know my way around, I'm not much compared to the experts though.
 

@@ -37,8 +37,6 @@ html lang: 'en', ->
 				header role: 'banner', ->
 					nav role: 'navigation', ->
 						ul ->
-							li ->
-								a href: '/', title: 'EduanTech', 'Home'
 							for page in @getCollection('pages').toJSON()
 								# Check to be able to tell the user which is the current menu option (as in currently in it)
 								pageMatch = page.match or page.url
@@ -46,6 +44,7 @@ html lang: 'en', ->
 								cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
 								li ->
 									a 'class':cssname, href: page.url, title: page.title, page.title
+									div '.arrow', ''
 
 			div '#content', ->
 				main role: 'main', ->

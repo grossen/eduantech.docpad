@@ -4,8 +4,7 @@ layout: page
 headline: Contact
 subHeadline: Drop me a line or two
 menuShow: true
-isPage: true
-menuOrder: 2
+menuOrder: 4
 ---
 If you want or need to contact me you can easily do so by sending an email to my email account <eduanlavaque@gmail.com>.
 

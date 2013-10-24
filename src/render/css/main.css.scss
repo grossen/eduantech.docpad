@@ -33,16 +33,14 @@ $blue:    #268bd2;
 $cyan:    #2aa198;
 $green:   #859900;
 
-/* HIGHLIGHT.JS STYLES */
-
-pre code{display:block;padding:.5em;background:#F0F0F0}pre code,pre .subst,pre .tag .title,pre .lisp .title,pre .clojure .built_in,pre .nginx .title{color:#000}pre .string,pre .title,pre .constant,pre .parent,pre .tag .value,pre .rules .value,pre .rules .value .number,pre .preprocessor,pre .haml .symbol,pre .ruby .symbol,pre .ruby .symbol .string,pre .aggregate,pre .template_tag,pre .django .variable,pre .smalltalk .class,pre .addition,pre .flow,pre .stream,pre .bash .variable,pre .apache .tag,pre .apache .cbracket,pre .tex .command,pre .tex .special,pre .erlang_repl .function_or_atom,pre .asciidoc .header,pre .markdown .header,pre .coffeescript .attribute{color:#800}pre .comment,pre .annotation,pre .template_comment,pre .diff .header,pre .chunk,pre .asciidoc .blockquote,pre .markdown .blockquote{color:#888}pre .number,pre .date,pre .regexp,pre .literal,pre .hexcolor,pre .smalltalk .symbol,pre .smalltalk .char,pre .go .constant,pre .change,pre .lasso .variable,pre .asciidoc .bullet,pre .markdown .bullet,pre .asciidoc .link_url,pre .markdown .link_url{color:#080}pre .label,pre .javadoc,pre .ruby .string,pre .decorator,pre .filter .argument,pre .localvars,pre .array,pre .attr_selector,pre .important,pre .pseudo,pre .pi,pre .haml .bullet,pre .doctype,pre .deletion,pre .envvar,pre .shebang,pre .apache .sqbracket,pre .nginx .built_in,pre .tex .formula,pre .erlang_repl .reserved,pre .prompt,pre .asciidoc .link_label,pre .markdown .link_label,pre .vhdl .attribute,pre .clojure .attribute,pre .asciidoc .attribute,pre .lasso .attribute,pre .coffeescript .property{color:#88F}pre .keyword,pre .id,pre .title,pre .built_in,pre .aggregate,pre .css .tag,pre .javadoctag,pre .phpdoc,pre .yardoctag,pre .smalltalk .class,pre .winutils,pre .bash .variable,pre .apache .tag,pre .go .typename,pre .tex .command,pre .asciidoc .strong,pre .markdown .strong,pre .request,pre .status{font-weight:700}pre .asciidoc .emphasis,pre .markdown .emphasis{font-style:italic}pre .nginx .built_in{font-weight:400}pre .coffeescript .javascript,pre .javascript .xml,pre .lasso .markup,pre .tex .formula,pre .xml .javascript,pre .xml .vbscript,pre .xml .css,pre .xml .cdata{opacity:.5}
+$a: #1e90ff;
+$v: #007AF5;
 
 /* UNDOING THE CSS RESET */
 
 /* BLOCK QUOTES */
 
 blockquote {
-	//margin-left:2rem;
 	border-left:4px #ebebeb solid;
 	padding-left:1rem;
 	color:$dark-gray;
@@ -83,13 +81,13 @@ h6 { font-size:8px; }
 /* ANCHOR TAGS */
 
 a:link, a:visited {
-	color:$red;
+	color:$a;
 	background:inherit;
 	text-decoration:none;
 }
-a:visited { color:#C02321; }
+a:visited { color:$v; }
 a:hover { text-decoration:underline; }
-// a:focus { color:$red; }
+// a:focus { color:$a; }
 
 /* HORIZONTAL RULERS */
 
@@ -157,12 +155,13 @@ pre {
 	//margin:0 10px;
 }
 
+
+
 /* GLOBAL STYLES */
 
 html {
 	font-size:17px;
 }
-
 
 
 
@@ -186,28 +185,22 @@ html {
 	nav { border-bottom:1px #eee solid; }
 	ul { list-style-type:none; margin:0; padding:0; }
 	li { display:inline-block; }
-	li:hover {
-	}
 	a:link, a:visited {
 		color:#423f37;
-		// font-size:18px;
 		display:block;
 		text-decoration:none;
 		@include transition(.2s);
-		border-bottom:#fff 3px solid;
 		padding:10px 23px;
-		padding-bottom:7px;
+		padding-bottom:0px;
 	}
-	a:hover {
-		// background:#f6f6f6;
-		// color:#423f37;
-		text-decoration:none;
-		border-bottom:#423f37 3px solid;
+	a~.arrow {
+		width:0px;
+		height:0px;
+		margin:0 auto;
+		border:transparent 5px solid;
 	}
-	a.menu-current {
-		color:$red;
-		border-bottom:$red 3px solid;
-	}
+	a:hover~.arrow { border-bottom:#bbb 5px solid; }
+	a.menu-current~.arrow { border-bottom:#423f37 5px solid; }
 }
 
 article {
@@ -234,6 +227,8 @@ article {
 		margin:0;
 	}
 }
+
+
 
 /* FOOTER */
 
@@ -263,7 +258,7 @@ article {
 }
 
 @media (min-width: 600px)  {
-	
+
 }
 
 @media (min-width: 801px)  {
@@ -274,7 +269,7 @@ article {
 }
 
 @media (min-width: 1025px)  {
-	
+
 }
 
 @media (min-width: 1281px)  {

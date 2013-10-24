@@ -4,8 +4,7 @@ layout: page
 headline: Posts
 subHeadline: Explore all my posts
 menuShow: true
-isPage: true
-menuOrder: 0
+menuOrder: 2
 ---
 # KUDOS to Steve Mc for figuring this out for me:
 # http://stackoverflow.com/users/126540/steve-mc
@@ -18,10 +17,10 @@ div '.posts-list', ->
 	for post in @getCollection('posts').toJSON()
 		if post.date.getFullYear() isnt yr
 			yr = post.date.getFullYear()
-			mnth = -1 
+			mnth = -1
 			h1 yr.toString()
 		if post.date.getMonth() isnt mnth
-			mnth = post.date.getMonth() 
+			mnth = post.date.getMonth()
 			h2 monthNames[mnth]
 			ul ->
 				li ->

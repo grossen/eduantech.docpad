@@ -20,13 +20,13 @@ docpadConfig = {
 		site:
 			url: "http://greduan.github.io"
 			title: "EduanTech"
-			author: "Eduan Lavaque"
+			author: "Eduán Lávaque"
 			email: "eduanlavaque@gmail.com"
 			description: """
-				A hacker's advice for Mac OS X, s2Member and web development.
+				A hacker's blog.
 				"""
 			keywords: """
-				greduan, eduan, eduán, eduan lavaque, lavaque, lávaque, hacker, mac, osx, os x, mac os x, mac osx, s2member, web development, code
+				greduan, eduán lávaque, blog, web development, clojure
 				"""
 
 		# Meta helpers
@@ -50,7 +50,7 @@ docpadConfig = {
 				model.setMetaDefaults({layout:'post'})
 
 		pages: ->
-			@getCollection('documents').findAllLive({isPage:true},[menuOrder:1])
+			@getCollection('documents').findAllLive({menuShow:true},[menuOrder:1])
 
 	events:
 		# Write After
