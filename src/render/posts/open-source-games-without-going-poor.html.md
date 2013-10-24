@@ -11,7 +11,7 @@ So what's the idea? What do you mean open source games?
 
 Well, as I'm sure most of you know, I love open source. I try to make everything I use open source whenever possible. There are lot of great projects I use and sometimes contribute to that are open source. For example Clojure, Vim, Chromium (all of which I use) or DocPad (to which I contribute).
 
-I also love games, I mean who doesn't? Doesn't have to be video games for it to be a game, there's also hysical games like Tag, Hide-and-Seek etc. They are all free, open source, they're just an idea, you see kids modifying games in order to make them more interesting all the time! Most video games aren't open source however. You pay for a game, you play it, finish it (or complete it), move on to the next game. The games that are open source are so simple there isn't any gain in making them not open source, if anything you lose from making them closed source.
+I also love games, I mean who doesn't? Doesn't have to be video games for it to be a game, there's also physical games like Tag, Hide-and-Seek etc. They are all free, open source, they're just an idea, you see kids modifying games in order to make them more interesting all the time! Most video games aren't open source however. You pay for a game, you play it, finish it (or complete it), move on to the next game. The games that are open source are so simple there isn't any gain in making them not open source, if anything you lose from making them closed source.
 
 A lot of, if not all developers love open source. However, a lot of us developers make games for a living. We can't make them open source, we would have to live off of donations, which are inconsistent if there are donations and if there aren't well... we're in deep shit if we don't have a job.
 
@@ -19,7 +19,7 @@ Now, this is an idea I had that tries to solve that. Us open source lovers who w
 
 The idea is simple, release the game to the public for a fee as usual, however after an agreed amount of time which you decide release the game's source. Make it open source. However, continue selling the pre-compiled game to the public.
 
-So it's really a simple idea. You release the game for a fee for a certain amount of time in order to make a living or at least make up for what you lost in the development process. After that certain amount of time is up you releas the source.
+So it's really a simple idea. You release the game for a fee for a certain amount of time in order to make a living or at least make up for what you lost in the development process. After that certain amount of time is up you release the source.
 
 This makes the game open source however you are still making an income from non-techie users or just nice users.
 
