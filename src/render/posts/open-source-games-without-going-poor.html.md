@@ -1,6 +1,5 @@
 ---
 title: Open Source Games Without Going Poor
-layout: post
 date: 2013-10-23
 tags:
     - blog
