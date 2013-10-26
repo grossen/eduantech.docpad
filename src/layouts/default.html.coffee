@@ -24,7 +24,7 @@ html lang: 'en', ->
 		# DocPad plugins' styles
 		text  @getBlock('styles').toHTML()
 		# My styles
-		link href:'http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic', rel:'stylesheet', type:'text/css'
+		link href: 'http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic', rel: 'stylesheet', type: 'text/css'
 		link rel: 'stylesheet', href: '/css/all.min.css'
 
 		# IE, HTML5 shiv
@@ -43,7 +43,7 @@ html lang: 'en', ->
 								documentMatch = @document.match or @document.url
 								cssname = if documentMatch.indexOf(pageMatch) is 0 then 'menu-current' else 'not-menu-current'
 								li ->
-									a 'class':cssname, href: page.url, title: page.title, page.title
+									a 'class': cssname, href: page.url, title: page.title, page.title
 									div '.arrow', ''
 
 			div '#content', ->
@@ -52,6 +52,15 @@ html lang: 'en', ->
 
 			div '#footer', ->
 				footer role: 'contentinfo', ->
+
+					div '.social-icons', ->
+						a '.icon-twitter', href: 'https://twitter.com/EduanLavaque', title: 'Eduán Lávaque (EduanLavaque) on Twitter', ''
+						a '.icon-gplus', href: 'https://plus.google.com/u/0/101160916170411335097', title: 'Eduardo Lávaque (Greduan) - Google+', ''
+						a '.icon-github-circled', href: 'https://github.com/Greduan', title: 'Greduan (Eduán Lávaque)', ''
+						a '.icon-youtube', href: 'http://www.youtube.com/user/eduantech', title: 'Eduardo Lávaque - YouTube', ''
+						a '.icon-gittip', href: 'https://www.gittip.com/Greduan/', title: 'Greduan - Gittip', ''
+						a '.icon-rss', href: '/atom.xml', title: 'EduanTech RSS', ''
+
 					p ->
 						a href:'https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md', title:'License Terms', 'License Terms'
 						text '. Powered by '

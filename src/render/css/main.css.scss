@@ -152,7 +152,6 @@ pre {
 	white-space:pre;
 	text-align:left;
 	padding:5px 5px;
-	//margin:0 10px;
 }
 
 
@@ -189,7 +188,6 @@ html {
 		color:#423f37;
 		display:block;
 		text-decoration:none;
-		@include transition(.2s);
 		padding:10px 23px;
 		padding-bottom:0px;
 	}
@@ -240,6 +238,19 @@ article {
 	padding-top:10px;
 	padding-bottom:30px;
 	p { margin:0; }
+
+	.social-icons {
+		margin:10px 0;
+		font-size:30px;
+		a:link, a:visited {
+			color:#57534a;
+		}
+		a:hover {
+			@include transition(.2s);
+			text-decoration:none;
+			color:$a;
+		}
+	}
 }
 
 
