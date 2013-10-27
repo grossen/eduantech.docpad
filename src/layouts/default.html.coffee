@@ -56,8 +56,8 @@ html lang: 'en', ->
 					div '.social-icons', ->
 						a '.icon-twitter', href: 'https://twitter.com/EduanLavaque', title: 'Eduán Lávaque (EduanLavaque) on Twitter', ''
 						a '.icon-gplus', href: 'https://plus.google.com/u/0/101160916170411335097', title: 'Eduardo Lávaque (Greduan) - Google+', ''
-						a '.icon-github-circled', href: 'https://github.com/Greduan', title: 'Greduan (Eduán Lávaque)', ''
 						a '.icon-youtube', href: 'http://www.youtube.com/user/eduantech', title: 'Eduardo Lávaque - YouTube', ''
+						a '.icon-github-circled', href: 'https://github.com/Greduan', title: 'Greduan (Eduán Lávaque)', ''
 						a '.icon-gittip', href: 'https://www.gittip.com/Greduan/', title: 'Greduan - Gittip', ''
 						a '.icon-rss', href: '/atom.xml', title: 'EduanTech RSS', ''
 
@@ -70,5 +70,13 @@ html lang: 'en', ->
 		# DocPad plugins' scripts
 		text @getBlock('scripts').toHTML()
 		# My scripts
+		script """
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-41315738-1', 'eduantech.com');
+			ga('send', 'pageview');
+		"""
 		script src: '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
 		script src: '/js/all.min.js'
