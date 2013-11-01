@@ -23,7 +23,7 @@ docpadConfig = {
 			author: "Eduán Lávaque"
 			email: "eduanlavaque@gmail.com"
 			description: """
-				A hacker's blog.
+				A web developer and software engineer that loves free software (as in freedom).
 				"""
 			keywords: """
 				greduan, eduán lávaque, blog, web development, clojure
@@ -46,7 +46,7 @@ docpadConfig = {
 
 	collections:
 		posts: ->
-			@getCollection('documents').findAllLive({relativeDirPath:'posts'},[{date:-1}]).on 'add', (model) ->
+			@getCollection('documents').findAllLive({relativeDirPath:'posts',tags:'blog'},[{date:-1}]).on 'add', (model) ->
 				model.setMetaDefaults({layout:'post'})
 
 		pages: ->

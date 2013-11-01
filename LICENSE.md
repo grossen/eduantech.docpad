@@ -1,6 +1,6 @@
 # License
 
-Unless stated otherwise; all works are licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) for the source code (this includes code snippets and design) and the [Creative Commons Attribution-NoDerivs 3.0 Unported (CC BY-ND 3.0)](http://creativecommons.org/licenses/by-nd/3.0/deed.en_US) license for everything else (including content and media).
+Unless stated otherwise; all source code licensed [permissively](http://en.wikipedia.org/wiki/Permissive_free_software_licence) under the [MIT License](http://creativecommons.org/licenses/MIT/) (this includes code snippets and design) and the [Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](http://creativecommons.org/licenses/by-sa/3.0/) license for everything else (including content and media).
 
 
 ## MIT License
@@ -14,6 +14,8 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-## Creative Commons Attribution-NoDerivs 3.0 Unported (CC BY-ND 3.0)
+## Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 
-See http://creativecommons.org/licenses/by-nd/3.0/deed.en_US for full legal text.
+For a simplified and human readable version visit this URL: http://creativecommons.org/licenses/by-sa/3.0/
+
+For full legal text visit this URL: http://creativecommons.org/licenses/by-sa/3.0/legalcode
