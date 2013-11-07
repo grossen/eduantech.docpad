@@ -25,8 +25,8 @@ implemented, go ahead and do it yourself! ;)
 
 And of course, it can be extended immensely towards developing. Debuggers, the
 CLI, automatic compiling functionality, people have made it an IDE as well. So
-it's limits are practically none. Oh and let's not forget about the language
-you use to customize it. Emacs Lisp, A.K.A. Elisp; It's own dialect of Lisp.
+its limits are practically none. Oh and let's not forget about the language
+you use to customize it. Emacs Lisp, A.K.A. Elisp; Its own dialect of Lisp.
 You can't get a lot more customizable than that.
 
 Except you can... Enter Light Table!
@@ -43,7 +43,7 @@ or remove anything and everything. Well maybe not everything since you'll always
 want some stuff there but you know what I mean. Think about the ECS ([Entity
 Component System](http://en.wikipedia.org/wiki/Entity_component_system)), that's
 almost *exactly* what Light Table has as an architecture. It is the first text
-editor of it's kind in this sense.
+editor of its kind in this sense.
 
 He has created a very interesting system with Light Table where the basic text
 editor is loaded by default. All of the text editor you get by default are just
@@ -55,7 +55,7 @@ competitor for Emacs as well in terms of customizability. Think about it, it's
 written in ClojureScript, a Lisp dialect, you can add or remove behaviours, to
 the point where you can make it a NotePad or a browser if you liked.
 
-JS is it's limit. If you can't do it with JS (and
+JS is its limit. If you can't do it with JS (and
 [Node.js](http://nodejs.org/)) you can't do it in Light Table. But if you can
 do it in JS you can do it in Light Table. JS is quickly becoming the one
 language to write. JS is found almost everywhere nowadays. So I think Chris has
