@@ -53,16 +53,20 @@ you get where I'm going with this.
 It could be anything and everything with due time! It could be the first real
 competitor for Emacs as well in terms of customizability. Think about it, it's
 written in ClojureScript, a Lisp dialect, you can add or remove behaviours, to
-the point where you can make it a NotePad or a browser.
-
-The main point is, it's got (almost) no limit on what can be added *and* no
-limit on what can be removed, something Emacs is missing.
+the point where you can make it a NotePad or a browser if you liked.
 
 JS is it's limit. If you can't do it with JS (and
 [Node.js](http://nodejs.org/)) you can't do it in Light Table. But if you can
 do it in JS you can do it in Light Table. JS is quickly becoming the one
 language to write. JS is found almost everywhere nowadays. So I think Chris has
 made a smart decision when he decided to write it in ClojureScript.
+
+The main point is, it's got (almost) no limit on what can be added *and* no
+limit on what can be removed, something Emacs is missing.
+
+Oh and one more thing. Emacs is millions of lines of Elisp plus the C code it
+uses. Light Table is only around twelve thousand lines of ClojureScript, at the
+time of writing.
 
 So I guess you get my point. If you don't yet, there's not much I can do so I
 really hope you have.
