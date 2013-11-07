@@ -1,5 +1,5 @@
 ---
-title: Light Table, The New Emacs
+title: "Light Table, The New Emacs"
 date: 2013-11-07
 tags:
     - blog
@@ -38,14 +38,14 @@ Enter Light Table!
 It is coded in [ClojureScript](http://clojure.org/clojurescript), a Lisp
 dialect that essentially compiles to JS. The other new kid is
 [Lime](https://github.com/limetext/lime), but he still hasn't got a working
-frontend (ATTOW).
+frontend (at the time of writing).
 
 Now, the fact that it's an editing environment written in JS isn't all that
 special today, with these popping up quickly. But what makes it unique is it's
 customizability.
 
 [Chris Granger](http://www.chris-granger.com/) (the main dev of Light Table)
-has created a unique architecture with Light Table. (AIUI) you can add or
+has created a unique architecture with Light Table. (As I understand it) you can add or
 remove anything and everything. Well maybe not everything since you'll always
 want some stuff there but you know what I mean.
 
@@ -74,6 +74,3 @@ and make a pull request for it!
 
 Thank you for reading! You can share your thoughts with me through email at
 eduanlavaque@gmail.com. :)
-
-*[ATTOW]: At The Time Of Writing.
-*[AIUI]: As I Understand It.

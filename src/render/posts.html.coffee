@@ -10,7 +10,7 @@ menuOrder: 2
 # http://stackoverflow.com/users/126540/steve-mc
 
 yr = -1 # temporary vars for storing current year value in loop
-mnth = -1 #same for month value
+mnth = -1 # same for month value
 monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"]
 
 div '.posts-list', ->
@@ -25,4 +25,4 @@ div '.posts-list', ->
 			ul ->
 				li ->
 					time datetime: @postDatetime(post.date), @postDatetime(post.date, 'DD MMM YYYY') + ' ⋅ '
-					a href:post.url, post.title
+					a href: post.url, post.title
