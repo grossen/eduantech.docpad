@@ -22,7 +22,7 @@ div '.posts-list', ->
 		if post.date.getMonth() isnt mnth
 			mnth = post.date.getMonth()
 			h2 monthNames[mnth]
-			ul ->
-				li ->
-					time datetime: @postDatetime(post.date), @postDatetime(post.date, 'DD MMM YYYY') + ' ⋅ '
-					a href: post.url, post.title
+		ul ->
+			li ->
+				time datetime: @postDatetime(post.date), @postDatetime(post.date, 'DD MMM YYYY') + ' ⋅ '
+				a href: post.url, post.title
