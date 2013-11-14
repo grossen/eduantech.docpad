@@ -5,9 +5,9 @@ tags:
     - blog
 ---
 In this post I'll be talking about my experience with switching from zsh (**Z**
-**sh**ell) to fish (**F**riendly **I**nteractive **sh**ell). I'm not gonna talk
-about how or why it's better than the other shells, I'm only gonna talk about
-the process of switching.
+ **sh**ell) to fish (**F**riendly **I**nteractive **sh**ell). I'm not gonna
+talk about how or why it's better than the other shells, I'm only gonna talk
+about the process of switching.
 
 Where to start... well, how about starting with the fact that I tried to do the
 switch before? I did try to do the switch before, I don't remember exactly what
