@@ -53,16 +53,27 @@ html lang: 'en', ->
 			div '#footer', ->
 				footer role: 'contentinfo', ->
 
-					div '.social-icons', ->
-						a '.icon-twitter', href: 'https://twitter.com/EduanLavaque', title: 'Eduán Lávaque (EduanLavaque) on Twitter', ''
-						a '.icon-gplus', href: 'https://plus.google.com/u/0/101160916170411335097', title: 'Eduardo Lávaque (Greduan) - Google+', ''
-						a '.icon-youtube', href: 'http://www.youtube.com/user/eduantech', title: 'eduantech - YouTube', ''
-						a '.icon-github-circled', href: 'https://github.com/Greduan', title: 'Greduan (Eduán Lávaque)', ''
-						a '.icon-gittip', href: 'https://www.gittip.com/Greduan/', title: 'Greduan - Gittip', ''
-						a '.icon-rss', href: '/atom.xml', title: 'EduanTech RSS', ''
+					div '.social', ->
+						span ->
+							a href: 'https://twitter.com/EduanLavaque', title:'Eduán Lávaque (EduanLavaque) - Twitter', 'Twitter'
+						text ' - '
+						span ->
+							a href: 'https://plus.google.com/u/0/101160916170411335097', title:'Eduardo Lávaque (Greduan) - Google+', 'Google+'
+						text ' - '
+						span ->
+							a href: 'http://www.youtube.com/user/eduantech', title:'eduantech - YouTube', 'YouTube'
+						text ' - '
+						span ->
+							a href: 'https://github.com/Greduan', title:'Greduan (Eduán Lávaque)', 'GitHub'
+						text ' - '
+						span ->
+							a href: 'https://www.gittip.com/Greduan/', title:'Greduan - Gittip', 'Gittip'
+						text ' - '
+						span ->
+							a href: '/atom.xml', title: 'EduanTech RSS', 'RSS'
 
 					p ->
-						a href:'https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md', title:'License Terms', 'License Terms'
+						a href:'https://github.com/Greduan/eduantech.docpad/blob/master/LICENSE.md', 'License Terms'
 						text '. Powered by '
 						a href:'http://docpad.org/', 'DocPad'
 						text '.'

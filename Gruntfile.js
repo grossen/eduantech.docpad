@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		},
 		cssmin: {
 			files: {
-				src: ['out/css/reset.css', 'out/css/main.css', 'out/css/fontello.css', 'out/css/highlightjs.css', 'out/css/cssemoticons.css'],
+				src: ['out/css/reset.css', 'out/css/main.css', 'out/css/highlightjs.css', 'out/css/cssemoticons.css'],
 				dest: 'out/css/all.min.css'
 			}
 		},

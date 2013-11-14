@@ -200,8 +200,6 @@ html {
 	a.menu-current~.arrow { border-bottom:#423f37 5px solid; }
 }
 
-.nav-placeholder { display:hidden; }
-
 article {
 	header {
 		h1 { margin-bottom:0.1em; }
@@ -239,21 +237,11 @@ article {
 	padding-top:10px;
 	padding-bottom:30px;
 	p { margin:0; }
-
-	.social-icons {
-		margin:10px 0;
-		font-size:30px;
-		a:link, a:visited {
-			color:#57534a;
-		}
-		a:hover {
-			@include transition(.2s);
-			text-decoration:none;
-			color:$a;
-		}
-	}
 }
 
+.social {
+	span { margin:0 5px; }
+}
 
 
 /* MEDIA QUERIES */
