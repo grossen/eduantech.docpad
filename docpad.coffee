@@ -15,6 +15,16 @@ docpadConfig = {
 		coffeekup:
 			coffeecup:
 				format: false
+		markedOptions:
+			gfm: true
+			highlight: null
+			tables: true
+			breaks: true
+			pedantic: false
+			sanitize: true
+			smartLists: true
+			smartypants: false
+			langPrefix: 'lang-'
 
 	templateData:
 		site:
