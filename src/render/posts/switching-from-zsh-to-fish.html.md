@@ -16,10 +16,11 @@ something.
 
 I decided to try the switch again taking advantage of the fact that a new
 version had been released recently
-([v2.1.0](http://fishshell.com/release_notes.html)). Seemed like a good idea to
-try again, also the fact that I like the features it has, of course.
+ ([v2.1.0](http://fishshell.com/release_notes.html)). Seemed like a good idea
+to try again, also the fact that I like the features it has, of course.
 
-The switch wasn't as problem-free as I wished but it was quite a smooth process.
+The switch wasn't as problem-free as I wished but it was quite a smooth
+process.
 
 First, I was running across problems with Vim which I imagine I wasn't able to
 solve last time, but I solved this time. The problem was a startup error that
@@ -40,7 +41,7 @@ Another problem I was running into was that Emacs was complaining about not
 being able to find the `package.el` file. The reason for the error was that I
 was opening an old version of Emacs (v22.x). This was just a matter of updating
 the `$PATH` variable, that was done with the following line of code in my
-`config.fish` file:
+ `config.fish` file:
 
 ```none
 set PATH /usr/local/bin /usr/local/sbin /usr/local/share/npm/bin /usr/local/opt/ruby/bin $HOME/bin $HOME/.tmuxifier/tmuxifier/bin $PATH
