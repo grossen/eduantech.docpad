@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 				removeComments: true,
 				removeCommentsFromCDATA: true,
 				removeCDATASectionsFromCDATA: true,
-				collapseWhitespace: true,
+				collapseWhitespace: false,
 				collapseBooleanAttributes: true,
 				removeAttributeQuotes: false,
 				removeRedundantAttributes: true,
