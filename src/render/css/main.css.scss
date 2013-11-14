@@ -1,49 +1,17 @@
 /*! main.css.scss */
 @import 'bourbon/bourbon';
 
-/* VARIABLES */
-
 /* COLOR VARIABLES */
-
-$lighter-gray:#ebebeb;
-$light-gray:#b8b8b8;
-$normal-gray:#ddd;
-$dark-gray:#aaa;
-$darker-gray:#525252;
-$var-black:#333;
-
-$background:#fff;
-$content-color:#575757;
-$title-color:#262626;
-
-$base03:  #002b36;
-$base02:  #073642;
-$base01:  #586e75;
-$base00:  #657b83;
-$base0:   #839496;
-$base1:   #93a1a1;
-$base2:   #eee8d5;
-$base3:   #fdf6e3;
-$yellow:  #b58900;
-$orange:  #cb4b16;
-$red:     #dc322f;
-$magenta: #d33682;
-$violet:  #6c71c4;
-$blue:    #268bd2;
-$cyan:    #2aa198;
-$green:   #859900;
 
 $a: #1e90ff;
 $v: #007AF5;
-
-/* UNDOING THE CSS RESET */
 
 /* BLOCK QUOTES */
 
 blockquote {
 	border-left:4px #ebebeb solid;
 	padding-left:1rem;
-	color:$dark-gray;
+	color:#aaa;
 }
 
 /* BASIC MARKUP TAGS */
@@ -85,7 +53,6 @@ a:link, a:visited {
 }
 a:visited { color:$v; }
 a:hover { text-decoration:underline; }
-// a:focus { color:$a; }
 
 /* HORIZONTAL RULERS */
 
@@ -102,7 +69,7 @@ hr {
 p { margin:1.1rem 0; }
 
 abbr {
-	border-bottom:1px $light-gray dotted;
+	border-bottom:1px #b8b8b8 dotted;
 }
 
 /* LISTS */
@@ -184,6 +151,7 @@ html {
 	ul { list-style-type:none; margin:0; padding:0; }
 	li { display:inline-block; }
 	a:link, a:visited {
+		letter-spacing:1px;
 		color:#423f37;
 		display:block;
 		text-decoration:none;
@@ -216,7 +184,7 @@ article {
 		margin-left:16px;
 	}
 	time {
-		color:$darker-gray;
+		color:#525252;
 		font-size:.7rem;
 		text-transform:uppercase;
 	}

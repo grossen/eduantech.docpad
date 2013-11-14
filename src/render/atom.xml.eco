@@ -17,7 +17,7 @@
 			<link href="<%= @site.url %><%= document.url %>"/>
 			<updated><%= document.date.toISOString() %></updated>
 			<id><%= @site.url %><%= document.url %></id>
-			<content type="html"><%= document.contentRenderedWithoutLayouts %></content>
+			<content type="html"><%= document.contentRenderedWithoutLayouts %><hr/><p>The post <a href="<%= @site.url %><%= document.url %>"><%= document.title or document.name or @title.title %></a> appeard first on <a href="<%= @site.url %>"><%= @site.title %></a></p></content>
 		</entry>
 	<% end %>
 </feed>
