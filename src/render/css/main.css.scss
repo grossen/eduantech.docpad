@@ -169,9 +169,17 @@ html {
 	a.menu-current~.arrow { border-bottom:#423f37 5px solid; }
 }
 
+#content {
+	background:#f6f6f6;
+	padding:24px 0;
+}
+
 article {
 	header {
-		h1 { margin-bottom:0.1em; }
+		h1 {
+			margin-top:0px;
+			margin-bottom:0.1em;
+		}
 	}
 }
 
@@ -201,7 +209,6 @@ article {
 #footer {
 	text-align:center;
 
-	margin-top:24px;
 	border-top:1px #eee solid;
 	padding-top:10px;
 	padding-bottom:30px;
@@ -218,7 +225,7 @@ article {
 @media (min-width: 320px)  {
 	#content {
 		max-width:90%;
-		padding:0 5%;
+		padding:24px 5%;
 	}
 }
 
