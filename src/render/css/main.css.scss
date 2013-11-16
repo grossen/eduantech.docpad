@@ -94,8 +94,9 @@ ol { list-style-type:decimal; }
 
 // styles for all code related tags
 pre, pre>code, p>code, a>code {
-	font-family:Consolas,Menlo,Monaco,monospace;
-	font-size:13px;
+	font-family:monospace;
+	font-size:12px;
+	line-height:18px;
 	background:#ebebeb;
 	margin:0;
 	padding:0;
