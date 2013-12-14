@@ -42,3 +42,4 @@ sftp-config.json
 /plugins
 .build-catalog.json
 npm-debug.log
+.docpad.db
